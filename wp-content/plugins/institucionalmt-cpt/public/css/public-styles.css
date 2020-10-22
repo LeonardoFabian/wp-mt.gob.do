@@ -1,0 +1,12 @@
+.rlt-map {
+    overflow: hidden;
+}
+
+.rlt-map iframe {
+    width: 100%;    
+}
+
+.rlt-cards .card-body .fa, 
+.rlt-cards .card-body .fas {
+    line-height: 0 !important;
+}

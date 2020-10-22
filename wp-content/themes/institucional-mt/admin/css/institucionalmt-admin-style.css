@@ -1,0 +1,11 @@
+.split-page-title-action {
+    padding: 16px 32px;
+    background: #003876;
+    border-radius: 4px;
+}
+
+.split-page-title-action a {
+    color: #FFF;
+    text-decoration: none;
+    font-size: 1rem;
+}

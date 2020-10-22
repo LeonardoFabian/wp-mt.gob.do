@@ -1,0 +1,35 @@
+#login h1 a {
+    background-image: url('../image/login-logo.svg');
+    padding-bottom: 30px;
+    width: 200px;
+    height: 150px;
+    background-size: 200px;
+}
+.login form {
+  -webkit-box-shadow: 0 1px 6px rgba(0,0,0,.4);
+  box-shadow: 0 1px 6px rgba(0,0,0,.4);
+}
+
+.login label {
+  color: #333;
+}
+
+.login #nav a {
+  color: #007CAD;
+}
+
+body, html, #login p .button-primary {
+  background: #003876;
+}
+
+.login #nav a, a.privacy-policy-link {
+    color: #FFF;
+}
+
+.login #backtoblog a {
+    color:  #EE2A24;
+}
+
+.login .message {
+    border-left: 4px solid #EE2A24;
+}
