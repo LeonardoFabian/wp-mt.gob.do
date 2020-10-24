@@ -15,6 +15,8 @@ class InstitucionalMT_Core {
 
     protected $build_menupage;
     protected $build_menu_settings;
+    protected $build_menu_rlt;
+    protected $build_menu_ote;
 
     protected $roles;
     protected $http;
@@ -43,6 +45,9 @@ class InstitucionalMT_Core {
 
         require_once $this->plugin_dir_path . 'instmt-menu-pages.php';
         require_once $this->plugin_dir_path . 'instmt-menu-pages-settings.php';
+        require_once $this->plugin_dir_path . 'instmt-menu-rlt.php';
+        require_once $this->plugin_dir_path . 'instmt-menu-ote.php';
+
         require_once $this->plugin_dir_path . 'instmt-roles.php';
         require_once $this->plugin_dir_path . 'instmt-http.php';
         require_once $this->plugin_dir_path . 'instmt-ajax.php';
@@ -57,6 +62,8 @@ class InstitucionalMT_Core {
 
         $this->build_menupage = new InstitucionalMT_Menu_Pages;
         $this->build_menu_settings = new InstitucionalMT_Menu_Ajustes( $this->build_menupage );
+        $this->build_menu_rlt = new InstitucionalMT_Menu_RLT( $this->build_menupage );
+        $this->build_menu_ote = new InstitucionalMT_Menu_OTE( $this->build_menupage );
 
         $this->roles = new InstitucionalMT_Roles;
         $this->http = new InstitucionalMT_Http;
@@ -90,6 +97,7 @@ class InstitucionalMT_Core {
         $this->loader->add_action( 'init', $this->cpt, 'ote');
         $this->loader->add_action( 'init', $this->cpt, 'documentos');
         $this->loader->add_action( 'init', $this->cpt, 'representantes_locales');
+        $this->loader->add_action( 'init', $this->cpt, 'encargados_ote');
 
         // Agregando campo de metadato para la taxonomia servicios_taxonomy
         // el campo se define define: {taxonomy}_{add||edit}_form_fields
@@ -113,6 +121,8 @@ class InstitucionalMT_Core {
 
         // Agregando menus al admin
         $this->loader->add_action( 'admin_menu', $this->build_menu_settings, 'options_page' );
+        $this->loader->add_action( 'admin_menu', $this->build_menu_rlt, 'options_page' );
+        $this->loader->add_action( 'admin_menu', $this->build_menu_ote, 'options_page' );
 
         // Manipulacion de roles
         $this->loader->add_action( 'init', $this->roles, 'manipulate_roles' );
@@ -122,6 +132,7 @@ class InstitucionalMT_Core {
 
         // Ajax
         $this->loader->add_action('wp_ajax_admin_search', $this->ajax, 'in_admin_search' );
+        $this->loader->add_action('wp_ajax_cargar_datos_representantes', $this->ajax, 'ajax_cargar_datos_representantes' );
 
     }
 

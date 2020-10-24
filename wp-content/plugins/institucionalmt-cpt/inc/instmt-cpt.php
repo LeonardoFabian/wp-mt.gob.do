@@ -118,14 +118,14 @@ class InstitucionalMT_CPT {
 
         $item = 'Representación Local de Trabajo (RLT)';
         $items = 'Representaciones Locales de Trabajo (RLT`s)';
-        $menu_name = 'RLT`s';
+        $menu_name = 'RLT';
 
         $labels = [
-            'name' => __("{$items}", 'institucionalmt'), // items en plural
-            'singular_name' => __("{$item}", 'institucionalmt'), // nombre en singular
-            'menu_name' => __("{$menu_name}"),
+            'name' => __("{$items}", 'RLT'), // items en plural
+            'singular_name' => __("{$item}", 'RLT'), // nombre en singular
+            'menu_name' => __("{$menu_name}", 'RLT'),
             'name_admin_bar' => __("{$item}"),
-            'add_new' => __('Añadir Nueva', 'rlt'),
+            'add_new' => __('Añadir Nueva', 'RLT'),
             'add_new_item' => __("Añadir Nueva {$item}"),
             'edit_item' => __("Editar {$item}"),
             'new_item' => __("Nueva {$item}"),
@@ -154,11 +154,14 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'editor', 'comments', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'post-formats'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => 'menu_rlt', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'            
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'rlt'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
+            'taxonomies' => array (
+                'rlt_taxonomy'
+            )
         ];
 
         register_post_type( 'instmt_rlt', $args );
@@ -207,11 +210,14 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'editor', 'comments', 'revisions', 'excerpt', 'page-attributes', 'thumbnail', 'post-formats'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => 'menu_ote', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'ote'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
+            'taxonomies' => array (
+                'ote_taxonomy'
+            )
         ];
 
         register_post_type( 'instmt_ote', $args );
@@ -420,14 +426,67 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'revisions', 'page-attributes', 'thumbnail'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => 'menu_rlt', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
             'show_in_nav_menus' => false, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
-            'rewrite' => array('slug' => 'viceministros'),
+            'rewrite' => array('slug' => 'representantes-locales'),
             'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_representante', $args );
+
+        flush_rewrite_rules();
+
+    }
+
+    public function encargados_ote(){
+
+        $item = 'Encargado OTE';
+        $items = 'Encargados OTE`s';
+        $menu_name = 'Encargados OTE`s';
+
+        $labels = [
+            'name' => __("{$items}", 'institucionalmt'), // items en plural
+            'singular_name' => __("{$item}", 'institucionalmt'), // nombre en singular
+            'menu_name' => __("{$menu_name}"),
+            'name_admin_bar' => __("{$item}"),
+            'add_new' => __('Añadir Nuevo', 'encargado_ote'),
+            'add_new_item' => __("Añadir Nuevo {$item}"),
+            'edit_item' => __("Editar {$item}"),
+            'new_item' => __("Nuevo {$item}"),
+            'all_items' => __("Todos los {$items}"),
+            'view_item' => __("Ver {$item}"),
+            'search_items' => __("Buscar {$items}"),
+            'not_found' => __("No se encontraron {$items}"),
+            'not_found_in_trash' => __("No se encontraron {$items} en la papelera"),
+            'parent_item_colon' => __("{$item} Padre:"),
+            'featured_image' => __("Fotografía del {$item}"),
+            'set_featured_image' => __('Establecer imagen de portada'),
+            'remove_featured_image' => __('Eliminar imagen de portada'),
+            'use_featured_image' => __('Usar como imagen de portada'),
+            'archives' => __("{$items}", 'Label para este tipo de publicación utilizado en los menus'),
+            'insert_into_item' => __("Añadir a este {$item}", 'Sobrescribir "Añadir a esta página o entrada" utilizado cuando agregamos un objeto a esta publicación'),
+            'filter_items_list' => __("Filtrar lista de {$items}"),
+            'items_list_navigation' => __("Navegación por lista de {$items}"),
+            'items_list'=> __("Listado de {$items}")
+        ];
+
+        $args = [
+            'labels' => $labels,
+            'description' => 'Contiene una lista de todos los Encargados de las OTE`s, con su información de contacto, estos estarán disponibles para ser asignados a una OTE',
+            'public' => true, // Se mostraran en el frontend
+            'has_archive' => false, // Si tendra pagina para listar este custom post type
+            'supports' => ['title', 'revisions', 'page-attributes', 'thumbnail'],
+            'capability_type' => 'post',
+            'show_ui' => true, // mostrar interfaz
+            'show_in_menu' => 'menu_ote', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_nav_menus' => false, // mostrar en el administrador de menus
+            'show_in_admin_bar' => true, // mostrar en la barra superior de admin
+            'rewrite' => array('slug' => 'encargados-ote'),
+            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+        ];
+
+        register_post_type( 'instmt_encargado_ote', $args );
 
         flush_rewrite_rules();
 

@@ -93,16 +93,20 @@ class InstitucionalMT_Taxonomy {
             'update_item' => 'Actualizar Zona',
             'add_new_item' => 'Agregar nueva Zona',
             'new_item_name' => 'Nuevo nombre de Zona',
-            'menu_name' => 'Zonas'
+            'menu_name' => __('Zonas', 'RLT')
         ];
     
         $args = [
+            'label' => 'RLT Zonas',
             'labels' => $labels,
             'hierarchical' => true,
             'sort' => true,
             'args' => ['orderby' => 'term_order'],        
             'rewrite' => ['slug' => 'zonas'],
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'show_in_nav_menus' => true,
+            'public' => true,
+            'show_ui' => true            
         ];
     
         register_taxonomy(

@@ -1,18 +1,18 @@
 <?php
 
-abstract class Instmt_Representantes_Locales_Metabox
+abstract class Instmt_Encargados_OTE_Metabox
 {
 
     public static function add()
     {
 
         $post_types = [
-            'instmt_representante'
+            'instmt_encargado_ote'
         ];
 
         add_meta_box(
-            'instmt_representante_details', // meta box id
-            'Datos del Representante Local', // meta box title
+            'instmt_encargado_ote_details', // meta box id
+            'Datos del Encargado', // meta box title
             [self::class, 'html'], // function callback
             $post_types, // string o array of CPT
             'advanced', // postion: normal, advanced, side
@@ -23,9 +23,9 @@ abstract class Instmt_Representantes_Locales_Metabox
     public static function html($post)
     {
 
-        wp_nonce_field('instmt_security_nonce', 'instmt_representante_nonce');
+        wp_nonce_field('instmt_security_nonce', 'instmt_encargado_ote_nonce');
 
-        $instmt_representante = get_post_meta($post->ID, '_instmt_representante', true);    
+        $instmt_representante = get_post_meta($post->ID, '_instmt_encargado_ote', true);    
         
         // echo "<pre>";
         // var_dump($instmt_representante);
@@ -37,21 +37,21 @@ abstract class Instmt_Representantes_Locales_Metabox
         $correo = isset($instmt_representante['correo']) ? esc_attr($instmt_representante['correo']) : '';              
 
         $html = "
-            <p>Datos del Representante</p>  
-            <label for='instmt_representante_nombre'>Nombre Completo</label>
-            <input type='text' class='instmt-input-group' name='instmt_representante[nombre]' id='instmt_representante_nombre' value='" . esc_attr($nombre) . "'>          
+            <p>Datos del Encargado</p>  
+            <label for='instmt_encargado_ote_nombre'>Nombre Completo</label>
+            <input type='text' class='instmt-input-group' name='instmt_encargado_ote[nombre]' id='instmt_encargado_ote_nombre' value='" . esc_attr($nombre) . "'>          
             <br>
-            <label for='instmt_representante_cargo'>Cargo</label>
-            <input type='text' class='instmt-input-group' name='instmt_representante[cargo]' id='instmt_representante_cargo' value='" . esc_attr($cargo) . "'>
+            <label for='instmt_encargado_ote_cargo'>Cargo</label>
+            <input type='text' class='instmt-input-group' name='instmt_encargado_ote[cargo]' id='instmt_encargado_ote_cargo' value='" . esc_attr($cargo) . "'>
         ";
 
         $html .= "            
             <br/>           
-            <label for='instmt_representante_flota'>Flota</label>
-            <input type='text' class='instmt-input-group' name='instmt_representante[flota]' id='instmt_representante_flota' value='" . esc_attr($flota) . "'>
+            <label for='instmt_encargado_ote_flota'>Flota</label>
+            <input type='text' class='instmt-input-group' name='instmt_encargado_ote[flota]' id='instmt_encargado_ote_flota' value='" . esc_attr($flota) . "'>
             <br/>           
-            <label for='instmt_representante_correo'>Correo</label>
-            <input type='email' class='instmt-input-group' name='instmt_representante[correo]' id='instmt_representante_correo' value='" . esc_attr($correo) . "'>
+            <label for='instmt_encargado_ote_correo'>Correo</label>
+            <input type='email' class='instmt-input-group' name='instmt_encargado_ote[correo]' id='instmt_encargado_ote_correo' value='" . esc_attr($correo) . "'>
         ";  
 
         echo $html;        
@@ -66,7 +66,7 @@ abstract class Instmt_Representantes_Locales_Metabox
             return;
         }
 
-        $nonce_value = isset($_POST['instmt_representante_nonce']) ? $_POST['instmt_representante_nonce'] : '';
+        $nonce_value = isset($_POST['instmt_encargado_ote_nonce']) ? $_POST['instmt_encargado_ote_nonce'] : '';
         $nonce_action = 'instmt_security_nonce';
 
         if (!isset($nonce_value)) {
@@ -95,7 +95,7 @@ abstract class Instmt_Representantes_Locales_Metabox
 
        
 
-        if (array_key_exists('instmt_representante', $_POST)) {
+        if (array_key_exists('instmt_encargado_ote', $_POST)) {
 
             // if( isset( $_POST['instmt_representante']['nombre'] ) && $_POST['instmt_representante']['nombre'] != "" ) {
             //     update_post_meta( $post_id, '_instmt_representante', $_POST['instmt_representante']['nombre'] );
@@ -128,12 +128,12 @@ abstract class Instmt_Representantes_Locales_Metabox
 
              update_post_meta(
                  $post_id,
-                  '_instmt_representante',
-                $_POST['instmt_representante']
+                  '_instmt_encargado_ote',
+                $_POST['instmt_encargado_ote']
             );
         }
     }
 }
 
-add_action('add_meta_boxes', ['Instmt_Representantes_Locales_Metabox', 'add']);
-add_action('save_post', ['Instmt_Representantes_Locales_Metabox', 'save']);
+add_action('add_meta_boxes', ['Instmt_Encargados_OTE_Metabox', 'add']);
+add_action('save_post', ['Instmt_Encargados_OTE_Metabox', 'save']);

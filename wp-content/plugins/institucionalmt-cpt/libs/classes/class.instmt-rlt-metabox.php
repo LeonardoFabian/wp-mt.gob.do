@@ -26,7 +26,10 @@ abstract class Instmt_RLT_Metabox
         wp_nonce_field('instmt_security_nonce', 'instmt_rlt_nonce');
 
         $instmt_rlt = get_post_meta($post->ID, '_instmt_rlt', true);
-        $representante = isset($instmt_rlt['representante']) ? $instmt_rlt['representante'] : '';
+        $representantel = isset($instmt_rlt['representante']) ? $instmt_rlt['representante'] : '';
+        $nombre = isset($instmt_rlt['nombre']) ? $instmt_rlt['nombre'] : '';
+        $representanteRLT = isset($instmt_rlt['representante_rlt']) ? $instmt_rlt['representante_rlt'] : '';
+        //$cargo = '';
         $cargo = isset($instmt_rlt['cargo']) ? $instmt_rlt['cargo'] : '';
         $direccion1 = isset($instmt_rlt['direccion_1']) ? $instmt_rlt['direccion_1'] : '';
         $direccion2 = isset($instmt_rlt['direccion_2']) ? $instmt_rlt['direccion_2'] : '';
@@ -38,31 +41,71 @@ abstract class Instmt_RLT_Metabox
         $extension2 = isset($instmt_rlt['extension_2']) ? $instmt_rlt['extension_2'] : '';
         $flota = isset($instmt_rlt['flota']) ? $instmt_rlt['flota'] : '';
         $correo = isset($instmt_rlt['correo']) ? $instmt_rlt['correo'] : '';
+        //$flota = '';
+       // $correo = '';
         $horario = isset($instmt_rlt['horario']) ? $instmt_rlt['horario'] : '';
         $iframe = isset($instmt_rlt['map_iframe']) ? $instmt_rlt['map_iframe'] : '';
         
+        $args = array(
+            'post_type' => 'instmt_representante',
+            'post_status' => 'publish',
+            'orderby' => 'title',
+            'order' => 'ASC',
+        );
+
+        $representante = new WP_Query( $args );    
         
+        // echo '<pre>';
+        // var_dump($representante);
+        // echo '</pre>';
+
+        $representanteActual = get_post( $representanteRLT, 'instmt_representante');               
 
         $html = "
-            <p>Datos del Representante</p>
-            <label for='instmt_rlt_representante'>Representante Local</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[representante]' id='instmt_rlt_representante' value=" . $representante . ">
+            <p>Datos del Representante</p>            
+            <label for='instmt_rlt_representante_rlt'>Cambiar Representante Local actual</label>
+            <select class='select-representante-rlt instmt-input-group' id='representante' name='instmt_rlt[representante_rlt]' value=''>
+                <option value=''> -- Seleccionar -- </option>";                             
+
+                while( $representante->have_posts() ) : $representante->the_post();
+
+                    $ID = get_the_ID();
+                    $name = get_the_title();
+
+                    // $r = get_post_meta( $ID, '_instmt_representante');   
+
+                    // echo '<pre>';
+                    // var_dump($r);
+                    // echo '</pre>';
+                    
+                    $html .= "<option value='". $ID . selected($representanteRLT, $ID, false) . "'>". $name ."</option>";
+
+                endwhile;
+
+                wp_reset_postdata();
+
+        $html .= "
+            </select>
+            <p class='description'> Listado de los Representantes Locales, añadidos en el menu 'Representantes Locales'.</p>
             <br>
-            <label for='instmt_rlt_cargo'>Cargo</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[cargo]' id='instmt_rlt_cargo' value=" . $cargo . ">
+            <label for='instmt_rep_nombre'>Representante Local</label>
+            <input type='text' class='instmt-input-group' name='instmt_rlt[nombre]' id='instmt_rep_nombre' value='" . $nombre . "' readonly >
+            <br>
+            <label for='instmt_rep_cargo'>Cargo</label>
+            <input type='text' class='instmt-input-group' name='instmt_rlt[cargo]' id='instmt_rep_cargo' value='" . $cargo . "' readonly>
         ";
 
         $html .= "
             <p>Dirección</p>
             <label for='instmt_rlt_direccion_1'>Dirección 1</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[direccion_1]' id='instmt_rlt_direccion_1' value=" . $direccion1 . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[direccion_1]' id='instmt_rlt_direccion_1' value='" . $direccion1 . "'>
             <label for='instmt_rlt_direccion_2'>Dirección 2</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[direccion_2]' id='instmt_rlt_direccion_2' value=" . $direccion2 . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[direccion_2]' id='instmt_rlt_direccion_2' value='" . $direccion2 . "'>
             <br/>
             <label for='instmt_rlt_sector'>Sector</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[sector]' id='instmt_rlt_sector' value=" . $sector . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[sector]' id='instmt_rlt_sector' value='" . $sector . "'>
             <label for='instmt_rlt_municipio'>Municipio</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[municipio]' id='instmt_rlt_municipio' value=" . $municipio . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[municipio]' id='instmt_rlt_municipio' value='" . $municipio . "'>
             <br/>
             <label for='instmt_rlt_provincia'>Provincia</label>
             <select class='instmt-input-group' name='instmt_rlt[provincia]' id='instmt_rlt_provincia'>
@@ -104,26 +147,26 @@ abstract class Instmt_RLT_Metabox
             <hr>
             <p><strong>Contacto</strong></p>            
             <label for='instmt_rlt_telefono'>Teléfono</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[telefono]' id='instmt_rlt_telefono' value=" . $telefono . ">           
+            <input type='text' class='instmt-input-group' name='instmt_rlt[telefono]' id='instmt_rlt_telefono' value='" . $telefono . "'>           
             <label for='instmt_rlt_extension_1'>Extensión 1</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[extension_1]' id='instmt_rlt_extension_1' value=" . $extension1 . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[extension_1]' id='instmt_rlt_extension_1' value='" . $extension1 . "'>
             <label for='instmt_rlt_extension_2'>Extensión 2</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[extension_2]' id='instmt_rlt_extension_2' value=" . $extension2 . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[extension_2]' id='instmt_rlt_extension_2' value='" . $extension2 . "'>
             <br>
-            <label for='instmt_rlt_flota'>Flota</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[flota]' id='instmt_rlt_flota' value=" . $flota . ">
+            <label for='instmt_rep_flota'>Flota</label>
+            <input type='text' class='instmt-input-group' name='instmt_rlt[flota]' id='instmt_rep_flota' value='" . $flota . "' readonly>
             <br/>           
-            <label for='instmt_rlt_correo'>Correo</label>
-            <input type='email' class='instmt-input-group' name='instmt_rlt[correo]' id='instmt_rlt_correo' value=" . $correo . ">
+            <label for='instmt_rep_correo'>Correo</label>
+            <input type='email' class='instmt-input-group' name='instmt_rlt[correo]' id='instmt_rep_correo' value='" . $correo . "' readonly>
         ";         
         
         $html .= "
             <br>
             <label for='instmt_rlt_map_iframe'>Código de Google Maps</label><br>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[map_iframe]' id='instmt_rlt_map_iframe' value=" . $iframe . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[map_iframe]' id='instmt_rlt_map_iframe' value='" . $iframe . "'>
             <br>
             <label for='instmt_rlt_horario'>Horario</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[horario]' id='instmt_rlt_horario' value=" . $horario . ">
+            <input type='text' class='instmt-input-group' name='instmt_rlt[horario]' id='instmt_rlt_horario' value='" . $horario . "'>
         "; 
 
         echo $html;        
@@ -151,6 +194,8 @@ abstract class Instmt_RLT_Metabox
         if (array_key_exists('instmt_rlt', $_POST)) {
 
             $_POST['instmt_rlt']['map_iframe'] = sanitize_text_field( $_POST['instmt_rlt']['map_iframe'] );
+            $_POST['instmt_rlt']['representante'] = sanitize_text_field( $_POST['instmt_rlt']['representante'] );
+            $_POST['instmt_rlt']['cargo'] = sanitize_text_field( $_POST['instmt_rlt']['cargo'] );
 
             update_post_meta(
                 $post_id,

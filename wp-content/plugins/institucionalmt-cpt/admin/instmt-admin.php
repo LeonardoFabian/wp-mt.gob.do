@@ -33,12 +33,12 @@ class InstitucionalMT_Admin
 
     public function institucionalmt_admin_enqueue_scripts( $hook ){
 
-        //var_dump($hook);
+        // var_dump($hook);
 
-        if( $hook != 'toplevel_page_instmt_settings' ){
-            //echo "<script>alert('Aqui no esta');</script>";
-            return;
-        }        
+        // if( $hook != 'toplevel_page_instmt_settings' && $hook != 'post.php' ){
+        //     //echo "<script>alert('Aqui no esta');</script>";
+        //     return;
+        // }        
 
         wp_enqueue_script( 'instmt_admin_plugin_scripts', $this->plugin_dir_url . 'js/admin-scripts.js', ['jquery'], $this->version, true );            
 
