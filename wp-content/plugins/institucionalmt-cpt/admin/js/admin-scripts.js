@@ -64,6 +64,44 @@ $representanteID.on('change', function(){
 
 });
 
+// Obtener datos de Representantes Locales
+var $encargadoID = $('#encargado');
+var $cargo = $('#instmt_enc_cargo');
+var $flota = $('#instmt_enc_flota');
+var $correo = $('#instmt_enc_correo');
+var $nombre = $('#instmt_enc_nombre');
+
+
+
+$encargadoID.on('change', function(){
+
+    //console.log($representante.val());
+
+    $.ajax({
+
+        url : instmt_object.url,
+        method : 'POST',
+        dataType : 'json',
+        data : {
+            action : 'cargar_datos_encargados_ote', // nombre del gancho a usar en instmt-core
+            nonce : instmt_object.security,
+            id : $encargadoID.val(),
+            tipo: 'cargando'
+        }, success: function ( data ){
+
+            console.log(data);
+
+            $cargo.val(data.cargo);
+            $flota.val(data.flota);
+            $correo.val(data.correo);     
+            $nombre.val(data.nombre);    
+
+        }
+
+    });
+
+});
+
    
 
 });

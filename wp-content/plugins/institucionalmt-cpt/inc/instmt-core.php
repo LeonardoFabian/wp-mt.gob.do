@@ -133,6 +133,7 @@ class InstitucionalMT_Core {
         // Ajax
         $this->loader->add_action('wp_ajax_admin_search', $this->ajax, 'in_admin_search' );
         $this->loader->add_action('wp_ajax_cargar_datos_representantes', $this->ajax, 'ajax_cargar_datos_representantes' );
+        $this->loader->add_action('wp_ajax_cargar_datos_encargados_ote', $this->ajax, 'ajax_cargar_datos_encargados_ote' );
 
     }
 

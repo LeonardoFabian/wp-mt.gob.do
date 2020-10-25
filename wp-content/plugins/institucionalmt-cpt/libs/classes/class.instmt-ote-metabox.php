@@ -56,7 +56,7 @@ abstract class Instmt_OTE_Metabox
         $encargado = new WP_Query( $args );    
         
         // echo '<pre>';
-        // var_dump($representante);
+        // var_dump($encargado);
         // echo '</pre>';
 
         $encargadoActual = get_post( $encargadoOTE, 'instmt_encargado_ote');               
@@ -72,7 +72,7 @@ abstract class Instmt_OTE_Metabox
                     $ID = get_the_ID();
                     $name = get_the_title();
 
-                    // $r = get_post_meta( $ID, '_instmt_encargado_ote');   
+                     $r = get_post_meta( $ID, '_instmt_encargado_ote');   
 
                     // echo '<pre>';
                     // var_dump($r);

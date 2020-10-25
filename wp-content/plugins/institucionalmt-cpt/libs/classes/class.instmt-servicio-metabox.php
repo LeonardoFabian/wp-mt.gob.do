@@ -41,6 +41,7 @@ abstract class Instmt_Servicio_Metabox
         $area_responsable = isset($instmt_service['area_responsable']) ? $instmt_service['area_responsable'] : '';
         $requisitos = isset($instmt_service['requisitos']) ? $instmt_service['requisitos'] : '';
         $procedimiento = isset($instmt_service['procedimiento']) ? $instmt_service['procedimiento'] : '';
+        $procedimiento_online = isset($instmt_service['procedimiento_online']) ? $instmt_service['procedimiento_online'] : '';
         $informacion_adicional = isset($instmt_service['informacion_adicional']) ? $instmt_service['informacion_adicional'] : '';
         $url = isset($instmt_service['servicio_url']) ? $instmt_service['servicio_url'] : '';
 
@@ -143,19 +144,28 @@ abstract class Instmt_Servicio_Metabox
 
         $html5= "
             <hr>            
-            <h3>Procedimiento:</h3>
+            <h3>Procedimiento (Modalidad Presencial):</h3>
         ";
 
         echo $html5;
 
         wp_editor($procedimiento, 'instmt_servicio_procedimiento', array('textarea_name' => 'instmt_servicio[procedimiento]', 'textarea_rows' => 5, 'media_buttons' => false, 'editor_class' => 'editor-procedimiento'));
 
-        $html6 = "
+        $html6= "
+            <hr>            
+            <h3>Procedimiento (Modalidad En Linea):</h3>
+        ";
+
+        echo $html6;
+
+        wp_editor($procedimiento_online, 'instmt_servicio_procedimiento_online', array('textarea_name' => 'instmt_servicio[procedimiento_online]', 'textarea_rows' => 5, 'media_buttons' => false, 'editor_class' => 'editor-procedimiento-online'));
+
+        $html7 = "
             <hr>            
             <h3>Informacion adicional:</h3>
         ";
 
-        echo $html6;
+        echo $html7;
 
         wp_editor($informacion_adicional, 'instmt_servicio_informacion_adicional', array('textarea_name' => 'instmt_servicio[informacion_adicional]', 'textarea_rows' => 5, 'media_buttons' => false, 'editor_class' => 'editor-informacion-adicional'));
     }

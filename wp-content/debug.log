@@ -5506,3 +5506,8 @@ Stack trace:
 [24-Oct-2020 16:48:37 UTC] PHP Notice:  Undefined index: country-name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\template-parts\rlt\content.php on line 99
 [24-Oct-2020 16:48:37 UTC] PHP Notice:  Undefined index: country-name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\template-parts\rlt\content.php on line 99
 [24-Oct-2020 16:48:37 UTC] PHP Notice:  Undefined index: country-name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\template-parts\rlt\content.php on line 99
+[25-Oct-2020 00:01:49 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
+[25-Oct-2020 00:04:15 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
+[25-Oct-2020 00:04:35 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
+[25-Oct-2020 00:29:09 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
+[25-Oct-2020 00:29:34 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197

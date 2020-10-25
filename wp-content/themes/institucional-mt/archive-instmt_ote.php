@@ -1,6 +1,4 @@
-
-
-<!--***** SERVICIOS POR TAXONOMIA *******-->
+<!--// OTE //-->
 
 <?php
 get_header();
@@ -15,37 +13,11 @@ get_header();
     </div>
 </div><!-- the_posts-header -->
 
-<div class="container py-5">
+<div class="container py-5">   
 
-    <div class="row">
+
         <?php
-/*
-        $terms = get_terms('dependencias_taxonomy', array(            
-            'orderby' => 'name',
-            'order' => 'asc',
-            'parent' => 0,
-            'hide_empty' => 0,
-            
-        ));
-        
-        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-            $count = count( $terms );
-            $i = 0;
-            $term_list = '<div class="col-xl-3">';
-            foreach ( $terms as $term ) {
-                $i++;
-                $term_list .= '<a href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '"><h2>' . $term->name . '</h2></a>';
-                if ( $count != $i ) {
-                    $term_list .= ' &middot; ';
-                }
-                else {
-                    $term_list .= '</div>';
-                }
-            }
-            echo $term_list;
-        }          
-        */
-
+		
         $page = ( get_query_var('paged') ) ? get_query_var( 'paged' ) : 1;
         $taxonomy = 'ote_taxonomy';
         $offset = ( $page-1) * 100;
@@ -76,38 +48,39 @@ get_header();
             ) );
             ?>
 
-            <?php if( $query->have_posts() ) : ?>
+            <?php if( $query->have_posts() ) : ?>          
+                   
 
-                <div class="col-xl-12">
 
-                    <a href="<?php esc_url( get_term_link( $term ) ); ?>"><h2><?php echo $term->name; ?></h2></a>
+                        <div class="mb-5">
+                            <a href="<?php esc_url( get_term_link( $term ) ); ?>"><h2><?php echo $term->name; ?></h2></a>
+                        </div>
+                        
+                        <div class="ote-cards row card-deck mb-5">
+                            <?php while($query->have_posts() ) : $query->the_post(); ?>    
 
-                    <ul class="list-unstyled">
+                            <div class="col-md-4">
+                        
+                                
+                                <?php get_template_part('template-parts/ote/content', get_post_format()); ?>
 
-                        <?php while($query->have_posts() ) : $query->the_post(); ?>
+                            </div>
 
-                            <li><a href="<?php echo get_the_permalink(); ?>"><?php echo get_the_title(); ?></a></li>
+                            <?php endwhile; ?>
 
-                        <?php endwhile; ?>
-                    
-                    </ul>
+                        </div>
 
-                </div>
+                        <?php wp_reset_postdata(); ?>                             
 
-                <?php wp_reset_postdata(); ?>
+                
 
             <?php endif; ?>
 
+
             <?php } ?>
 
-    </div>
 
-    <div class="row posts-pagination justify-content-center">
-        <?php
-        
-        //echo bootstrap_pagination();
-        ?>
-    </div>
+    
 
 </div>
 

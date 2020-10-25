@@ -48,7 +48,7 @@ class institucionalmt_search_widget extends WP_Widget
         <div class="">
             <form method="get" action="<?php echo $_SERVER['PHP_SELF']; ?>">
                 <div class="input-group">
-                    <input class="form-control py-2 " type="search" value="<?php echo esc_html($text); ?>" id="buscador-noticias" name="buscador-noticias" placeholder="<?php echo apply_filters('title', $instance['title']); ?>">
+                    <input class="form-control py-2 " type="search" value="<?php echo esc_html($text); ?>" id="s" name="s" placeholder="<?php echo apply_filters('title', $instance['title']); ?>">
                     <span class="input-group-append">
                         <button class="btn btn-outline-secondary" type="submit">
                             <i class="fa fa-search"></i>
