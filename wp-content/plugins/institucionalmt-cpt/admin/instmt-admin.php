@@ -23,10 +23,12 @@ class InstitucionalMT_Admin
 
         //var_dump($hook);
 
-        if ($hook != 'post.php') {
-            return;
-        }
+        // if ($hook != 'post.php') {
+        //     return;
+        // }
 
+        wp_enqueue_style( 'bootstrap_animate_css', $this->plugin_dir_url . 'inc/animate.css', [], $this->version, 'all' );                   
+        wp_enqueue_style( 'bootstrap_admin_css', $this->plugin_dir_url . 'inc/bootstrap-3.3.7-dist/css/bootstrap.min.css', [], $this->version, 'all' );                   
         wp_enqueue_style( 'instmt_admin_plugin_styles', $this->plugin_dir_url . 'css/admin-styles.css', [], $this->version, 'all' );                   
 
     }
@@ -40,6 +42,8 @@ class InstitucionalMT_Admin
         //     return;
         // }        
 
+        wp_enqueue_script( 'bootstrap_admin_js', $this->plugin_dir_url . 'inc/bootstrap-3.3.7-dist/js/bootstrap.min.js', ['jquery'], $this->version, true );  
+        wp_enqueue_script( 'bootstrap_admin_notify', $this->plugin_dir_url . 'inc/bootstrap-notify/bootstrap-notify.min.js', ['jquery'], $this->version, true );  
         wp_enqueue_script( 'instmt_admin_plugin_scripts', $this->plugin_dir_url . 'js/admin-scripts.js', ['jquery'], $this->version, true );            
 
         wp_localize_script( 
@@ -48,6 +52,7 @@ class InstitucionalMT_Admin
             [
                 'url' => admin_url( 'admin-ajax.php' ), // return the route wp-admin/admin-ajax.php
                 'security' => wp_create_nonce( 'instmt_ajax_security_nonce' ),
+                'current_user_id' => get_current_user_id()
             ]
         );
 

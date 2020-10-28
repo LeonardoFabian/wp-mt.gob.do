@@ -24,9 +24,15 @@ y compartir lo aprendido con los demás.
 }
 */
 
-/* *{
-    border: 1px solid #ff6600;
-} */
+*{
+    /* border: 1px solid #ff6600; */
+    margin: 0;
+    padding: 0;
+} 
+
+.main-container {
+    max-width: 84% !important;
+}
 
 img, button, .btn, .btn-social {
     transition:all .5s ease-in-out;
@@ -552,10 +558,10 @@ box-shadow: 0px 0px 45px 0px rgba(102,102,102,0.20);
 }
 
 .procedimiento-online-content {
-    height: 241px;
+    height: 318px;
     position: absolute;
-    left: 30px;
-    top: 69px;
+    left: 3px;
+    top: 58px;
     z-index: 10;
     font-size: 0px;
     overflow: hidden;
@@ -563,7 +569,7 @@ box-shadow: 0px 0px 45px 0px rgba(102,102,102,0.20);
 
 .loopscroll {
     height:500px;
-  width:500px;
+  width:553px;
   overflow:hidden;
   /* background-image:url(http://picsum.photos/500/500/?image=1063);  */
   background-repeat:no-repeat;
@@ -578,15 +584,23 @@ box-shadow: 0px 0px 45px 0px rgba(102,102,102,0.20);
    
 }
 
+.opacity {
+    opacity: 0.7;
+}
+
+.opacity:hover{
+    opacity: 1;
+}
+
 @keyframes backgroundloop {
      0% {
       background-position: 0 0;
     }
     50% {
-      background-position:0 -400px;
+      background-position:0 -350px;
     } 
     100% {
-        background-position:-400 0px;
+        background-position:-350 0px;
       } 
     
   }

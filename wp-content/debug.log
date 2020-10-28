@@ -5511,3 +5511,594 @@ Stack trace:
 [25-Oct-2020 00:04:35 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
 [25-Oct-2020 00:29:09 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
 [25-Oct-2020 00:29:34 UTC] PHP Notice:  Undefined index: encargado in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\libs\classes\class.instmt-ote-metabox.php on line 197
+[25-Oct-2020 19:25:58 UTC] PHP Notice:  Undefined variable: urlImage in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\template-parts\servicio\content.php on line 23
+[25-Oct-2020 19:25:59 UTC] PHP Notice:  Undefined variable: urlImage in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\template-parts\servicio\content.php on line 23
+[25-Oct-2020 22:12:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:142
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(32): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 142
+[25-Oct-2020 22:12:28 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:142
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(32): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 142
+[25-Oct-2020 22:14:29 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:142
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(32): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 142
+[25-Oct-2020 22:16:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:142
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(32): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 142
+[25-Oct-2020 22:18:31 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:19:54 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:20:10 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:22:11 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:24:12 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:26:13 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:28:14 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:30:15 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:36:41 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:36:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\www\wp- in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:36:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin-ajax.php(22): require_once('C:\\xampp\\htdocs...')
+#7 {main}
+  thrown in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:37:49 UTC] PHP Fatal error:  Uncaught Error: Call to undefined method InstitucionalMT_Loader::add_filter() in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php:148
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php(34): InstitucionalMT_Core->institucionalmmt_define_admin_hooks()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(266): InstitucionalMT_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\institucionalmt-cpt.php(271): run_institucionalmt_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(107): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\admin.php(34): require_once('C:\\xampp\\htdocs...')
+#7 C:\xampp\htdocs\www\wp- in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-core.php on line 148
+[25-Oct-2020 22:53:36 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:55:37 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:56:34 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:56:40 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:56:45 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:56:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:56:55 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:57:50 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:57:53 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:57:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:58:03 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:58:08 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 22:58:14 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:00:15 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:02:16 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:02:24 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:02:30 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:04:31 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:05:58 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:02 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:07 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:12 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:17 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:22 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:27 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:06:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[25-Oct-2020 23:08:32 UTC] PHP Fatal error:  Uncaught ArgumentCountError: Too few arguments to function InstitucionalMT_Heartbeat::heartbeat_receive_and_respond(), 1 passed in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 289 and exactly 3 expected in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php:5
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(289): InstitucionalMT_Heartbeat->heartbeat_receive_and_respond(Array)
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(206): WP_Hook->apply_filters(Array, Array)
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php(3398): apply_filters('heartbeat_recei...', Array, Array, 'edit-instmt_rlt')
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(287): wp_ajax_heartbeat('')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php(311): WP_Hook->apply_filters('', Array)
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\plugin.php(478): WP_Hook->do_action(Array)
+#6 C in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 5
+[27-Oct-2020 01:10:10 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\update.php on line 403
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 122
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 127
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 132
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 138
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 143
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 147
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[27-Oct-2020 01:10:35 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 122
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 127
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 132
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 138
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 143
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 147
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[27-Oct-2020 01:13:12 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[27-Oct-2020 12:58:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\update.php on line 168
+[27-Oct-2020 12:58:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\update.php on line 403
+[27-Oct-2020 12:58:56 UTC] PHP Warning:  An unexpected error occurred. Something may be wrong with WordPress.org or this server&#8217;s configuration. If you continue to have problems, please try the <a href="https://wordpress.org/support/forums/">support forums</a>. (WordPress could not establish a secure connection to WordPress.org. Please contact your server administrator.) in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\update.php on line 607
+[28-Oct-2020 04:06:37 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:08:38 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:10:39 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:12:40 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:14:41 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:16:42 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:18:43 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:18:59 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:19:34 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:19:39 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:19:52 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:20:02 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:20:08 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:20:44 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:22:09 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:22:45 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:24:11 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:24:46 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:26:12 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:26:48 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:28:13 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:28:48 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:30:14 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:30:50 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:32:15 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:32:51 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:34:16 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:34:51 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:36:17 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:36:52 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:38:18 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:38:54 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:40:19 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:40:55 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:42:20 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:42:55 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:44:21 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:44:56 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:46:22 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:46:58 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:48:23 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:48:58 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:50:24 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:51:00 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:52:23 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:53:00 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:54:24 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:55:01 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:56:24 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:57:02 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:58:23 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 04:59:01 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:00:24 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:01:01 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:02:25 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:03:01 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:04:25 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:05:03 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:06:26 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:07:04 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:08:26 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:09:05 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:10:28 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:11:05 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:12:29 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:13:07 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:14:30 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:15:07 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:16:30 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:17:08 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:18:31 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:19:09 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:20:32 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:21:10 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:22:33 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:23:12 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:24:35 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:25:12 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:26:36 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:27:14 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:28:37 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:29:15 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:30:38 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:31:16 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:32:39 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:33:16 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:34:39 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:35:18 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:36:40 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:37:19 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:38:42 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:39:20 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:40:43 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:41:20 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:42:44 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:43:22 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:44:45 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:45:23 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:46:46 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:47:24 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:48:46 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:49:25 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:50:47 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:51:26 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:52:48 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:53:27 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:54:49 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:55:29 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:56:50 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:57:29 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:58:51 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 05:59:30 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:00:52 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:01:31 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:02:53 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:03:32 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:04:54 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:05:31 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:06:54 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:07:32 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:08:54 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:09:33 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:10:55 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28
+[28-Oct-2020 06:11:33 UTC] PHP Notice:  Undefined index: user_update in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\instmt-heartbeat.php on line 28

@@ -47,29 +47,29 @@ abstract class Instmt_Servicio_Metabox
 
         $html = "
             <label for='instmt_servicio_precio'>Precio</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[precio]' id='instmt_servicio_precio' value=" . $precio . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[precio]' id='instmt_servicio_precio' value='" . $precio . "'>
         ";
 
         $html .= "
             <p>Teléfono</p>
             <label for='instmt_servicio_telefono_1'>Teléfono 1</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_1]' id='instmt_servicio_telefono_1' value=" . $telefono1 . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_1]' id='instmt_servicio_telefono_1' value='" . $telefono1 . "'>
             <label for='instmt_servicio_telefono_2'>Teléfono 2</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_2]' id='instmt_servicio_telefono_2' value=" . $telefono2 . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_2]' id='instmt_servicio_telefono_2' value='" . $telefono2 . "'>
             <br/>
             <p>Extensiones</p>
             <label for='instmt_servicio_extension_1'>Extensión 1</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_1]' id='instmt_servicio_extension_1' value=" . $extension1 . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_1]' id='instmt_servicio_extension_1' value='" . $extension1 . "'>
             <label for='instmt_servicio_extension_2'>Extensión 2</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_2]' id='instmt_servicio_extension_2' value=" . $extension2 . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_2]' id='instmt_servicio_extension_2' value='" . $extension2 . "'>
             <label for='instmt_servicio_extension_3'>Extensión 3</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_3]' id='instmt_servicio_extension_3' value=" . $extension3 . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[extension_3]' id='instmt_servicio_extension_3' value='" . $extension3 . "'>
             <br/>
             <p>Correo Eléctronico</p>
             <label for='instmt_servicio_correo_1'>Correo 1</label>
-            <input type='email' class='instmt-input-group' name='instmt_servicio[correo_1]' id='instmt_servicio_correo_1' value=" . $correo1 . ">
+            <input type='email' class='instmt-input-group' name='instmt_servicio[correo_1]' id='instmt_servicio_correo_1' value='" . $correo1 . "'>
             <label for='instmt_servicio_correo_2'>Correo 2</label>
-            <input type='email' class='instmt-input-group' name='instmt_servicio[correo_2]' id='instmt_servicio_correo_2' value=" . $correo2 . ">
+            <input type='email' class='instmt-input-group' name='instmt_servicio[correo_2]' id='instmt_servicio_correo_2' value='" . $correo2 . "'>
         ";
 
         $html .= "
@@ -101,13 +101,13 @@ abstract class Instmt_Servicio_Metabox
         $html .= "
             <br>
             <label for='instmt_servicio_tiempo_respuesta'>Tiempo de respuesta</label>
-            <input type='text' class='instmt-input-group' name='instmt_servicio[tiempo_respuesta]' id='instmt_servicio_tiempo_respuesta' value=" . $tiempo_respuesta . ">
+            <input type='text' class='instmt-input-group' name='instmt_servicio[tiempo_respuesta]' id='instmt_servicio_tiempo_respuesta' value='" . $tiempo_respuesta . "'>
         ";       
         
         $html .= "
             <br>
             <label for='instmt_servicio_url'>URL del Servicio</label>
-            <input type='url' class='instmt-input-group' name='instmt_servicio[url]' id='instmt_servicio_url' value=" . esc_url( $url ) . ">
+            <input type='url' class='instmt-input-group' name='instmt_servicio[url]' id='instmt_servicio_url' value='" . esc_url( $url ) . "'>
         "; 
 
         echo $html;
@@ -189,6 +189,9 @@ abstract class Instmt_Servicio_Metabox
         }
 
         if (array_key_exists('instmt_servicio', $_POST)) {
+
+            $_POST['instmt_servicio']['url']  = filter_input( INPUT_POST, $_POST['instmt_servicio']['url'], FILTER_VALIDATE_URL );
+
             update_post_meta(
                 $post_id,
                 '_instmt_servicio',

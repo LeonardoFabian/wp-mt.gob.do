@@ -16,11 +16,13 @@ foreach ($datos as $key => $dato) {
 
 
         <?php
+
         $url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 
         echo '<div class="d-flex text-left text-light h-100 imagen-cabecera" style="background: linear-gradient( rgba(39, 128, 196, 0.55), rgba(0, 56, 118, 0.75) ), url(' . $url . ');repeat: no-repeat;background-size:cover;background-position: center;background-attachment: fixed;">';
+                                              
         ?>
-        <div class="container align-self-center">
+        <div class="container align-self-center" style="z-index:999;">
             <div class="">
                 <h2 class="entry-header-title"><?php the_title(); ?></h2>
                 <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
@@ -31,10 +33,11 @@ foreach ($datos as $key => $dato) {
         </div>
 
     </div>
-    </div><!-- entry-header -->
+
+</div>
 
 
-    <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class('pb-5'); ?>>
 
         <div id="single-post-wrapper" class="single-post-wrapper">
 
@@ -219,22 +222,24 @@ foreach ($datos as $key => $dato) {
                             <div class="row mb-5">
                                 <?php if ($dato['procedimiento_online'] != '') : ?>
                                     <div class="my-3 px-4 py-5" style="width:50%; background: #ffffff;">
-                                        <tr class="text-left">
-                                            <th scope="row" class="px-0 ">  
-                                                <i class="fas fa-laptop" style="font-size:4em;"></i>
-                                            </th>
-                                            <td class="text-left">                                                                              
-                                                <h3>Procedimiento</h3>      
-                                                <span>(Modalidad En Linea)</span>                                                                            
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td>
-                                            <div class="online lead text-justify mb-3">
-                                                    <p><?php echo $dato['procedimiento_online']; ?></p>
-                                                </div>  
-                                            </td>
-                                        </tr>
+                                        <table>
+                                            <tr class="text-left">
+                                                <th scope="row" class="px-0 text-center">  
+                                                    <i class="fas fa-laptop" style="font-size:4em;"></i>
+                                                </th>
+                                                <td class="text-left">                                                                              
+                                                    <h3>Procedimiento</h3>      
+                                                    <span>(Modalidad En Linea)</span>                                                                            
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td colspan="2" style="padding-top:16px;">
+                                                    <div class="online lead text-justify mb-3 px-4">
+                                                        <p><?php echo $dato['procedimiento_online']; ?></p>
+                                                    </div>  
+                                                </td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 <?php endif; ?>                               
                                 <div class="my-3 text-center start-animation">
@@ -249,6 +254,11 @@ foreach ($datos as $key => $dato) {
                                             <!-- <div class="loopscroll">
                                             <span style="background-image: url(<?php echo get_template_directory_uri(); ?>/admin/image/services/<?php echo $post->ID ?>/img.png);"></span> 
                                             </div> -->
+                                        </div>
+                                    </div>
+                                    <div class="row text-center pt-5">
+                                        <div class="col-xl-12 col-md-12 mb-5 justify-content-center">
+                                            <a href="<?php echo $dato['url']; ?>" class="btn btn-lg bg-secondary-color text-light"><i class="fas fa-link"></i>Acceder al Servicio</a>
                                         </div>
                                     </div>
                                 </div>
@@ -301,13 +311,7 @@ foreach ($datos as $key => $dato) {
                             <?php the_tags('<span class="tag"><i class="fa fa-tag"></i>', '</span><span class="tag"><i class="fa fa-tag"></i>', '</span>'); ?>
                         </div>
 
-
-
-                        <div class="row text-center">
-                            <div class="col-xl-12 col-md-12 mb-5 justify-content-center">
-                                <a href="" class="btn btn-lg bg-secondary-color text-light"><i class="fas fa-link"></i>Acceder al Servicio</a>
-                            </div>
-                        </div>
+                        
 
                         <div class="comments-count my-3">
                             <span class="comment">

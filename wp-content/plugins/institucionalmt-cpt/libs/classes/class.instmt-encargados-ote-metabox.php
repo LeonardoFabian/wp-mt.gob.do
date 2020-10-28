@@ -113,7 +113,6 @@ abstract class Instmt_Encargados_OTE_Metabox
             // $_POST['instmt_representante']['cargo'] = sanitize_text_field( $_POST['instmt_representante']['cargo'] );
             // $_POST['instmt_representante']['correo'] = sanitize_email( $_POST['instmt_representante']['correo'] );
 
-                              
             
 
             // if( isset( $_POST['my_meta_box_text'] ) )

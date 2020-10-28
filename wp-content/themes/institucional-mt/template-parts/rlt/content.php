@@ -42,76 +42,80 @@ foreach ($datos as $key => $dato) {
                 <!-- Title -->
                 <h5 class="map-card-title card-title h5 text-left"><?php echo get_the_title(); ?></h5>
                                
-
-                <div id="collapseVCard-<?php echo $post->ID ?>" class="collapse">
-
                 <?php if ($dato['representante_rlt'] != '') { ?>
 
-                    <div class="container">
-                        <div class="row my-3">
-                            <div class="col-2 agent align-self-center float-left">
-                                <img src="<?php echo get_template_directory_uri(); ?>/admin/image/domo-dark.svg" class="img-fluid mx-auto d-block" style="min-width: 30px;">
-                            </div>
-                            <div class="col-10">
-                                <span class="card-subtitle text-left">
-                                    <?php echo $dato['nombre']; ?><br>
-                                    <span class="card-title-desc text-muted"><?php echo $dato['cargo']; ?></span>
-                                </span>
-                            </div>
-                        </div>
-                    </div>
+<div class="container">
+    <div class="row my-3">
+        <div class="col-2 agent align-self-center float-left">
+            <img src="<?php echo get_template_directory_uri(); ?>/admin/image/domo-dark.svg" class="img-fluid mx-auto d-block" style="min-width: 30px;">
+        </div>
+        <div class="col-10">
+            <span class="card-subtitle text-left">
+                <?php echo $dato['nombre']; ?><br>
+                <span class="card-title-desc text-muted"><?php echo $dato['cargo']; ?></span>
+            </span>
+        </div>
+    </div>
+</div>
 
-                <?php } ?> 
+<?php } ?> 
+
+                <div id="collapseVCard-<?php echo $post->ID ?>" class="collapse">
+                
 
                     <table class="table table-borderless">
 
                         <tbody>
 
                             <?php if($dato['telefono'] != '') : ?>
-                            <tr>
+                            <tr class="opacity">
                                 <th scope="row" class="px-0 ">
                                     <i class="fa fa-phone"></i>
                                 </th>
-                                <td class="text-left text-muted">
+                                <td class="text-left">
+                                <span><strong>Teléfono</strong></span><br>
                                     <a class="tel text-muted" href="tel:+1<?php echo $dato['telefono'] ?>"><?php echo $dato['telefono']; ?></a>
                                     <?php if($dato['extension_1'] != '' ) : ?>
-                                        &nbsp;Ext.:<span><?php echo $dato['extension_1'] ?></span>
+                                        &nbsp;Ext.:&nbsp;<span class="text-muted"><?php echo $dato['extension_1'] ?></span>
                                     <?php endif; ?>
                                     <?php if($dato['extension_2'] != '' ) : ?>
-                                        &nbsp;|&nbsp;<span><?php echo $dato['extension_2'] ?></span>
+                                        &nbsp;|&nbsp;<span class="text-muted"><?php echo $dato['extension_2'] ?></span>
                                     <?php endif; ?>
                                 </td>
                             </tr>
                             <?php endif; ?>
 
                             <?php if($dato['flota'] != '') : ?>
-                            <tr>
+                                <tr class="opacity">
                                 <th scope="row" class="px-0 ">
                                     <i class="fa fa-mobile"></i>
                                 </th>
                                 <td class="text-left">
+                                <span><strong>Flota</strong></span><br>
                                     <a class="flota text-muted" href="tel:+1<?php echo $dato['flota'] ?>"><?php echo $dato['flota']; ?></a>
                                 </td>
                             </tr>
                             <?php endif; ?>
 
                             <?php if($dato['correo'] != '') : ?>
-                            <tr class="mt-1">
+                            <tr class="opacity mt-1">
                                 <th scope="row" class="px-0 ">
                                     <i class="far fa-envelope"></i>
                                 </th>
                                 <td class=" text-left">
+                                <span><strong>Correo</strong></span><br>
                                     <a class="correo text-muted" href="mailto:<?php echo $dato['correo'] ?>">&nbsp;<?php echo $dato['correo']; ?></a>
                                 </td>
                             </tr>
                             <?php endif; ?>
 
                             <?php if($dato['direccion_1'] != '') : ?>
-                            <tr class="mt-1">
+                            <tr class="mt-1 opacity">
                                 <th scope="row" class="px-0 ">
                                     <i class="fas fa-map-marker-alt"></i>
                                 </th>
                                 <td class="text-left">
+                                <span><strong>Dirección</strong></span><br>
                                     <address class="direccion-rlt">
                                         <span class="calle"><?php echo $dato['direccion_1'] ?></span>
                                         <?php if($dato['direccion_2'] != '') : ?><span class="referencia"><?php echo ", " . $dato['direccion_2'] ?></span><?php endif; ?>
@@ -122,8 +126,8 @@ foreach ($datos as $key => $dato) {
                             </tr>
                             <?php endif; ?>                            
 
-                            <?php if($dato['horario'] != '') : ?>
-                            <tr class="mt-1">
+                            <!-- <?php if($dato['horario'] != '') : ?>
+                            <tr class="mt-1 opacity">
                                 <th scope="row" class="px-0 ">
                                     <i class="far fa-clock"></i>
                                 </th>
@@ -131,7 +135,7 @@ foreach ($datos as $key => $dato) {
                                     <?php echo $dato['horario']; ?>
                                 </td>
                             </tr>
-                            <?php endif; ?>
+                            <?php endif; ?> -->
 
                         </tbody>
 

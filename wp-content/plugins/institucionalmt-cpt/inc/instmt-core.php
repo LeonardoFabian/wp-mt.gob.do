@@ -22,6 +22,10 @@ class InstitucionalMT_Core {
     protected $http;
     protected $ajax;
 
+    protected $heartbeat;
+
+    protected $online;
+
     public function __construct(){
 
         $this->version = '1.0.0';
@@ -52,6 +56,10 @@ class InstitucionalMT_Core {
         require_once $this->plugin_dir_path . 'instmt-http.php';
         require_once $this->plugin_dir_path . 'instmt-ajax.php';
 
+        require_once $this->plugin_dir_path . 'instmt-heartbeat.php';
+
+        require_once $this->plugin_dir_path . 'instmt-online.php';
+
         $this->loader = new InstitucionalMT_Loader;
         $this->taxonomy = new InstitucionalMT_Taxonomy;
         $this->admin = new InstitucionalMT_Admin( $this->version );
@@ -68,6 +76,10 @@ class InstitucionalMT_Core {
         $this->roles = new InstitucionalMT_Roles;
         $this->http = new InstitucionalMT_Http;
         $this->ajax = new InstitucionalMT_Ajax;
+
+        $this->heartbeat = new InstitucionalMT_Heartbeat;
+
+        $this->online = new InstitucionalMT_User_Online;
         
     }
 
@@ -134,6 +146,18 @@ class InstitucionalMT_Core {
         $this->loader->add_action('wp_ajax_admin_search', $this->ajax, 'in_admin_search' );
         $this->loader->add_action('wp_ajax_cargar_datos_representantes', $this->ajax, 'ajax_cargar_datos_representantes' );
         $this->loader->add_action('wp_ajax_cargar_datos_encargados_ote', $this->ajax, 'ajax_cargar_datos_encargados_ote' );
+
+        // Peticiones Ajax usuario no logueado 'wp_ajax_nopriv'
+        // $this->loader->add_action('wp_ajax_nopriv_ACTION', $this->ajax, 'FUNCTION' );
+
+        // Agregando filtros
+        //$this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_receive_and_respond', 10, 3 );
+
+        // Hook de login y logout
+        $this->loader->add_action('wp_login', $this->online, 'conectado', 10, 2 );
+        $this->loader->add_action('wp_logout', $this->online, 'desconectado' );
+        $this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_notificacion', 10, 3 );
+
 
     }
 

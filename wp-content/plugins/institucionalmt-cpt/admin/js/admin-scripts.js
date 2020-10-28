@@ -102,6 +102,69 @@ $encargadoID.on('change', function(){
 
 });
 
+// Heartbeat API
+
+wp.heartbeat.interval('fast'); // fast = 15 seg
+
+$(document)
+    // .on( 'heartbeat-send', function( event, data ){
+
+    //     data.nombre = 'Leonardo';
+
+    //     console.log('Ejecutando evento heartbeat-send');
+
+    // })
+    // .on( 'heartbeat-tick.instmt', function( event, data ){
+
+    //     if( data.hasOwnProperty( 'mensaje' ) ) {          
+
+    //         console.log( data.mensaje );
+    //         console.log( data.screen_id );
+
+    //     }        
+
+    // })
+    .on( 'heartbeat-tick.instmt_notificacion', function( event, data ){
+
+        if( data.hasOwnProperty( 'instmt_notificacion' ) ) {          
+
+            if(data.instmt_notificacion == 'true'){
+
+                $.notify({
+                    icon    :   data.updater.avatar,
+                    title   :   data.updater.display_name,
+                    message :   'Ha actualizado los datos de ' + data.user_updated.display_name
+                }, {
+                    placement: {
+                        from    :   'bottom',
+                        align   :   'left'
+                    }, 
+                    type    :   'minimalist',
+                    delaye  :   4000,
+                    icon_type : 'image',
+                    template : '<div data-notify="container" class="col-xs-11 col-sm-8 col-md-3 alert alert-{0}" role="alert">' +
+                                    '<img data-notify="icon" class="img-circle pull-left">' +
+                                    '<span data-notify="title">{1}</span>' +
+                                    '<span data-notify="message">{2}</span>' +
+                                '</div>',                   
+                    z_index :   9999999
+                });
+
+            }
+
+        }    
+        
+        var datos = {
+            'actualizado' : 'false',
+            'current_user_id' : instmt_object.current_user_id
+        }
+
+        // Enviando el indice instmt_notificacion al heartbeat
+        wp.heartbeat.enqueue( 'instmt_notificacion', datos, false );
+
+    })
+
+
    
 
 });
