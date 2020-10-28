@@ -90,9 +90,21 @@ abstract class Instmt_RLT_Metabox
             <br>
             <label for='instmt_rep_nombre'>Representante Local</label>
             <input type='text' class='instmt-input-group' name='instmt_rlt[nombre]' id='instmt_rep_nombre' value='" . $nombre . "' readonly >
+            <input type='hidden' id='id-representante-rlt' value='". $representanteRLT . "'>
             <br>
             <label for='instmt_rep_cargo'>Cargo</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[cargo]' id='instmt_rep_cargo' value='" . $cargo . "' readonly>
+            <input type='text' class='instmt-input-group' name='instmt_rlt[cargo]' id='instmt_rep_cargo' value='" . $cargo . "' >
+            <br>
+            <label for='instmt_rep_flota'>Flota</label>
+            <input type='text' class='instmt-input-group' name='instmt_rlt[flota]' id='instmt_rep_flota' value='" . $flota . "' >
+            <br/>           
+            <label for='instmt_rep_correo'>Correo</label>
+            <input type='email' class='instmt-input-group' name='instmt_rlt[correo]' id='instmt_rep_correo' value='" . $correo . "' >
+            <br>
+
+            <button type='button' id='actualizar-representante-rlt' class='btn btn-primary btn-lg'>
+                <span class='glyphicon glyphicon-refresh' aria-hidden='true'></span> Actualizar Datos del Representante
+            </button>
         ";
 
         $html .= "
@@ -152,12 +164,6 @@ abstract class Instmt_RLT_Metabox
             <input type='text' class='instmt-input-group' name='instmt_rlt[extension_1]' id='instmt_rlt_extension_1' value='" . $extension1 . "'>
             <label for='instmt_rlt_extension_2'>Extensión 2</label>
             <input type='text' class='instmt-input-group' name='instmt_rlt[extension_2]' id='instmt_rlt_extension_2' value='" . $extension2 . "'>
-            <br>
-            <label for='instmt_rep_flota'>Flota</label>
-            <input type='text' class='instmt-input-group' name='instmt_rlt[flota]' id='instmt_rep_flota' value='" . $flota . "' readonly>
-            <br/>           
-            <label for='instmt_rep_correo'>Correo</label>
-            <input type='email' class='instmt-input-group' name='instmt_rlt[correo]' id='instmt_rep_correo' value='" . $correo . "' readonly>
         ";         
         
         $html .= "

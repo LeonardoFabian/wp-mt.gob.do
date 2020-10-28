@@ -152,11 +152,12 @@ class InstitucionalMT_Core {
 
         // Agregando filtros
         //$this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_receive_and_respond', 10, 3 );
-
+        $this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_notificacion', 10, 3 );
+        
         // Hook de login y logout
         $this->loader->add_action('wp_login', $this->online, 'conectado', 10, 2 );
         $this->loader->add_action('wp_logout', $this->online, 'desconectado' );
-        $this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_notificacion', 10, 3 );
+        
 
 
     }

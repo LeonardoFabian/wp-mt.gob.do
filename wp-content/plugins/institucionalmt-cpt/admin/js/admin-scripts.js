@@ -26,14 +26,13 @@ $button.on('keyup', function(){
 
 });
         
-// Obtener datos de Representantes Locales
+// OBTENER DATOS DE REPRESENTANTES LOCALES
+
 var $representanteID = $('#representante');
 var $cargo = $('#instmt_rep_cargo');
 var $flota = $('#instmt_rep_flota');
 var $correo = $('#instmt_rep_correo');
 var $nombre = $('#instmt_rep_nombre');
-
-
 
 $representanteID.on('change', function(){
 
@@ -64,7 +63,59 @@ $representanteID.on('change', function(){
 
 });
 
-// Obtener datos de Representantes Locales
+
+// ACTUALIZAR DATOS DE REPRESENTANTES LOCALES DESDE OTRO MENU
+
+var $guardarRepresentante = $('#actualizar-representante-rlt');
+var $nombre_rep  = $('#instmt_rep_nombre');
+var $representanteID = $('#id-representante-rlt');
+var $cargo_rep = $('#instmt_rep_cargo');
+var $flota_rep = $('#instmt_rep_flota');
+var $correo_rep = $('#instmt_rep_correo');
+
+$guardarRepresentante.on('click', function(){
+
+    //console.log($representante.val());
+
+    $.ajax({
+
+        url : instmt_object.url,
+        method : 'POST',
+        dataType : 'json',
+        data : {
+            action : 'cargar_datos_representantes', // nombre del gancho a usar en instmt-core
+            nonce : instmt_object.security,
+            id : $representanteID.val(),
+            tipo: 'guardando',
+            nombre: $nombre_rep.val(),
+            cargo : $cargo_rep.val(),
+            flota : $flota_rep.val(),
+            correo : $correo_rep.val(),            
+        }, success: function ( data ){
+
+            console.log(data);
+
+            if( data.result == 'success' ){
+
+                alert( "Se han actualizado los datos del Representante: " + data.representante );
+
+            } else if ( data.result == 'error' ){
+
+                alert( "Ha ocurrido un error al intentar guardar los datos" );
+
+            }
+
+        }
+
+    });
+
+});
+
+
+
+
+// OBTENER DATOS DE ENCARGADOS OTE
+
 var $encargadoID = $('#encargado');
 var $cargo = $('#instmt_enc_cargo');
 var $flota = $('#instmt_enc_flota');
@@ -95,6 +146,53 @@ $encargadoID.on('change', function(){
             $flota.val(data.flota);
             $correo.val(data.correo);     
             $nombre.val(data.nombre);    
+
+        }
+
+    });
+
+});
+
+// ACTUALIZAR DATOS DE ENCARGADOS OTE DESDE OTRO MENU
+
+var $guardar = $('#actualizar-encargado-ote');
+var $nombre  = $('#instmt_enc_nombre');
+var $encargadoID = $('#id-encargado-ote');
+var $cargo = $('#instmt_enc_cargo');
+var $flota = $('#instmt_enc_flota');
+var $correo = $('#instmt_enc_correo');
+
+$guardar.on('click', function(){
+
+    //console.log($representante.val());
+
+    $.ajax({
+
+        url : instmt_object.url,
+        method : 'POST',
+        dataType : 'json',
+        data : {
+            action : 'cargar_datos_encargados_ote', // nombre del gancho a usar en instmt-core
+            nonce : instmt_object.security,
+            id : $encargadoID.val(),
+            tipo: 'guardando',
+            nombre: $nombre.val(),
+            cargo : $cargo.val(),
+            flota : $flota.val(),
+            correo : $correo.val(),            
+        }, success: function ( data ){
+
+            console.log(data);
+
+            if( data.result == 'success' ){
+
+                alert( "Se han actualizado los datos del Encargado " + data.encargado );
+
+            } else if ( data.result == 'error' ){
+
+                alert( "Ha ocurrido un error al intentar guardar los datos" );
+
+            }
 
         }
 

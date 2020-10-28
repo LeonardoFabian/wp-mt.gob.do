@@ -90,9 +90,18 @@ abstract class Instmt_OTE_Metabox
             <br>
             <label for='instmt_enc_nombre'>Encargado</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[nombre]' id='instmt_enc_nombre' value='" . $nombre . "' readonly >
-            <br>
+            <input type='hidden' id='id-encargado-ote' value='". $encargadoOTE . "'>
             <label for='instmt_enc_cargo'>Cargo</label>
-            <input type='text' class='instmt-input-group' name='instmt_ote[cargo]' id='instmt_enc_cargo' value='" . $cargo . "' readonly>
+            <input type='text' class='instmt-input-group' name='instmt_ote[cargo]' id='instmt_enc_cargo' value='" . $cargo . "' >
+            <br>
+            <label for='instmt_enc_flota'>Flota</label>
+            <input type='text' class='instmt-input-group' name='instmt_ote[flota]' id='instmt_enc_flota' value='" . $flota . "' >         
+            <label for='instmt_enc_correo'>Correo</label>
+            <input type='email' class='instmt-input-group' name='instmt_ote[correo]' id='instmt_enc_correo' value='" . $correo . "' >
+
+            <button type='button' id='actualizar-encargado-ote' class='btn btn-primary btn-lg'>
+                <span class='glyphicon glyphicon-refresh' aria-hidden='true'></span> Actualizar Datos del Encargado
+            </button>
         ";
 
         $html .= "
@@ -152,12 +161,6 @@ abstract class Instmt_OTE_Metabox
             <input type='text' class='instmt-input-group' name='instmt_ote[extension_1]' id='instmt_ote_extension_1' value='" . $extension1 . "'>
             <label for='instmt_ote_extension_2'>Extensión 2</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[extension_2]' id='instmt_ote_extension_2' value='" . $extension2 . "'>
-            <br>
-            <label for='instmt_enc_flota'>Flota</label>
-            <input type='text' class='instmt-input-group' name='instmt_ote[flota]' id='instmt_enc_flota' value='" . $flota . "' readonly>
-            <br/>           
-            <label for='instmt_enc_correo'>Correo</label>
-            <input type='email' class='instmt-input-group' name='instmt_ote[correo]' id='instmt_enc_correo' value='" . $correo . "' readonly>
         ";         
         
         $html .= "

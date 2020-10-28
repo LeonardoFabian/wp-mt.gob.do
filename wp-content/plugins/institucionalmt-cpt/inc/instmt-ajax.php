@@ -27,9 +27,11 @@ class InstitucionalMT_Ajax
 
         if (isset($_POST['action'])) {
 
+            $representante_id = $_POST['id'];
+
             if( $_POST['tipo'] == 'cargando' ) {
 
-                $representante = get_post_meta( $_POST['id'], '_instmt_representante', true);                    
+                $representante = get_post_meta( $representante_id, '_instmt_representante', true);                    
 
                 if( isset( $representante) && is_array($representante) ) {
 
@@ -54,7 +56,43 @@ class InstitucionalMT_Ajax
                 }
 
                 
-            }  
+            }  elseif ( $_POST['tipo'] == 'guardando' ){
+                
+                $nombr_rep = sanitize_text_field($_POST['nombre']);
+                $cargo_rep = sanitize_text_field($_POST['cargo']);
+                $flota_rep = sanitize_text_field($_POST['flota']);
+                $correo_rep = sanitize_text_field($_POST['correo']);               
+                
+                $datos_representante_RLT = [
+                    'nombre' => $nombr_rep,
+                    'cargo' => $cargo_rep,
+                    'flota' => $flota_rep,
+                    'correo' => $correo_rep,                   
+                ];
+
+                $result = update_post_meta( $representante_id, '_instmt_representante', $datos_representante_RLT );
+                $representanteRLT = get_post_meta( $representante_id, '_instmt_representante', true); 
+                
+                // extract( $encargado, EXTR_OVERWRITE );
+
+                // var_dump( $nombre );
+                
+                if( $result != false ){
+
+                    $json = [
+                        'result' => 'success',
+                        'representante' => $representanteRLT['nombre']
+                    ];
+
+                } else {
+
+                    $json = [
+                        'result' => 'error',                      
+                    ];
+
+                }
+                
+            }
             
             echo json_encode($json);
 
@@ -71,9 +109,14 @@ class InstitucionalMT_Ajax
 
         if (isset($_POST['action'])) {
 
+            $encargado_id = $_POST['id'];
+
+            // var_dump($encargado_id);
+
+
             if( $_POST['tipo'] == 'cargando' ) {
 
-                $encargadoOTE = get_post_meta( $_POST['id'], '_instmt_encargado_ote', true);                    
+                $encargadoOTE = get_post_meta( $encargado_id, '_instmt_encargado_ote', true);                    
 
                 if( isset( $encargadoOTE) && is_array($encargadoOTE) ) {
 
@@ -98,7 +141,43 @@ class InstitucionalMT_Ajax
                 }
 
                 
-            }  
+            }  elseif ( $_POST['tipo'] == 'guardando' ){
+                
+                $nombre = sanitize_text_field($_POST['nombre']);
+                $cargo = sanitize_text_field($_POST['cargo']);
+                $flota = sanitize_text_field($_POST['flota']);
+                $correo = sanitize_text_field($_POST['correo']);               
+                
+                $datos_encargado_OTE = [
+                    'nombre' => $nombre,
+                    'cargo' => $cargo,
+                    'flota' => $flota,
+                    'correo' => $correo,                   
+                ];
+
+                $result = update_post_meta( $encargado_id, '_instmt_encargado_ote', $datos_encargado_OTE );
+                $encargado = get_post_meta( $encargado_id, '_instmt_encargado_ote', true); 
+                
+                // extract( $encargado, EXTR_OVERWRITE );
+
+                // var_dump( $nombre );
+                
+                if( $result != false ){
+
+                    $json = [
+                        'result' => 'success',
+                        'encargado' => $encargado['nombre']
+                    ];
+
+                } else {
+
+                    $json = [
+                        'result' => 'error',                      
+                    ];
+
+                }
+                
+            }
             
             echo json_encode($json);
 
