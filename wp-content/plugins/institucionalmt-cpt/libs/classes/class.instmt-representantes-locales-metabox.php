@@ -12,7 +12,7 @@ abstract class Instmt_Representantes_Locales_Metabox
 
         add_meta_box(
             'instmt_representante_details', // meta box id
-            'Datos del Representante Local', // meta box title
+            __('Datos del Representante Local', 'institucionalmt'), // meta box title
             [self::class, 'html'], // function callback
             $post_types, // string o array of CPT
             'advanced', // postion: normal, advanced, side
@@ -37,20 +37,20 @@ abstract class Instmt_Representantes_Locales_Metabox
         $correo = isset($instmt_representante['correo']) ? esc_attr($instmt_representante['correo']) : '';              
 
         $html = "
-            <p>Datos del Representante</p>  
-            <label for='instmt_representante_nombre'>Nombre Completo</label>
+            <p>" . __('Datos del Representante', 'institucionalmt') . "</p>  
+            <label for='instmt_representante_nombre'>" . __('Nombre Completo', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_representante[nombre]' id='instmt_representante_nombre' value='" . esc_attr($nombre) . "'>          
             <br>
-            <label for='instmt_representante_cargo'>Cargo</label>
+            <label for='instmt_representante_cargo'>" . __('Cargo', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_representante[cargo]' id='instmt_representante_cargo' value='" . esc_attr($cargo) . "'>
         ";
 
         $html .= "            
             <br/>           
-            <label for='instmt_representante_flota'>Flota</label>
+            <label for='instmt_representante_flota'>" . __('Flota', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_representante[flota]' id='instmt_representante_flota' value='" . esc_attr($flota) . "'>
             <br/>           
-            <label for='instmt_representante_correo'>Correo</label>
+            <label for='instmt_representante_correo'>" . __('Correo', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_representante[correo]' id='instmt_representante_correo' value='" . esc_attr($correo) . "'>
         ";  
 

@@ -23,6 +23,7 @@ class InstitucionalMT_Core {
     protected $ajax;
 
     protected $heartbeat;
+    protected $cron;
 
     protected $online;
    
@@ -59,6 +60,7 @@ class InstitucionalMT_Core {
         require_once $this->plugin_dir_path . 'instmt-ajax.php';
 
         require_once $this->plugin_dir_path . 'instmt-heartbeat.php';
+        require_once $this->plugin_dir_path . 'instmt-cron.php';
 
         require_once $this->plugin_dir_path . 'instmt-online.php';
         require_once $this->plugin_dir_path . 'instmt-widgets.php';        
@@ -85,6 +87,7 @@ class InstitucionalMT_Core {
         $this->ajax = new InstitucionalMT_Ajax;
 
         $this->heartbeat = new InstitucionalMT_Heartbeat;
+        $this->cron = new InstitucionalMT_Cron;
 
         $this->online = new InstitucionalMT_User_Online;        
 
@@ -173,8 +176,12 @@ class InstitucionalMT_Core {
 
         // Registrar los Widgets
         $this->loader->add_action('widgets_init', $this, 'institucionalmt_register_widgets' );
-        
 
+        // Registrar Intervalos WP Cron perzonalizados
+        $this->loader->add_filter('cron_schedules', $this->cron, 'institucionalmt_cron_intervalos' );
+        $this->loader->add_action('instmt_cron', $this->cron, 'institucionalmt_cron_enviar_ultima_publicacion', 10, 2 );
+        //$this->loader->add_action('instmt_cron', $this->cron, 'institucionalmt_cron_enviar_ultima_publicacion');
+        $this->loader->add_action('init', $this->cron, 'institucionalmt_cron_init' );
 
     }
 

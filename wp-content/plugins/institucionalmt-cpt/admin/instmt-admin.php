@@ -56,6 +56,17 @@ class InstitucionalMT_Admin
             ]
         );
 
+        wp_localize_script( 
+            'instmt_admin_plugin_scripts', 
+            'traductor',  
+            [
+                'actualizar' => [
+                    'success' => __('Se han actualizado los datos del Representante: ', 'institucionalmt'),
+                    'error' => __('Ha ocurrido un error al intentar guardar los datos', 'institucionalmt')
+                ]
+            ]
+        );
+
     }
 
 }

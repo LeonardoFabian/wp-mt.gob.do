@@ -12,10 +12,10 @@ class InstitucionalMT_Menu_RLT {
 
     public function options_page(){
 
-        $this->build_menupage->add_menu_page('RLT`s', 'RLT`s', 'manage_options', 'menu_rlt', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 30 );
+        $this->build_menupage->add_menu_page('RLT`s', __('RLT`s', 'institucionalmt'), 'manage_options', 'menu_rlt', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 30 );
 
         // Añadir submenu para las taxonomias
-        $this->build_menupage->add_submenu_page( 'menu_rlt', 'Zonas', 'Zonas', 'manage_options', 'edit-tags.php?taxonomy=rlt_taxonomy&post_type=instmt_rlt', false );
+        $this->build_menupage->add_submenu_page( 'menu_rlt', __('Zonas', 'institucionalmt'), __('Zonas', 'institucionalmt'), 'manage_options', 'edit-tags.php?taxonomy=rlt_taxonomy&post_type=instmt_rlt', false );
 
         $this->build_menupage->run();
 

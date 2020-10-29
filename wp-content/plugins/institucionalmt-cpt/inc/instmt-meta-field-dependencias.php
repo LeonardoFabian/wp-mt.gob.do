@@ -1,14 +1,18 @@
 <?php 
 
+/**
+ * Meta Fields para la Administracion de Dependencias
+ */
+
 class InstitucionalMT_Meta_Field_Dependencias {
 
     public function add_meta_field(){
 
         $html = "
         <div class='form-field term-parent-wrap'>
-            <label for='tipo'>Tipo</label>
+            <label for='tipo'>" . __('Tipo', 'institucionalmt') . "</label>
             <input type='text' name='tipo'>
-            <p>Puede agregar un catgoría a la taxonomía actual, para ver la categoría de una taxonomía, haga click en Editar</p>
+            <p>" . __('Puede agregar un catgoría a la taxonomía actual, para ver la categoría de una taxonomía, haga click en Editar', 'institucionalmt') . "</p>
         </div>
         ";
 
@@ -23,11 +27,11 @@ class InstitucionalMT_Meta_Field_Dependencias {
 
         $html = "
         <tr class='form-field form-required term-name-wrap'>
-            <th scope='row'><label for='tipo'>Tipo</label></th>
+            <th scope='row'><label for='tipo'>" . __('Tipo', 'institucionalmt') . "</label></th>
             <td>
                 <input type='text' name='tipo' id='tipo' size='40' value='$tipo'>
             </td>
-            <p class='description'>Tipo de Dependencia</p>
+            <p class='description'>" . __('Tipo de Dependencia', 'institucionalmt') . "</p>
         </tr>
         ";
 

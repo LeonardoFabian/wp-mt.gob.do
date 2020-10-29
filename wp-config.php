@@ -66,6 +66,11 @@ define( 'NONCE_SALT',       'a3;Hm4KXCX/pO/ukl(%hHYI#hXE]wx^?Bdlx@43f{xE/a#^GH@~
 $table_prefix = 'wp_';
 
 /**
+* Desactivar en WordPress WP CRON
+*/
+// define ('DISABLE_WP_CRON', true);
+
+/**
  * For developers: WordPress debugging mode.
  *
  * Change this to true to enable the display of notices during development.

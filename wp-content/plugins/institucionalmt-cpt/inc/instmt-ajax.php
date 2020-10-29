@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Peticiones Ajax desde Admin-Script.js
+ */
+
 class InstitucionalMT_Ajax
 {
 
@@ -13,7 +17,7 @@ class InstitucionalMT_Ajax
 
             $nombre = $_POST['nombre'];
 
-            echo json_encode(["result" => "Se ha recibido: $nombre"]);
+            echo json_encode(["result" => __('Se ha recibido: ', 'institucionalmt') + $nombre,  ]);
 
             wp_die();
         }

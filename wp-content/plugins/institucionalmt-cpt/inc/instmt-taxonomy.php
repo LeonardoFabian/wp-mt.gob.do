@@ -1,5 +1,9 @@
 <?php 
 
+/**
+ * Todas las taxonomias asociadas a los Custom Post Types
+ */
+
 class InstitucionalMT_Taxonomy {
 
     public function institucionalmt_servicios(){
@@ -9,17 +13,17 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => 'Categoría del Servicio',
-            'singular_name' => 'Categoría',
-            'search_items' => 'Buscar categoría de servicios',
-            'all_itens' => 'Todas las categorías de servicios',
-            'parent_item' => 'Categoría padre',
-            'parent_item_colon' => 'Categoría padre:',
-            'edit_item' => 'Editar Categoría',
-            'update_item' => 'Actualizar Categoría',
-            'add_new_item' => 'Agregar nueva categoría',
-            'new_item_name' => 'Nuevo nombre de categoría',
-            'menu_name' => 'Categoría de Servicios'
+            'name' => __('Categoría del Servicio', 'institucionalmt'),
+            'singular_name' => __('Categoría', 'institucionalmt'),
+            'search_items' => __('Buscar categoría de servicios', 'institucionalmt'),
+            'all_itens' => __('Todas las categorías de servicios', 'institucionalmt'),
+            'parent_item' => __('Categoría padre', 'institucionalmt'),
+            'parent_item_colon' => __('Categoría padre:', 'institucionalmt'),
+            'edit_item' => __('Editar Categoría', 'institucionalmt'),
+            'update_item' => __('Actualizar Categoría', 'institucionalmt'),
+            'add_new_item' => __('Agregar nueva categoría', 'institucionalmt'),
+            'new_item_name' => __('Nuevo nombre de categoría', 'institucionalmt'),
+            'menu_name' => __('Categoría de Servicios', 'institucionalmt')
         ];
     
         $args = [
@@ -46,16 +50,16 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => 'Tipos de Dependencias',
-            'singular_name' => 'Tipo de Dependencia',
-            'search_items' => 'Buscar tipos de Dependencias',
-            'all_itens' => 'Todas los tipos de Dependencias',
-            'parent_item' => 'Dependencia padre',
-            'parent_item_colon' => 'Dependencia padre:',
-            'edit_item' => 'Editar Tipo de Dependencia',
-            'update_item' => 'Actualizar tipo',
-            'add_new_item' => 'Agregar nuevo tipo',
-            'new_item_name' => 'Nuevo nombre de tipo de dependencia',
+            'name' => __('Tipos de Dependencias', 'institucionalmt'),
+            'singular_name' => __('Tipo de Dependencia', 'institucionalmt'),
+            'search_items' => __('Buscar tipos de Dependencias', 'institucionalmt'),
+            'all_itens' => __('Todas los tipos de Dependencias', 'institucionalmt'),
+            'parent_item' => __('Dependencia padre', 'institucionalmt'),
+            'parent_item_colon' => __('Dependencia padre:', 'institucionalmt'),
+            'edit_item' => __('Editar Tipo de Dependencia', 'institucionalmt'),
+            'update_item' => __('Actualizar tipo', 'institucionalmt'),
+            'add_new_item' => __('Agregar nuevo tipo', 'institucionalmt'),
+            'new_item_name' => __('Nuevo nombre de tipo de dependencia', 'institucionalmt'),
             'menu_name' => 'Dependencias'
         ];
     
@@ -83,21 +87,21 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => 'Zonas',
-            'singular_name' => 'Zona',
-            'search_items' => 'Buscar Zonas',
-            'all_itens' => 'Todas las Zonas',
-            'parent_item' => 'Zona padre',
-            'parent_item_colon' => 'Zona padre:',
-            'edit_item' => 'Editar Zona',
-            'update_item' => 'Actualizar Zona',
-            'add_new_item' => 'Agregar nueva Zona',
-            'new_item_name' => 'Nuevo nombre de Zona',
-            'menu_name' => __('Zonas', 'RLT')
+            'name' => __('Zonas', 'institucionalmt'),
+            'singular_name' => __('Zona', 'institucionalmt'),
+            'search_items' => __('Buscar Zonas', 'institucionalmt'),
+            'all_itens' => __('Todas las Zonas', 'institucionalmt'),
+            'parent_item' => __('Zona padre', 'institucionalmt'),
+            'parent_item_colon' => __('Zona padre:', 'institucionalmt'),
+            'edit_item' => __('Editar Zona', 'institucionalmt'),
+            'update_item' => __('Actualizar Zona', 'institucionalmt'),
+            'add_new_item' => __('Agregar nueva Zona', 'institucionalmt'),
+            'new_item_name' => __('Nuevo nombre de Zona', 'institucionalmt'),
+            'menu_name' => __('Zonas', 'institucionalmt')
         ];
     
         $args = [
-            'label' => 'RLT Zonas',
+            'label' => __('RLT Zonas', 'institucionalmt'),
             'labels' => $labels,
             'hierarchical' => true,
             'sort' => true,
@@ -124,17 +128,17 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => 'Zonas',
-            'singular_name' => 'Zona',
-            'search_items' => 'Buscar Zonas',
-            'all_itens' => 'Todas las Zonas',
-            'parent_item' => 'Zona padre',
-            'parent_item_colon' => 'Zona padre:',
-            'edit_item' => 'Editar Zona',
-            'update_item' => 'Actualizar Zona',
-            'add_new_item' => 'Agregar nueva Zona',
-            'new_item_name' => 'Nuevo nombre de Zona',
-            'menu_name' => 'Zonas'
+            'name' => __('Zonas', 'institucionalmt'),
+            'singular_name' => __('Zona', 'institucionalmt'),
+            'search_items' => __('Buscar Zonas', 'institucionalmt'),
+            'all_itens' => __('Todas las Zonas', 'institucionalmt'),
+            'parent_item' => __('Zona padre', 'institucionalmt'),
+            'parent_item_colon' => __('Zona padre:', 'institucionalmt'),
+            'edit_item' => __('Editar Zona', 'institucionalmt'),
+            'update_item' => __('Actualizar Zona', 'institucionalmt'),
+            'add_new_item' => __('Agregar nueva Zona', 'institucionalmt'),
+            'new_item_name' => __('Nuevo nombre de Zona', 'institucionalmt'),
+            'menu_name' => __('Zonas', 'institucionalmt')
         ];
     
         $args = [
@@ -161,17 +165,17 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => 'Categoria de Documentos',
-            'singular_name' => 'Categoría',
-            'search_items' => 'Buscar Categoría',
-            'all_itens' => 'Todas las Categorías de Documentos',
-            'parent_item' => 'Categoría padre',
-            'parent_item_colon' => 'Categoría padre:',
-            'edit_item' => 'Editar Categoría',
-            'update_item' => 'Actualizar Categoría',
-            'add_new_item' => 'Agregar nueva Categoría',
-            'new_item_name' => 'Nuevo nombre de Categoría',
-            'menu_name' => 'Categorías de Documentos'
+            'name' => __('Categoria de Documentos', 'institucionalmt'),
+            'singular_name' => __('Categoría', 'institucionalmt'),
+            'search_items' => __('Buscar Categoría', 'institucionalmt'),
+            'all_itens' => __('Todas las Categorías de Documentos', 'institucionalmt'),
+            'parent_item' => __('Categoría padre', 'institucionalmt'),
+            'parent_item_colon' => __('Categoría padre:', 'institucionalmt'),
+            'edit_item' => __('Editar Categoría', 'institucionalmt'),
+            'update_item' => __('Actualizar Categoría', 'institucionalmt'),
+            'add_new_item' => __('Agregar nueva Categoría', 'institucionalmt'),
+            'new_item_name' => __('Nuevo nombre de Categoría', 'institucionalmt'),
+            'menu_name' => __('Categorías de Documentos', 'institucionalmt')
         ];
     
         $args = [

@@ -8,7 +8,7 @@ class InstitucionalMT_Heartbeat {
 
             extract( $data, EXTR_OVERWRITE );
 
-            $response['mensaje'] = "Hemos recibido el nombre $nombre";
+            $response['mensaje'] = __("Hemos recibido el nombre", 'institucionalmt') + $nombre;
             $response['screen_id'] = $screen_id;
 
         }

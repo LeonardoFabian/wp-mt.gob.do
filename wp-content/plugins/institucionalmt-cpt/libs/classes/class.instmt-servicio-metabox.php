@@ -12,7 +12,7 @@ abstract class Instmt_Servicio_Metabox
 
         add_meta_box(
             'instmt_service_details', // meta box id
-            'Detalles del Servicio', // meta box title
+            __('Detalles del Servicio', 'institucionalmt'), // meta box title
             [self::class, 'html'], // function callback
             $post_types, // string o array of CPT
             'advanced', // postion: normal, advanced, side
@@ -46,37 +46,37 @@ abstract class Instmt_Servicio_Metabox
         $url = isset($instmt_service['servicio_url']) ? $instmt_service['servicio_url'] : '';
 
         $html = "
-            <label for='instmt_servicio_precio'>Precio</label>
+            <label for='instmt_servicio_precio'>" . __('Precio', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[precio]' id='instmt_servicio_precio' value='" . $precio . "'>
         ";
 
         $html .= "
-            <p>Teléfono</p>
-            <label for='instmt_servicio_telefono_1'>Teléfono 1</label>
+            <p>" . __('Teléfono', 'institucionalmt') . "</p>
+            <label for='instmt_servicio_telefono_1'>" . __('Teléfono 1', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_1]' id='instmt_servicio_telefono_1' value='" . $telefono1 . "'>
-            <label for='instmt_servicio_telefono_2'>Teléfono 2</label>
+            <label for='instmt_servicio_telefono_2'>" . __('Teléfono 2', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[telefono_2]' id='instmt_servicio_telefono_2' value='" . $telefono2 . "'>
             <br/>
-            <p>Extensiones</p>
-            <label for='instmt_servicio_extension_1'>Extensión 1</label>
+            <p>" . __('Extensiones', 'institucionalmt') . "</p>
+            <label for='instmt_servicio_extension_1'>" . __('Extensión 1', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[extension_1]' id='instmt_servicio_extension_1' value='" . $extension1 . "'>
-            <label for='instmt_servicio_extension_2'>Extensión 2</label>
+            <label for='instmt_servicio_extension_2'>" . __('Extensión 2', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[extension_2]' id='instmt_servicio_extension_2' value='" . $extension2 . "'>
-            <label for='instmt_servicio_extension_3'>Extensión 3</label>
+            <label for='instmt_servicio_extension_3'>" . __('Extensión 3', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[extension_3]' id='instmt_servicio_extension_3' value='" . $extension3 . "'>
             <br/>
-            <p>Correo Eléctronico</p>
-            <label for='instmt_servicio_correo_1'>Correo 1</label>
+            <p>" . __('Correo Eléctronico', 'institucionalmt') . "</p>
+            <label for='instmt_servicio_correo_1'>" . __('Correo 1', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_servicio[correo_1]' id='instmt_servicio_correo_1' value='" . $correo1 . "'>
-            <label for='instmt_servicio_correo_2'>Correo 2</label>
+            <label for='instmt_servicio_correo_2'>" . __('Correo 2', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_servicio[correo_2]' id='instmt_servicio_correo_2' value='" . $correo2 . "'>
         ";
 
         $html .= "
-            <p>Horario</p>
-            <label for='instmt_servicio_desde'>Desde</label>
+            <p>" . __('Horario', 'institucionalmt') . "</p>
+            <label for='instmt_servicio_desde'>" . __('Desde', 'institucionalmt') . "</label>
             <select class='instmt-input-group' name='instmt_servicio[desde]' id='instmt_servicio_desde'>
-                <option value=''>Seleccione un día</option>
+                <option value=''>" . __('Seleccione un día', 'institucionalmt') . "</option>
                 <option value='lunes' " . selected($desde, 'lunes', false) . ">LUN</option>
                 <option value='martes' " . selected($desde, 'martes', false) . ">MAR</option>
                 <option value='miercoles' " . selected($desde, 'miercoles', false) . ">MIE</option>
@@ -87,7 +87,7 @@ abstract class Instmt_Servicio_Metabox
             </select>
             <label for='instmt_servicio_hasta'>Hasta</label>
             <select class='instmt-input-group' name='instmt_servicio[hasta]' id='instmt_servicio_hasta'>
-                <option value=''>Seleccione un día</option>
+                <option value=''>" . __('Seleccione un día', 'institucionalmt') . "</option>
                 <option value='lunes' " . selected($hasta, 'lunes', false) . ">LUN</option>
                 <option value='martes' " . selected($hasta, 'martes', false) . ">MAR</option>
                 <option value='miercoles' " . selected($hasta, 'miercoles', false) . ">MIE</option>
@@ -100,13 +100,13 @@ abstract class Instmt_Servicio_Metabox
 
         $html .= "
             <br>
-            <label for='instmt_servicio_tiempo_respuesta'>Tiempo de respuesta</label>
+            <label for='instmt_servicio_tiempo_respuesta'>" . __('Tiempo de respuesta', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[tiempo_respuesta]' id='instmt_servicio_tiempo_respuesta' value='" . $tiempo_respuesta . "'>
         ";       
         
         $html .= "
             <br>
-            <label for='instmt_servicio_url'>URL del Servicio</label>
+            <label for='instmt_servicio_url'>" . __('URL del Servicio', 'institucionalmt') . "</label>
             <input type='url' class='instmt-input-group' name='instmt_servicio[url]' id='instmt_servicio_url' value='" . esc_url( $url ) . "'>
         "; 
 
@@ -115,7 +115,7 @@ abstract class Instmt_Servicio_Metabox
         
         $html2 = "
             <hr>            
-            <h3>A quién va dirigido:</h3>
+            <h3>" . __('A quién va dirigido:', 'institucionalmt') . "</h3>
         ";
 
         echo $html2;
@@ -125,7 +125,7 @@ abstract class Instmt_Servicio_Metabox
 
         $html3 = "
             <hr>            
-            <h3>Area responsable de ofrecer el servicio:</h3>
+            <h3>" . __('Area responsable de ofrecer el servicio:', 'institucionalmt') . "</h3>
         ";
 
         echo $html3;
@@ -134,7 +134,7 @@ abstract class Instmt_Servicio_Metabox
 
         $html4 = "
             <hr>            
-            <h3>Requisitos:</h3>
+            <h3>" . __('Requisitos:', 'institucionalmt') . "</h3>
         ";
 
         echo $html4;
@@ -144,7 +144,7 @@ abstract class Instmt_Servicio_Metabox
 
         $html5= "
             <hr>            
-            <h3>Procedimiento (Modalidad Presencial):</h3>
+            <h3>" . __('Procedimiento (Modalidad Presencial):', 'institucionalmt') . "</h3>
         ";
 
         echo $html5;
@@ -153,7 +153,7 @@ abstract class Instmt_Servicio_Metabox
 
         $html6= "
             <hr>            
-            <h3>Procedimiento (Modalidad En Linea):</h3>
+            <h3>" . __('Procedimiento (Modalidad En Linea):', 'institucionalmt') . "</h3>
         ";
 
         echo $html6;
@@ -162,7 +162,7 @@ abstract class Instmt_Servicio_Metabox
 
         $html7 = "
             <hr>            
-            <h3>Informacion adicional:</h3>
+            <h3>" . __('Informacion adicional:', 'institucionalmt') . "</h3>
         ";
 
         echo $html7;

@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Metabox para el CPT: OTE
+ */
+
 abstract class Instmt_OTE_Metabox
 {
 
@@ -12,7 +16,7 @@ abstract class Instmt_OTE_Metabox
 
         add_meta_box(
             'instmt_ote_details', // meta box id
-            'Detalles de las Oficinas Territoriales', // meta box title
+            __('Detalles de las Oficinas Territoriales', 'institucionalmt'), // meta box title
             [self::class, 'html'], // function callback
             $post_types, // string o array of CPT
             'advanced', // postion: normal, advanced, side
@@ -62,10 +66,10 @@ abstract class Instmt_OTE_Metabox
         $encargadoActual = get_post( $encargadoOTE, 'instmt_encargado_ote');               
 
         $html = "
-            <p>Datos del Encargado</p>            
-            <label for='instmt_ote_encargado_ote'>Cambiar Encargado actual</label>
+            <p>" . __('Datos del Encargado', 'institucionalmt') . "</p>            
+            <label for='instmt_ote_encargado_ote'>" . __('Cambiar Encargado actual', 'institucionalmt') . "</label>
             <select class='select-encargado-ote instmt-input-group' id='encargado' name='instmt_ote[encargado_ote]' value=''>
-                <option value=''> -- Seleccionar -- </option>";                             
+                <option value=''> --" . __('Seleccionar', 'institucionalmt') . "-- </option>";                             
 
                 while( $encargado->have_posts() ) : $encargado->the_post();
 
@@ -86,39 +90,39 @@ abstract class Instmt_OTE_Metabox
 
         $html .= "
             </select>
-            <p class='description'> Listado de Encargados, añadidos en el menu 'Encargados OTE'.</p>
+            <p class='description'>" . __('Listado de Encargados, añadidos en el menu Encargados OTE.', 'institucionalmt') . "</p>
             <br>
-            <label for='instmt_enc_nombre'>Encargado</label>
+            <label for='instmt_enc_nombre'>" . __('Encargado', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[nombre]' id='instmt_enc_nombre' value='" . $nombre . "' readonly >
             <input type='hidden' id='id-encargado-ote' value='". $encargadoOTE . "'>
-            <label for='instmt_enc_cargo'>Cargo</label>
+            <label for='instmt_enc_cargo'>" . __('Cargo', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[cargo]' id='instmt_enc_cargo' value='" . $cargo . "' >
             <br>
-            <label for='instmt_enc_flota'>Flota</label>
+            <label for='instmt_enc_flota'>". __('Flota', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[flota]' id='instmt_enc_flota' value='" . $flota . "' >         
-            <label for='instmt_enc_correo'>Correo</label>
+            <label for='instmt_enc_correo'>" . __('Correo', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_ote[correo]' id='instmt_enc_correo' value='" . $correo . "' >
 
             <button type='button' id='actualizar-encargado-ote' class='btn btn-primary btn-lg'>
-                <span class='glyphicon glyphicon-refresh' aria-hidden='true'></span> Actualizar Datos del Encargado
+                <span class='glyphicon glyphicon-refresh' aria-hidden='true'></span>" . __('Actualizar Datos del Encargado', 'institucionalmt') . "
             </button>
         ";
 
         $html .= "
-            <p>Dirección</p>
-            <label for='instmt_ote_direccion_1'>Dirección 1</label>
+            <p>" . __('Dirección', 'institucionalmt') . "</p>
+            <label for='instmt_ote_direccion_1'>". __('Dirección 1', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[direccion_1]' id='instmt_ote_direccion_1' value='" . $direccion1 . "'>
-            <label for='instmt_ote_direccion_2'>Dirección 2</label>
+            <label for='instmt_ote_direccion_2'>". __('Dirección 2', 'institucionalmt')."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[direccion_2]' id='instmt_ote_direccion_2' value='" . $direccion2 . "'>
             <br/>
-            <label for='instmt_ote_sector'>Sector</label>
+            <label for='instmt_ote_sector'>". __('Sector', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[sector]' id='instmt_ote_sector' value='" . $sector . "'>
-            <label for='instmt_ote_municipio'>Municipio</label>
+            <label for='instmt_ote_municipio'>". __('Municipio', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[municipio]' id='instmt_ote_municipio' value='" . $municipio . "'>
             <br/>
-            <label for='instmt_ote_provincia'>Provincia</label>
+            <label for='instmt_ote_provincia'>". __('Provincia', 'institucionalmt') ."</label>
             <select class='instmt-input-group' name='instmt_ote[provincia]' id='instmt_ote_provincia'>
-                <option value=''>Seleccione un Provincia</option>
+                <option value=''>". __('Seleccione un Provincia', 'institucionalmt') ."</option>
                 <option value='azua' " . selected($provincia, 'azua', false) . ">Azua</option>
                 <option value='bahoruco' " . selected($provincia, 'bahoruco', false) . ">Bahoruco</option>
                 <option value='barahona' " . selected($provincia, 'barahona', false) . ">Barahona</option>
@@ -154,21 +158,21 @@ abstract class Instmt_OTE_Metabox
             </select>
             <br/>
             <hr>
-            <p><strong>Contacto</strong></p>            
-            <label for='instmt_ote_telefono'>Teléfono</label>
+            <p><strong>". __('Contacto', 'institucionalmt') ."</strong></p>            
+            <label for='instmt_ote_telefono'>". __('Teléfono', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[telefono]' id='instmt_ote_telefono' value='" . $telefono . "'>           
-            <label for='instmt_ote_extension_1'>Extensión 1</label>
+            <label for='instmt_ote_extension_1'>". __('Extensión 1', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[extension_1]' id='instmt_ote_extension_1' value='" . $extension1 . "'>
-            <label for='instmt_ote_extension_2'>Extensión 2</label>
+            <label for='instmt_ote_extension_2'>". __('Extensión 2', 'institucionalmt') ."</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[extension_2]' id='instmt_ote_extension_2' value='" . $extension2 . "'>
         ";         
         
         $html .= "
             <br>
-            <label for='instmt_ote_map_iframe'>Código de Google Maps</label><br>
+            <label for='instmt_ote_map_iframe'>". __('Código de Google Maps', 'institucionalmt') ."</label><br>
             <input type='text' class='instmt-input-group' name='instmt_ote[map_iframe]' id='instmt_ote_map_iframe' value='" . $iframe . "'>
             <br>
-            <label for='instmt_ote_horario'>Horario</label>
+            <label for='instmt_ote_horario'>" . __('Horario', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[horario]' id='instmt_ote_horario' value='" . $horario . "'>
         "; 
 

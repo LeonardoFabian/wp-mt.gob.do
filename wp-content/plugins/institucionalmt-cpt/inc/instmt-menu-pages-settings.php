@@ -1,4 +1,7 @@
 <?php 
+/**
+ * Menu Ajustes: En proceso...
+ */
 
 class InstitucionalMT_Menu_Ajustes {
 
@@ -12,9 +15,9 @@ class InstitucionalMT_Menu_Ajustes {
 
     public function options_page(){
 
-        $this->build_menupage->add_menu_page('MT Ajustes', 'MT Ajustes', 'manage_options', 'instmt_settings', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 15 );
+        $this->build_menupage->add_menu_page('MT Ajustes', __('MT Ajustes', 'institucionalmt'), 'manage_options', 'instmt_settings', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 15 );
 
-        $this->build_menupage->add_submenu_page( 'instmt_settings', 'Configuración', 'Configuración', 'manage_options', 'instmt_settings_config', [$this, 'page_view_configurations'] );
+        $this->build_menupage->add_submenu_page( 'instmt_settings', __('Configuración', 'institucionalmt'), __('Configuración', 'institucionalmt'), 'manage_options', 'instmt_settings_config', [$this, 'page_view_configurations'] );
 
         $this->build_menupage->run();
 
@@ -31,11 +34,47 @@ class InstitucionalMT_Menu_Ajustes {
         echo "
             <table class='form-table'>
                 <tr>
-                    <td><input type='text' class='nombre' placeholder='Escribe tu nombre'></td>
+                    <td><input type='text' class='nombre' placeholder='". __('Escribe tu nombre', 'institucionalmt') . "'></td>
                 </tr>
             </table>
-            <button class='peticion btn-primary' name='btn-prueba'>Enviar peticion Ajax</button>
+            <button class='peticion btn-primary' name='btn-prueba'>" . __('Enviar peticion Ajax', 'institucionalmt') . "</button>
+            <br>
+            <br>            
         ";
+
+        $args = [
+            'arg1' => 150,
+            'arg2' => 250,
+        ];
+
+        echo "<pre>";
+
+        // // mostrar los intervalos
+        // var_dump(wp_get_schedules());
+        // var_dump(wp_get_schedule('instmt_cron', $args));
+
+        // obtener tareas programadas en wordpress        
+        // var_dump(_get_cron_array());
+
+        //echo wp_next_scheduled( 'instmt_cron', $args);
+
+        echo "</pre>";
+
+        echo "<br><br><pre>";
+
+        echo __( 'Plugin realizado en Republica Dominicana', 'institucionalmt');
+        echo '<br>';
+        _e( 'Plugin realizado en Republica Dominicana', 'institucionalmt');
+        echo '<br>';
+        
+        $ciudad = 'Republica Dominicana';
+        printf( __( 'Plugin realizado en %s', 'institucionalmt'), $ciudad );
+
+        echo '<br>';
+        $provincia = 'Santo Domingo';
+        printf( __( 'Plugin realizado en %1$s, provincia  %2$s', 'institucionalmt'), $ciudad, $provincia );
+
+        echo "</pre>";
 
         if( current_user_can( 'manage_options' ) ) {
 
@@ -44,7 +83,7 @@ class InstitucionalMT_Menu_Ajustes {
                 add_settings_error(
                     'instmt_settings',
                     'instmt_settings',
-                    'Configuración guardada correctamente',
+                    __('Configuración guardada correctamente', 'institucionalmt'),
                     'updated'
                 );
                 
@@ -58,7 +97,7 @@ class InstitucionalMT_Menu_Ajustes {
 
                 do_settings_sections( 'instmt_settings' );
 
-                submit_button( 'Guardar cambios' );
+                submit_button( __('Guardar cambios', 'institucionalmt') );
 
             echo '</form>';
 
@@ -77,13 +116,13 @@ class InstitucionalMT_Menu_Ajustes {
 
                 <form action ="" method="post">
 
-                    <input name="<?php echo $prefijo ?>ajuste" type="text" placeholder="Ajuste">
+                    <input name="<?php echo $prefijo ?>ajuste" type="text" placeholder="<?php __('Ajuste', 'institucionalmt') ?>">
 
                     <?php 
 
                         //do_action('instmt_ajuste_x', $prefijo, $id ); 
 
-                        submit_button( 'Guardar ajustes' );
+                        submit_button( __('Guardar ajustes', 'institucionalmt') );
                         
                     ?>
 

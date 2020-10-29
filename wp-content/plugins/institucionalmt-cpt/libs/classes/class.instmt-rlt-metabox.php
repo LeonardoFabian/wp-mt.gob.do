@@ -12,7 +12,7 @@ abstract class Instmt_RLT_Metabox
 
         add_meta_box(
             'instmt_rlt_details', // meta box id
-            'Detalles de la Representación Local', // meta box title
+            __('Detalles de la Representación Local', 'institucionalmt'), // meta box title
             [self::class, 'html'], // function callback
             $post_types, // string o array of CPT
             'advanced', // postion: normal, advanced, side

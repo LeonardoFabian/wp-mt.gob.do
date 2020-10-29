@@ -1,12 +1,17 @@
 <?php 
 
+/**
+ * Agregar aqui los Widgets del plugin
+ * Cada clase Widget hereda de la clase WP_Widget
+ */
+
 class InstitucionalMT_Widget extends WP_Widget {
 
     public function __construct(){
 
         $widget_options = [
             'classname' => 'instmt-widget',
-            'description' => 'Este es una prueba de un Widget'
+            'description' => __('Este es una prueba de un Widget', 'institucionalmt')
         ];
 
         $control_options = [
@@ -16,15 +21,15 @@ class InstitucionalMT_Widget extends WP_Widget {
             //'id_base' => array()
         ];
 
-        parent::__construct( 'instmt-plugin-widget', __('InstitucionalMT Widget personalizado', 'textdomain'), $widget_options, $control_options );
+        parent::__construct( 'instmt-plugin-widget', __('InstitucionalMT Widget personalizado', 'institucionalmt'), $widget_options, $control_options );
     }
 
     public function widget( $args, $instance ){
 
         extract( $args, EXTR_SKIP );
 
-        $titulo = isset( $instance['title'] ) ? $instance['title'] : 'Ingresa un titulo';
-        $contenido = isset( $instance['content'] ) ? $instance['content'] : 'Ingresa el contenido';
+        $titulo = isset( $instance['title'] ) ? $instance['title'] : __('Ingresa un titulo', 'institucionalmt');
+        $contenido = isset( $instance['content'] ) ? $instance['content'] : __('Ingresa el contenido', 'institucionalmt');
 
         $output = "
             $before_widget
@@ -56,9 +61,9 @@ class InstitucionalMT_Widget extends WP_Widget {
 
         $form = "
         <p>
-            <label for='$title_id'>Title</label><br />
+            <label for='$title_id'>" . __('Título', 'institucionalmt') . "</label><br />
             <input type='text' name='$title_name' id='$title_id' value='$title_val' class='' maxlength='50' />
-            <label for='$content_id'>Content</label><br />
+            <label for='$content_id'>" . __('Contenido', 'institucionalmt') . "</label><br />
             <textarea id='$content_id' name='$content_name'>$content_val</textarea>
         </p>
         ";

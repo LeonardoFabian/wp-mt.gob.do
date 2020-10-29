@@ -1,5 +1,9 @@
 <?php
 
+/**
+ * Meta Fields para el Administrador de Usuarios
+ */
+
 class InstitucionalMT_Meta_Field_Usuarios
 {
 
@@ -19,18 +23,18 @@ class InstitucionalMT_Meta_Field_Usuarios
         //var_dump($usuario);         
 
         $html = "
-        <h3>Información de contacto</h3>
+        <h3>" . __('Información de contacto', 'institucionalmt') . "</h3>
             <table class='form-table'>
 
                 <tr class='form-required user-telefono-wrap'>
-                    <th scope='row'><label for='instmt_usuario[telefono]'>Teléfono</label></th>
+                    <th scope='row'><label for='instmt_usuario[telefono]'>" . __('Teléfono', 'institucionalmt') . "</label></th>
                     <td>
                         <input type='text' class='regular-text' name='instmt_usuario[telefono]' id='telefono' size='40' value='" . $usuario['telefono'] ."'>
                     </td>        
                 </tr>
 
                 <tr class='form-required user-extension-wrap'>
-                    <th scope='row'><label for='instmt_usuario[extension]'>Extensión</label></th>
+                    <th scope='row'><label for='instmt_usuario[extension]'>" . __('Extensión', 'institucionalmt') . "</label></th>
                     <td>
                         <input type='text' class='regular-text' name='instmt_usuario[extension]' id='extension' size='40' value='" . $usuario['extension'] ."'>
                     </td>        

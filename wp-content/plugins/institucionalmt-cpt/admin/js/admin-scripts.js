@@ -104,7 +104,7 @@ $guardarRepresentante.on('click', function(){
                 $.notify({
                     icon    :   'glyphicon glyphicon-ok',
                     title   :   'Actualizado: ',
-                    message :   'Se han actualizado los datos del Representante: ' + data.representante
+                    message :   traductor.actualizar.success + data.representante
                 }, {
                     placement: {
                         from    :   'top',
@@ -129,7 +129,7 @@ $guardarRepresentante.on('click', function(){
                 $.notify({
                     icon    :   'glyphicon glyphicon-exclamation-sign',
                     title   :   'Error: ',
-                    message :   'Ha ocurrido un error al intentar guardar los datos'
+                    message :   traductor.actualizar.error
                 }, {
                     placement: {
                         from    :   'top',

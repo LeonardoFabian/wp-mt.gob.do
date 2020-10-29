@@ -1,5 +1,9 @@
 <?php 
 
+/**
+ * Determina si un usuario ha iniciado sesion
+ */
+
 class InstitucionalMT_User_Online {
 
     public function conectado( $username, $user ){
