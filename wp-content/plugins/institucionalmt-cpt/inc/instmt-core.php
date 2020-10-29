@@ -25,6 +25,7 @@ class InstitucionalMT_Core {
     protected $heartbeat;
 
     protected $online;
+   
 
     public function __construct(){
 
@@ -33,7 +34,8 @@ class InstitucionalMT_Core {
         $this->plugin_dir_path = plugin_dir_path(__FILE__);
         $this->plugin_dir_path_dir = plugin_dir_path(__DIR__);
         $this->institucionalmt_load_dependencies();
-        $this->institucionalmmt_define_admin_hooks();
+        $this->institucionalmt_load_instances();
+        $this->institucionalmt_define_admin_hooks();
 
     }
 
@@ -59,6 +61,11 @@ class InstitucionalMT_Core {
         require_once $this->plugin_dir_path . 'instmt-heartbeat.php';
 
         require_once $this->plugin_dir_path . 'instmt-online.php';
+        require_once $this->plugin_dir_path . 'instmt-widgets.php';        
+        
+    }
+
+    public function institucionalmt_load_instances(){
 
         $this->loader = new InstitucionalMT_Loader;
         $this->taxonomy = new InstitucionalMT_Taxonomy;
@@ -79,11 +86,17 @@ class InstitucionalMT_Core {
 
         $this->heartbeat = new InstitucionalMT_Heartbeat;
 
-        $this->online = new InstitucionalMT_User_Online;
-        
+        $this->online = new InstitucionalMT_User_Online;        
+
     }
 
-    public function institucionalmmt_define_admin_hooks(){
+    public function institucionalmt_register_widgets(){
+
+        register_widget( 'InstitucionalMT_Widget');
+
+    }
+
+    public function institucionalmt_define_admin_hooks(){
 
         // Cargando Taxonomias
         $this->loader->add_action( 'init', $this->taxonomy, 'institucionalmt_servicios' );
@@ -153,10 +166,13 @@ class InstitucionalMT_Core {
         // Agregando filtros
         //$this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_receive_and_respond', 10, 3 );
         $this->loader->add_filter('heartbeat_received', $this->heartbeat, 'heartbeat_notificacion', 10, 3 );
-        
+
         // Hook de login y logout
         $this->loader->add_action('wp_login', $this->online, 'conectado', 10, 2 );
         $this->loader->add_action('wp_logout', $this->online, 'desconectado' );
+
+        // Registrar los Widgets
+        $this->loader->add_action('widgets_init', $this, 'institucionalmt_register_widgets' );
         
 
 

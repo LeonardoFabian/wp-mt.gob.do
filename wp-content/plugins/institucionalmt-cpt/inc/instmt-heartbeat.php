@@ -48,6 +48,7 @@ class InstitucionalMT_Heartbeat {
                         $datos = [
                             'user_updater_id' => $current_user_id,
                             'user_update_id' => $user_update_id,
+                            'screen_id' => $screen_id,
                             'notificar' => 'true'
                         ];
 
@@ -65,7 +66,9 @@ class InstitucionalMT_Heartbeat {
                     
                     $user_updater_id = $current_user->instmt_notificacion['user_updater_id'];
                     $user_updater = new WP_User( $user_updater_id );
-                    $user_update = new WP_User( $current_user->instmt_notificacion['user_update_id']);
+                    // $user_update = new WP_User( $current_user->instmt_notificacion['user_update_id']);
+                    $user_update = get_post($current_user->instmt_notificacion['user_update_id']);
+                    $screen_id = $current_user->instmt_notificacion['screen_id'];
                     $notificar = $current_user->instmt_notificacion['notificar'];
 
                     // si notificar == true
@@ -78,7 +81,8 @@ class InstitucionalMT_Heartbeat {
                             'avatar' => get_avatar_url( $user_updater_id )
                         ];
                         $response['user_updated'] = [
-                            'display_name' => $user_update->display_name,
+                            // 'display_name' => $user_update->display_name,
+                            'display_name' => $user_update->post_title,
                         ];
 
                         $datos = [

@@ -63,6 +63,8 @@ $representanteID.on('change', function(){
 
 });
 
+console.log(instmt_object.current_user_id);
+
 
 // ACTUALIZAR DATOS DE REPRESENTANTES LOCALES DESDE OTRO MENU
 
@@ -97,11 +99,48 @@ $guardarRepresentante.on('click', function(){
 
             if( data.result == 'success' ){
 
-                alert( "Se han actualizado los datos del Representante: " + data.representante );
+                // alert( "Se han actualizado los datos del Representante: " + data.representante );
+
+                $.notify({
+                    icon    :   'glyphicon glyphicon-ok',
+                    title   :   'Actualizado: ',
+                    message :   'Se han actualizado los datos del Representante: ' + data.representante
+                }, {
+                    placement: {
+                        from    :   'top',
+                        align   :   'right'
+                    }, 
+                    type    :   'success',
+                    delaye  :   4000,                                          
+                    z_index :   9999999
+                });
+
+                var datos = {
+                    'actualizado' : 'true',
+                    'current_user_id' : instmt_object.current_user_id,
+                    'user_update' : $representanteID.val()
+                }
+
+                // Notificar actualizacion a los demas usuarios conectados
+                wp.heartbeat.enqueue( 'instmt_notificacion', datos, false );
 
             } else if ( data.result == 'error' ){
 
-                alert( "Ha ocurrido un error al intentar guardar los datos" );
+                $.notify({
+                    icon    :   'glyphicon glyphicon-exclamation-sign',
+                    title   :   'Error: ',
+                    message :   'Ha ocurrido un error al intentar guardar los datos'
+                }, {
+                    placement: {
+                        from    :   'top',
+                        align   :   'right'
+                    }, 
+                    type    :   'danger',
+                    delaye  :   4000,                                          
+                    z_index :   9999999
+                });
+
+                // alert( "Ha ocurrido un error al intentar guardar los datos" );
 
             }
 
@@ -186,11 +225,48 @@ $guardar.on('click', function(){
 
             if( data.result == 'success' ){
 
-                alert( "Se han actualizado los datos del Encargado " + data.encargado );
+                // alert( "Se han actualizado los datos del Encargado " + data.encargado );
+
+                $.notify({
+                    icon    :   'glyphicon glyphicon-ok',
+                    title   :   'Actualizado: ',
+                    message :   'Se han actualizado los datos del Encargado: ' + data.encargado
+                }, {
+                    placement: {
+                        from    :   'top',
+                        align   :   'right'
+                    }, 
+                    type    :   'success',
+                    delaye  :   4000,                                          
+                    z_index :   9999999
+                });
+
+                var datos = {
+                    'actualizado' : 'true',
+                    'current_user_id' : instmt_object.current_user_id,
+                    'user_update' : $encargadoID.val()
+                }
+
+                // Notificar actualizacion a los demas usuarios conectados
+                wp.heartbeat.enqueue( 'instmt_notificacion', datos, false );
 
             } else if ( data.result == 'error' ){
 
-                alert( "Ha ocurrido un error al intentar guardar los datos" );
+                // alert( "Ha ocurrido un error al intentar guardar los datos" );
+
+                $.notify({
+                    icon    :   'glyphicon glyphicon-exclamation-sign',
+                    title   :   'Error: ',
+                    message :   'Ha ocurrido un error al intentar guardar los datos'
+                }, {
+                    placement: {
+                        from    :   'top',
+                        align   :   'right'
+                    }, 
+                    type    :   'danger',
+                    delaye  :   4000,                                          
+                    z_index :   9999999
+                });
 
             }
 
