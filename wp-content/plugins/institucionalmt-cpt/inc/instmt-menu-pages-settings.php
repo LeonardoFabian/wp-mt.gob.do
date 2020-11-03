@@ -31,6 +31,9 @@ class InstitucionalMT_Menu_Ajustes {
 
         echo '</h1>';
 
+        echo "<button class='btn btn-primary btnMarco'>Abrir gestor de medios</button>";
+        echo "<br>";
+
         echo "
             <table class='form-table'>
                 <tr>
@@ -41,6 +44,25 @@ class InstitucionalMT_Menu_Ajustes {
             <br>
             <br>            
         ";
+
+        // global $sirladb;
+           
+        // try {
+        //     $sirladb = new PDO("sqlsrv:server=" . DB_SIRLA_HOST . "; Database=" . DB_SIRLA_NAME, DB_SIRLA_USER, DB_SIRLA_PASS );
+        //     $sirladb->setAttribute( PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION );
+        // } catch (Exception $e) {
+        //     die( print_r( $e->getmessage() ) ) ;
+        // }
+        
+        // $schema = TABLE_SIRLA_SCHEMA;
+
+        // $query = "SELECT COUNT(DISTINCT('IdDocumento')) FROM $schema.VW_CIUDADANOS";
+
+        // $result = $sirladb->get_var( $query );
+
+        // echo "<pre>";
+        //     var_dump( $result );
+        // echo "</pre>";
 
         $args = [
             'arg1' => 150,

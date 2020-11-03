@@ -12,10 +12,10 @@ class InstitucionalMT_Menu_OTE {
 
     public function options_page(){
 
-        $this->build_menupage->add_menu_page('OTE`s', __('OTE`s', 'institucionalmt'), 'manage_options', 'menu_ote', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 31 );
+        $this->build_menupage->add_menu_page('OTE`s', __('OTE`s', 'institucionalmt'), 'manage_options', 'menu_ote', [$this, 'page_view_principal'], plugin_dir_url(__DIR__) . 'admin/image/domo.svg', 41 );
 
         // Añadir submenu para las taxonomias
-        $this->build_menupage->add_submenu_page( 'menu_ote', __('Zonas', 'institucionalmt'), __('Zonas', 'institucionalmt'), 'manage_options', 'edit-tags.php?taxonomy=ote_taxonomy&post_type=instmt_ote', false );
+        $this->build_menupage->add_submenu_page( 'menu_ote', __('Zonas OTE', 'institucionalmt'), __('Zonas OTE', 'institucionalmt'), 'manage_options', 'edit-tags.php?taxonomy=ote_taxonomy&post_type=instmt_ote', false );
 
         $this->build_menupage->run();
 

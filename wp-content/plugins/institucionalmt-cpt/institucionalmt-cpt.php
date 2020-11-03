@@ -1,22 +1,34 @@
 <?php
-
 /*
-Plugin Name: InstitucionalMT Custom Post Types
-Plugin URI:
-Description: Añade tus propios Custom Post Types a en tu sitio WordPress (Servicios, Departamentos, Localidades, Ferias, etc.)
-Version: 1.0
-Author: Leonardo Fabian
-Author URI: https://www.linkedin.com/in/leonardofabian/
-License: GPL2
-License URI: https://www.gnu.org/licenses/gpl-2.0.html
-Text Domain: institucionalmt
-Domain Path: /languages
+* Plugin Name:      InstitucionalMT Custom Post Types
+* Plugin URI:
+* Description:      Añade tus propios Custom Post Types a en tu sitio WordPress (Servicios, Departamentos, Localidades, Ferias, etc.)
+* Version:          1.0
+* Author:           Leonardo Fabian
+* Author URI:       https://www.linkedin.com/in/leonardofabian/
+* License:          GPL2
+* License URI:      https://www.gnu.org/licenses/gpl-2.0.html
+* Text Domain:      institucionalmt
+* Domain Path:      /languages
 */
+
+/**
+ * COMANDO PARA CREAR EL ARCHIVO POT
+ * el comando debe ser: php {ruta_archivo\makepot.php} {tipo_de_proyecto} {ruta_del_proyecto} {ruta_guardar_archivo\nombre.pot}
+ * 
+ * php i18n\makepot.php wp-plugin wp-content\plugins\institucionalmt-cpt\ wp-content\plugins\institucionalmt-cpt\languages\institucionalmt.pot
+ */
+
 
 
 /**
  * Instalar (activar) plugin
  */
+global $wpdb;
+define( 'INSTMT_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
+define( 'INSTMT_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ) );
+define( 'INSTMT_TABLE_DOCS', "{$wpdb->prefix}institucionalmt_documentos");
+
 if (!function_exists('institucionalmt_cpt_install')) {
     function institucionalmt_cpt_install()
     {
@@ -24,6 +36,11 @@ if (!function_exists('institucionalmt_cpt_install')) {
     }
     register_activation_hook(__FILE__, 'institucionalmt_cpt_install');
 }
+
+/**
+ * TEXTDOMAIN URI
+ */
+define( 'REALPATH_BASENAME_PLUGIN', dirname( plugin_basename(__FILE__) ) );
 
 
 /**
@@ -251,15 +268,12 @@ add_shortcode('instmt_tab_item', 'institucionalmt_service_tab_item');
 
 
 
-/**
- * CLASSES
- */
-require_once PLUGIN_DIR_PATH . 'libs/classes/classes.php';
+
 
 /**
  * CORE
  */
-require_once PLUGIN_DIR_PATH . 'inc/instmt-core.php';
+require_once PLUGIN_DIR_PATH . 'inc/class-instmt-core.php';
 
 function run_institucionalmt_core(){
     
@@ -276,6 +290,9 @@ run_institucionalmt_core();
 //require_once PLUGIN_DIR_PATH . 'inc/instmt-taxonomy.php';
 
 
-
+/**
+ * CLASSES
+ */
+require_once PLUGIN_DIR_PATH . 'libs/classes/classes.php';
 
 

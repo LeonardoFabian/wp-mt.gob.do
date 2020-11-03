@@ -1,0 +1,575 @@
+# Copyright (C) 2020 Leonardo Fabian
+# This file is distributed under the GPL2.
+msgid ""
+msgstr ""
+"Project-Id-Version: InstitucionalMT Custom Post Types 1.0\n"
+"Report-Msgid-Bugs-To: https://www.linkedin.com/in/leonardofabian/\n"
+"POT-Creation-Date: 2020-10-29 22:42:45+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2020-11-03 15:39-0400\n"
+"Language-Team: Leonardo Fabian <ramonlfabian@gmail.com>\n"
+"X-Generator: Poedit 2.4.1\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: utf-8\n"
+"X-Poedit-KeywordsList: __;_e;_x;esc_html_e;esc_html__;esc_attr_e;esc_attr__;"
+"_ex:1,2c;_nx:4c,1,2;_nx_noop:4c,1,2;_x:1,2c;_n:1,2;_n_noop:1,2;"
+"__ngettext_noop:1,2;_c,_nc:4c,1,2\n"
+"X-Textdomain-Support: yes\n"
+"Last-Translator: \n"
+"Language: en_US\n"
+
+#: admin/instmt-admin.php:64
+msgid "Se han actualizado los datos del Representante: "
+msgstr "The Representative's data have been updated: "
+
+#: admin/instmt-admin.php:65
+msgid "Ha ocurrido un error al intentar guardar los datos"
+msgstr "An error occurred while trying to save the data"
+
+#: inc/instmt-ajax.php:20
+msgid "Se ha recibido: "
+msgstr "Received: "
+
+#: inc/instmt-cpt.php:27 inc/instmt-cpt.php:244 inc/instmt-cpt.php:297
+#: inc/instmt-cpt.php:351 inc/instmt-cpt.php:404 inc/instmt-cpt.php:457
+msgid "Añadir Nuevo"
+msgstr "Add New"
+
+#: inc/instmt-cpt.php:38 inc/instmt-cpt.php:90 inc/instmt-cpt.php:143
+#: inc/instmt-cpt.php:199 inc/instmt-cpt.php:255 inc/instmt-cpt.php:308
+#: inc/instmt-cpt.php:362 inc/instmt-cpt.php:415 inc/instmt-cpt.php:468
+msgid "Establecer imagen de portada"
+msgstr ""
+
+#: inc/instmt-cpt.php:39 inc/instmt-cpt.php:91 inc/instmt-cpt.php:144
+#: inc/instmt-cpt.php:200 inc/instmt-cpt.php:256 inc/instmt-cpt.php:309
+#: inc/instmt-cpt.php:363 inc/instmt-cpt.php:416 inc/instmt-cpt.php:469
+msgid "Eliminar imagen de portada"
+msgstr ""
+
+#: inc/instmt-cpt.php:40 inc/instmt-cpt.php:92 inc/instmt-cpt.php:145
+#: inc/instmt-cpt.php:201 inc/instmt-cpt.php:257 inc/instmt-cpt.php:310
+#: inc/instmt-cpt.php:364 inc/instmt-cpt.php:417 inc/instmt-cpt.php:470
+msgid "Usar como imagen de portada"
+msgstr ""
+
+#: inc/instmt-cpt.php:50
+msgid "Contiene nuestros servicios y datos específicos de los servicios"
+msgstr ""
+
+#: inc/instmt-cpt.php:79 inc/instmt-cpt.php:132 inc/instmt-cpt.php:188
+msgid "Añadir Nueva"
+msgstr ""
+
+#: inc/instmt-cpt.php:102
+msgid ""
+"Contiene una lista de todas las Direcciones y sus dependencias, así como "
+"tambien datos específicos de las mismas"
+msgstr ""
+
+#: inc/instmt-cpt.php:155
+msgid ""
+"Contiene una lista de todas las Representaciones Locales de Trabajo (RLT), "
+"así como tambien datos específicos de las mismas"
+msgstr ""
+
+#: inc/instmt-cpt.php:211
+msgid ""
+"Contiene una lista de todas las Oficinas Territoriales de Empleo (OTE), así "
+"como tambien datos específicos de las mismas"
+msgstr ""
+
+#: inc/instmt-cpt.php:267
+msgid ""
+"Contiene una lista de todos los Ministros, la vista solo mostrará la "
+"información del ultimo Ministro añadido"
+msgstr ""
+"It contains a list of all Ministers, the view will only show the "
+"information of the last Minister added"
+
+#: inc/instmt-cron.php:9
+msgid "Cada 5 segundos"
+msgstr ""
+
+#: inc/instmt-cron.php:14
+msgid "Cada 5 minutos"
+msgstr ""
+
+#: inc/instmt-cron.php:19
+msgid "Cada 30 minutos"
+msgstr ""
+
+#: inc/instmt-heartbeat.php:11
+msgid "Hemos recibido el nombre"
+msgstr ""
+
+#: inc/instmt-menu-ote.php:15
+msgid "OTE`s"
+msgstr ""
+
+#: inc/instmt-menu-ote.php:18 inc/instmt-menu-rlt.php:18
+#: inc/instmt-taxonomy.php:90 inc/instmt-taxonomy.php:100
+#: inc/instmt-taxonomy.php:131 inc/instmt-taxonomy.php:141
+msgid "Zonas"
+msgstr "Areas"
+
+#: inc/instmt-menu-pages-settings.php:18
+msgid "MT Ajustes"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:20
+msgid "Configuración"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:37
+msgid "Escribe tu nombre"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:40
+msgid "Enviar peticion Ajax"
+msgstr "Send Ajax request"
+
+#: inc/instmt-menu-pages-settings.php:65 inc/instmt-menu-pages-settings.php:67
+msgid "Plugin realizado en Republica Dominicana"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:71
+msgid "Plugin realizado en %s"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:75
+msgid "Plugin realizado en %1$s, provincia  %2$s"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:86
+msgid "Configuración guardada correctamente"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:100
+msgid "Guardar cambios"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:119
+msgid "Ajuste"
+msgstr ""
+
+#: inc/instmt-menu-pages-settings.php:125
+msgid "Guardar ajustes"
+msgstr ""
+
+#: inc/instmt-menu-rlt.php:15
+msgid "RLT`s"
+msgstr ""
+
+#: inc/instmt-meta-field-dependencias.php:13
+#: inc/instmt-meta-field-dependencias.php:30
+msgid "Tipo"
+msgstr ""
+
+#: inc/instmt-meta-field-dependencias.php:15
+msgid ""
+"Puede agregar un catgoría a la taxonomía actual, para ver la categoría de "
+"una taxonomía, haga click en Editar"
+msgstr ""
+"You can add a category to the current taxonomy, to view the category of a "
+"taxonomy, click Edit"
+
+#: inc/instmt-meta-field-dependencias.php:34 inc/instmt-taxonomy.php:54
+msgid "Tipo de Dependencia"
+msgstr ""
+
+#: inc/instmt-meta-field-usuarios.php:26
+msgid "Información de contacto"
+msgstr ""
+
+#: inc/instmt-meta-field-usuarios.php:30
+#: libs/classes/class.instmt-ote-metabox.php:162
+#: libs/classes/class.instmt-servicio-metabox.php:54
+msgid "Teléfono"
+msgstr ""
+
+#: inc/instmt-meta-field-usuarios.php:37
+msgid "Extensión"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:16
+msgid "Categoría del Servicio"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:17 inc/instmt-taxonomy.php:169
+msgid "Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:18
+msgid "Buscar categoría de servicios"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:19
+msgid "Todas las categorías de servicios"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:20 inc/instmt-taxonomy.php:172
+msgid "Categoría padre"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:21 inc/instmt-taxonomy.php:173
+msgid "Categoría padre:"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:22 inc/instmt-taxonomy.php:174
+msgid "Editar Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:23 inc/instmt-taxonomy.php:175
+msgid "Actualizar Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:24
+msgid "Agregar nueva categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:25
+msgid "Nuevo nombre de categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:26
+msgid "Categoría de Servicios"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:53
+msgid "Tipos de Dependencias"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:55
+msgid "Buscar tipos de Dependencias"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:56
+msgid "Todas los tipos de Dependencias"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:57
+msgid "Dependencia padre"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:58
+msgid "Dependencia padre:"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:59
+msgid "Editar Tipo de Dependencia"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:60
+msgid "Actualizar tipo"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:61
+msgid "Agregar nuevo tipo"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:62
+msgid "Nuevo nombre de tipo de dependencia"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:91 inc/instmt-taxonomy.php:132
+msgid "Zona"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:92 inc/instmt-taxonomy.php:133
+msgid "Buscar Zonas"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:93 inc/instmt-taxonomy.php:134
+msgid "Todas las Zonas"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:94 inc/instmt-taxonomy.php:135
+msgid "Zona padre"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:95 inc/instmt-taxonomy.php:136
+msgid "Zona padre:"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:96 inc/instmt-taxonomy.php:137
+msgid "Editar Zona"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:97 inc/instmt-taxonomy.php:138
+msgid "Actualizar Zona"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:98 inc/instmt-taxonomy.php:139
+msgid "Agregar nueva Zona"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:99 inc/instmt-taxonomy.php:140
+msgid "Nuevo nombre de Zona"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:104
+msgid "RLT Zonas"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:168
+msgid "Categoria de Documentos"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:170
+msgid "Buscar Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:171
+msgid "Todas las Categorías de Documentos"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:176
+msgid "Agregar nueva Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:177
+msgid "Nuevo nombre de Categoría"
+msgstr ""
+
+#: inc/instmt-taxonomy.php:178
+msgid "Categorías de Documentos"
+msgstr ""
+
+#: inc/instmt-widgets.php:14
+msgid "Este es una prueba de un Widget"
+msgstr ""
+
+#: inc/instmt-widgets.php:24
+msgid "InstitucionalMT Widget personalizado"
+msgstr ""
+
+#: inc/instmt-widgets.php:31
+msgid "Ingresa un titulo"
+msgstr ""
+
+#: inc/instmt-widgets.php:32
+msgid "Ingresa el contenido"
+msgstr ""
+
+#: inc/instmt-widgets.php:64
+msgid "Título"
+msgstr ""
+
+#: inc/instmt-widgets.php:66
+msgid "Contenido"
+msgstr ""
+
+#: libs/classes/class.instmt-encargados-ote-metabox.php:15
+#: libs/classes/class.instmt-encargados-ote-metabox.php:40
+#: libs/classes/class.instmt-ote-metabox.php:69
+msgid "Datos del Encargado"
+msgstr ""
+
+#: libs/classes/class.instmt-encargados-ote-metabox.php:41
+#: libs/classes/class.instmt-representantes-locales-metabox.php:41
+msgid "Nombre Completo"
+msgstr ""
+
+#: libs/classes/class.instmt-encargados-ote-metabox.php:44
+#: libs/classes/class.instmt-ote-metabox.php:98
+#: libs/classes/class.instmt-representantes-locales-metabox.php:44
+msgid "Cargo"
+msgstr ""
+
+#: libs/classes/class.instmt-encargados-ote-metabox.php:50
+#: libs/classes/class.instmt-ote-metabox.php:101
+#: libs/classes/class.instmt-representantes-locales-metabox.php:50
+msgid "Flota"
+msgstr ""
+
+#: libs/classes/class.instmt-encargados-ote-metabox.php:53
+#: libs/classes/class.instmt-ote-metabox.php:103
+#: libs/classes/class.instmt-representantes-locales-metabox.php:53
+msgid "Correo"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:19
+msgid "Detalles de las Oficinas Territoriales"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:70
+msgid "Cambiar Encargado actual"
+msgstr "Change Current Manager"
+
+#: libs/classes/class.instmt-ote-metabox.php:72
+msgid "Seleccionar"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:93
+msgid "Listado de Encargados, añadidos en el menu Encargados OTE."
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:95
+msgid "Encargado"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:107
+msgid "Actualizar Datos del Encargado"
+msgstr "Update Manager Data"
+
+#: libs/classes/class.instmt-ote-metabox.php:112
+msgid "Dirección"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:113
+msgid "Dirección 1"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:115
+msgid "Dirección 2"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:118
+msgid "Sector"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:120
+msgid "Municipio"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:123
+msgid "Provincia"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:125
+msgid "Seleccione un Provincia"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:161
+msgid "Contacto"
+msgstr "Contact"
+
+#: libs/classes/class.instmt-ote-metabox.php:164
+#: libs/classes/class.instmt-servicio-metabox.php:61
+msgid "Extensión 1"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:166
+#: libs/classes/class.instmt-servicio-metabox.php:63
+msgid "Extensión 2"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:172
+msgid "Código de Google Maps"
+msgstr ""
+
+#: libs/classes/class.instmt-ote-metabox.php:175
+#: libs/classes/class.instmt-servicio-metabox.php:76
+msgid "Horario"
+msgstr "Schedule"
+
+#: libs/classes/class.instmt-representantes-locales-metabox.php:15
+msgid "Datos del Representante Local"
+msgstr ""
+
+#: libs/classes/class.instmt-representantes-locales-metabox.php:40
+msgid "Datos del Representante"
+msgstr ""
+
+#: libs/classes/class.instmt-rlt-metabox.php:15
+msgid "Detalles de la Representación Local"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:15
+msgid "Detalles del Servicio"
+msgstr "Service Details"
+
+#: libs/classes/class.instmt-servicio-metabox.php:49
+msgid "Precio"
+msgstr "Price"
+
+#: libs/classes/class.instmt-servicio-metabox.php:55
+msgid "Teléfono 1"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:57
+msgid "Teléfono 2"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:60
+msgid "Extensiones"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:65
+msgid "Extensión 3"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:68
+msgid "Correo Eléctronico"
+msgstr "Electronic Mail"
+
+#: libs/classes/class.instmt-servicio-metabox.php:69
+msgid "Correo 1"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:71
+msgid "Correo 2"
+msgstr ""
+
+#: libs/classes/class.instmt-servicio-metabox.php:77
+msgid "Desde"
+msgstr "From"
+
+#: libs/classes/class.instmt-servicio-metabox.php:79
+#: libs/classes/class.instmt-servicio-metabox.php:90
+msgid "Seleccione un día"
+msgstr "Select a day"
+
+#: libs/classes/class.instmt-servicio-metabox.php:103
+msgid "Tiempo de respuesta"
+msgstr "Response time"
+
+#: libs/classes/class.instmt-servicio-metabox.php:109
+msgid "URL del Servicio"
+msgstr "Service URL"
+
+#: libs/classes/class.instmt-servicio-metabox.php:118
+msgid "A quién va dirigido:"
+msgstr "Who it is addressed to:"
+
+#: libs/classes/class.instmt-servicio-metabox.php:128
+msgid "Area responsable de ofrecer el servicio:"
+msgstr "Area responsible for offering the service:"
+
+#: libs/classes/class.instmt-servicio-metabox.php:137
+msgid "Requisitos:"
+msgstr "Requirements:"
+
+#: libs/classes/class.instmt-servicio-metabox.php:147
+msgid "Procedimiento (Modalidad Presencial):"
+msgstr "Procedure (Presence Mode):"
+
+#: libs/classes/class.instmt-servicio-metabox.php:156
+msgid "Procedimiento (Modalidad En Linea):"
+msgstr "Procedure (Online Mode):"
+
+#: libs/classes/class.instmt-servicio-metabox.php:165
+msgid "Informacion adicional:"
+msgstr "Additional information:"
+
+#. Plugin Name of the plugin/theme
+msgid "InstitucionalMT Custom Post Types"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid ""
+"Añade tus propios Custom Post Types a en tu sitio WordPress (Servicios, "
+"Departamentos, Localidades, Ferias, etc.)"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "Leonardo Fabian"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://www.linkedin.com/in/leonardofabian/"
+msgstr ""

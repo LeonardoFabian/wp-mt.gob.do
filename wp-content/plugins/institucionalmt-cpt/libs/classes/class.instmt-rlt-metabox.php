@@ -197,7 +197,7 @@ abstract class Instmt_RLT_Metabox
             return;
         }
 
-        if (array_key_exists('instmt_rlt', $_POST)) {
+        if (array_key_exists('instmt_rlt', $_POST)) {            
 
             $_POST['instmt_rlt']['map_iframe'] = sanitize_text_field( $_POST['instmt_rlt']['map_iframe'] );
             $_POST['instmt_rlt']['representante'] = sanitize_text_field( $_POST['instmt_rlt']['representante'] );

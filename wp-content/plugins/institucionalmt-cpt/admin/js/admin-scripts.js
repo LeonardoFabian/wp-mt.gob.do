@@ -63,7 +63,7 @@ $representanteID.on('change', function(){
 
 });
 
-console.log(instmt_object.current_user_id);
+//console.log(instmt_object.current_user_id);
 
 
 // ACTUALIZAR DATOS DE REPRESENTANTES LOCALES DESDE OTRO MENU
@@ -221,7 +221,7 @@ $guardar.on('click', function(){
             correo : $correo.val(),            
         }, success: function ( data ){
 
-            console.log(data);
+            //console.log(data);
 
             if( data.result == 'success' ){
 
@@ -336,7 +336,104 @@ $(document)
         // Enviando el indice instmt_notificacion al heartbeat
         wp.heartbeat.enqueue( 'instmt_notificacion', datos, false );
 
-    })
+    });
+
+    var marco, 
+    $btnMarco = $('#btnCargarArchivos');
+
+    $btnMarco.on('click', function(){
+
+        if(marco){
+            marco.open();
+            return;
+        }
+
+        var marco = wp.media({
+            frame : 'post', // post, select
+            title : 'Seleccionar un archivo',
+            button : {
+                text : 'Usar este archivo'
+            },
+            multiple : false, // Seleccioanr mas de un archivo, si es true, no usar .first() al traer el json y usar el indice de toJSON[#]
+            library : {
+                order: 'DESC',
+                orderby: 'date',
+                type: 'application/pdf',
+                //search : '', // buscar por el titulo del archivo
+                //uploadedTo : 17 // medios subidos a un id de post
+            }
+        });
+
+        marco.on('select', function(){
+
+            //var archivo = marco.state().get( 'selection' );
+
+            // OBTENIENDO INFORMACION EN ARRAY
+            //var archivo = marco.state().get( 'selection' ).toArray()[0]; // Mostrar atributos de un archivo seleccionado
+            //var archivo = marco.state().get( 'selection' ).toArray()[0].attributes.url; // Mostrar atributos de un archivo seleccionado
+
+            // OBTENIENDO INFORMACION EN JSON
+            //var archivo = marco.state().get( 'selection' ).toJSON()[0].url; // Mostrar atributos de un archivo seleccionado
+            // var archivo = marco.state().get( 'selection' ).first().toJSON().url; // Mostrar atributos de un archivo seleccionado
+            var archivo = marco.state().get( 'selection' ).first().toJSON(); // Mostrar atributos de un archivo seleccionado
+
+            console.log(archivo);
+            $('#instmt_documentos_archivo').val(archivo.url);
+            $('.document-file-title').html("Nombre del archivo: " + archivo.filename);
+            $('.document-file-type').html("Tipo de archivo: " + archivo.subtype);
+            $('.document-file-size').html("Tamaño de archivo: " + archivo.filesizeHumanReadable);
+
+        });
+
+        marco.on('insert', function(){
+
+            marco.state().get('selection').map(function(v){
+
+                var e = v.toJSON();
+
+                console.log( "evento insert");
+                console.log(e);
+                $('#instmt_documentos_archivo').val(e.url);
+                $('.document-file-title').html("Nombre del archivo: " + e.filename);
+                $('.document-file-type').html("Tipo de archivo: " + e.subtype);
+                $('.document-file-size').html("Tamaño de archivo: " + e.filesizeHumanReadable);
+                
+            });                   
+
+        });
+
+        marco.on('ready', function(){
+            // cuando abre el gestor de medio
+            console.log('Evento Ready gestor de medios');
+        });
+
+        marco.on('attach', function(){
+            // cuando abre el gestor de medio cuando se añaden los elementos al DOM en el gestor de medios
+            console.log('Evento Attach');
+        });
+
+        marco.on('open', function(){
+            // cuando abre la ventana del gestor de medio
+            console.log('Evento Open');
+        });
+
+        marco.on('escape', function(){
+            // cuando se presiona la tecla ESC desde el gestor de medio
+            console.log('Evento Escape');
+        });
+
+        marco.on('close', function(){
+            // cuando se cierra el gestor de medio
+            console.log('Evento Close');
+        });
+
+        marco.on('activate', function(){
+            // cuando se activa algun estado: "select", "post"
+            console.log('Evento Activate');
+        });
+
+        marco.open();
+    });
 
 
    

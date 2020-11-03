@@ -21,15 +21,19 @@
 // ** MySQL settings - You can get this info from your web host ** //
 /** The name of the database for WordPress */
 define( 'DB_NAME', 'wp_mtdata' );
+define( 'DB_SIRLA_NAME', 'SIRLA2' );
 
 /** MySQL database username */
 define( 'DB_USER', 'root' );
+define( 'DB_SIRLA_USER', 'MTCORE' );
 
 /** MySQL database password */
 define( 'DB_PASSWORD', '' );
+define( 'DB_SIRLA_PASS', 'MT123456' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
+define( 'DB_SIRLA_HOST', '52.247.107.132' );
 
 /** Database Charset to use in creating database tables. */
 define( 'DB_CHARSET', 'utf8mb4' );
@@ -64,6 +68,8 @@ define( 'NONCE_SALT',       'a3;Hm4KXCX/pO/ukl(%hHYI#hXE]wx^?Bdlx@43f{xE/a#^GH@~
  * a unique prefix. Only numbers, letters, and underscores please!
  */
 $table_prefix = 'wp_';
+
+define('TABLE_SIRLA_SCHEMA','dbo');
 
 /**
 * Desactivar en WordPress WP CRON

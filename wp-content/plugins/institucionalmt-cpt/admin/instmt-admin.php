@@ -2,15 +2,32 @@
 
 class InstitucionalMT_Admin
 {
+    /**
+     * El identificador único de éste plugin
+     * 
+     * @since   1.0.0
+     * @access  private
+     * @var     string      $plugin_name    El nombre o identificador único de éste plugin
+     */
+    private $plugin_name;
 
+    /**
+     * Versión actual del plugin
+     * 
+     * @since   1.0.0
+     * @access  private
+     * @var     string      $version    La versión actual del plugin
+     */
     private $version;
+    
     private $plugin_dir_path;
     private $plugin_dir_url;
     private $plugin_dir_url_dir;
 
-    public function __construct( $version )
+    public function __construct( $plugin_name, $version )
     {
 
+        $this->plugin_name = $plugin_name;
         $this->version = $version;
         $this->plugin_dir_path = plugin_dir_path(__FILE__);
         $this->plugin_dir_url = plugin_dir_url( __FILE__ );
@@ -35,12 +52,16 @@ class InstitucionalMT_Admin
 
     public function institucionalmt_admin_enqueue_scripts( $hook ){
 
-        // var_dump($hook);
+        var_dump($hook);
 
         // if( $hook != 'toplevel_page_instmt_settings' && $hook != 'post.php' ){
         //     //echo "<script>alert('Aqui no esta');</script>";
         //     return;
         // }        
+
+        if( $hook == "post.php"){
+             wp_enqueue_media();
+        }
 
         wp_enqueue_script( 'bootstrap_admin_js', $this->plugin_dir_url . 'inc/bootstrap-3.3.7-dist/js/bootstrap.min.js', ['jquery'], $this->version, true );  
         wp_enqueue_script( 'bootstrap_admin_notify', $this->plugin_dir_url . 'inc/bootstrap-notify/bootstrap-notify.min.js', ['jquery'], $this->version, true );  

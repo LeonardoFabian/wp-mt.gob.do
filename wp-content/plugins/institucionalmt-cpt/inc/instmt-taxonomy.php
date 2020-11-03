@@ -128,8 +128,8 @@ class InstitucionalMT_Taxonomy {
         ];
     
         $labels = [
-            'name' => __('Zonas', 'institucionalmt'),
-            'singular_name' => __('Zona', 'institucionalmt'),
+            'name' => __('Zonas OTE', 'institucionalmt'),
+            'singular_name' => __('Zona OTE', 'institucionalmt'),
             'search_items' => __('Buscar Zonas', 'institucionalmt'),
             'all_itens' => __('Todas las Zonas', 'institucionalmt'),
             'parent_item' => __('Zona padre', 'institucionalmt'),
@@ -138,7 +138,7 @@ class InstitucionalMT_Taxonomy {
             'update_item' => __('Actualizar Zona', 'institucionalmt'),
             'add_new_item' => __('Agregar nueva Zona', 'institucionalmt'),
             'new_item_name' => __('Nuevo nombre de Zona', 'institucionalmt'),
-            'menu_name' => __('Zonas', 'institucionalmt')
+            'menu_name' => __('Zonas OTE', 'institucionalmt')
         ];
     
         $args = [

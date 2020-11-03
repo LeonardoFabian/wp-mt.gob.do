@@ -17,3 +17,6 @@ require plugin_dir_path(__FILE__) . 'class.instmt-representantes-locales-metabox
 // Instmt Encargados OTE Metabox
 require plugin_dir_path(__FILE__) . 'class.instmt-encargados-ote-metabox.php';
 
+// Instmt Documentos Metabox
+require plugin_dir_path(__FILE__) . 'class.instmt-documentos-metabox.php';
+
