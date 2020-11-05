@@ -1,8 +1,47 @@
 <?php 
 
+/**
+ * Registrar todos los menús y submenus del plugin
+ * 
+ * @link        https://misitioweb.com
+ * @since       1.0.0
+ * 
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
+ */
+
+/**
+ * Agrega todos los menús y submenus a utilizar en el plugin
+ * donde los métodos add_menu_page() y add_submenu_page()
+ * tienen que ser llamados junto con el gancho
+ * de acción 'admin_menu'
+ * 
+ * @since       1.0.0
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
+ * @author      Leonardo Fabián <ramonlfabian@gmail.com>
+ * 
+ * @property    array   $menus
+ * @property    array   $submenus
+ */
 class InstitucionalMT_Menu_Pages {
 
+    /**
+     * Array de menús a registrar en WordPress
+     * 
+     * @since       1.0.0
+     * @access      protected
+     * @var         array       $menus      Los menús registrados en WordPress para ejecutar cuando se llame
+     */
     protected $menus;
+
+    /**
+     * Array de submenus a registrar en WordPress
+     * 
+     * @since       1.0.0
+     * @access      protected
+     * @var         array       $submenus       Los submenus registrados en WordPress para ejecutar cuando se llame.
+     */
     protected $submenus;
 
     public function __construct(){
@@ -56,6 +95,12 @@ class InstitucionalMT_Menu_Pages {
 
     }
 
+    /**
+     * Registra los menús y submenus con WordPress
+     * 
+     * @since       1.0.0
+     * @access      public
+     */
     public function run(){
 
         foreach( $this->menus as $menus ){

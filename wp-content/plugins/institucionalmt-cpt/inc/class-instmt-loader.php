@@ -1,10 +1,57 @@
 <?php 
 
+/**
+ * Registrar todas las acciones y filtros para el complemento
+ * 
+ * @link        https://misitioweb.com
+ * @since       1.0.0
+ * 
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
+ */
+
+/**
+ * Registrar todas las acciones y filtros para el plugin
+ * 
+ * Mantener una lista de todos los ganchos que están registrados
+ * en todo el plugin, y registrarlos con la API de WordPress.
+ * Llame a la función run para ejecutar la lista de acciones y filtros.
+ * 
+ * @since       1.0.0
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
+ * @author      Leonardo Fabián <ramonlfabian@gmail.com>
+ * 
+ * @property    array   $actions
+ * @property    array   $filters
+ */
 class InstitucionalMT_Loader{
 
+    /**
+     * Array de acciones registradas en WordPress
+     * 
+     * @since       1.0.0
+     * @access      protected
+     * @var         array       $actions    Las acciones registradas en WordPress para ejecutar cuando se carga el plugin.
+     */
     protected $actions;
+
+    /**
+     * Array de filtros registrados en WordPress
+     * 
+     * @since       1.0.0
+     * @access      protected
+     * @var         array       $filters    Los filtros registrados en WordPress para ejecutar cuando se carga el plugin.
+     */
     protected $filters;
 
+    /**
+     * Constructor
+     * 
+     * Inicializar las propiedades utilizadas para mantener las acciones y filtros.
+     * 
+     * @since       1.0.0
+     */
     public function __construct(){
 
         $this->actions = [];
@@ -38,6 +85,12 @@ class InstitucionalMT_Loader{
 
     }
 
+    /**
+     * Registre las acciones y filtros con WordPress
+     * 
+     * @since       1.0.0
+     * @access      public
+     */
     public function run(){
 
         foreach( $this->actions as $action ){

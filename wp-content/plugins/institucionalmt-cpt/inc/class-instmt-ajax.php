@@ -1,11 +1,37 @@
 <?php
 
 /**
- * Peticiones Ajax desde Admin-Script.js
+ * Se activa con la activación del plugin
+ * 
+ * @link        https://misitioweb.com
+ * @since       1.0.0
+ * 
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
  */
 
+/**
+ * Esta clase define todo lo necesario durante la activación del plugin
+ * 
+ * @since       1.0.0
+ * @package     InstitucionalMT-CPT
+ * @subpackage  InstitucionalMT-CPT/inc
+ * @author      Leonardo Fabián <ramonlfabian@gmail.com>
+ */
 class InstitucionalMT_Ajax
 {
+
+    /**
+     * Método constructor
+     * 
+     * Se ejecuta cuando se instancia la clase
+     * 
+     * @since       1.0.0
+     * @access      public
+     */
+    public function __construct(){
+        // Código a ejecutar en la instancia del objeto
+    }
 
     public function in_admin_search()
     {
