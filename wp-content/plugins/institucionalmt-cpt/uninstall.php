@@ -14,7 +14,9 @@ if( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
     exit(); // or die;
 }
 
-// Eliminar las opciones
+/**
+ * Código para eliminar las opciones
+ */
 $institucionalmt_option_name = 'institucionalmt_options';
 delete_option( $institucionalmt_option_name );
 
@@ -24,4 +26,21 @@ delete_option( $institucionalmt_option_name );
 //     'side' // advanced, normal, side
 // );
 
-// $wpdb->query( "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_documentos");
+/**
+ * Código para eliminar las bases de datos creadas por el plugin
+ * 
+ * @since       1.0.0
+ */
+global $wpdb;
+
+$sql = "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_item";
+
+$wpdb->query( $sql );
+
+/**
+ * Código para limpiar la cache
+ */
+
+/**
+ * Código para limpiar enlaces permanentes
+ */

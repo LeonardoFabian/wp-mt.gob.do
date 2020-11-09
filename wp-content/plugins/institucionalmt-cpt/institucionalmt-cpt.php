@@ -39,6 +39,7 @@ define( 'INSTMT_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INSTMT_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'INSTMT_PLUGIN_DIR_URL_DIR', plugin_dir_url( __DIR__ ) );
 define( 'INSTMT_TABLE_DOCS', "{$wpdb->prefix}institucionalmt_documentos");
+define( 'INSTMT_TABLE_ITEM', "{$wpdb->prefix}institucionalmt_item");
 
 /**
  * Código que se ejecuta en la activación del plugin
@@ -56,9 +57,7 @@ if (!function_exists('activate_institucionalmt_cpt')) {
 if (!function_exists('deactivate_institucionalmt_cpt')) {
     function deactivate_institucionalmt_cpt() {
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/deactivate/class-instmt-deactivator.php';
-        InstitucionalMT_Deactivator::deactivate();
-        // Limpiar enlaces permanentes
-        flush_rewrite_rules();
+        InstitucionalMT_Deactivator::deactivate();        
     }    
 }
 

@@ -29,6 +29,9 @@ class InstitucionalMT_Deactivator {
      */
     public static function deactivate(){
 
+        // Limpiar enlaces permanentes
+        flush_rewrite_rules();
+
     }
     
 }

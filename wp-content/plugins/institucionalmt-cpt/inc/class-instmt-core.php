@@ -26,9 +26,7 @@
   * @property   string $version
   */
 
-class InstitucionalMT_Core {
-   
-    protected $plugin_dir_path_dir;
+class InstitucionalMT_Core {      
 
     /**
      * loader es responsable de mantener y registrar
@@ -101,6 +99,7 @@ class InstitucionalMT_Core {
         $this->institucionalmt_load_instances();
         $this->institucionalmt_set_languages();
         $this->institucionalmt_define_admin_hooks();
+        $this->institucionalmt_define_public_hooks();
 
     }
 
@@ -134,24 +133,34 @@ class InstitucionalMT_Core {
          * Clase responsable de definir todas las acciones en el área de 
          * administración
          */
-        require_once INSTMT_PLUGIN_DIR_PATH . 'admin/instmt-admin.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'admin/class-instmt-admin.php';
 
         /**
          * Clase responsable de definir todas las acciones en el área del
          * lado del cliente/público
          */
-        require_once INSTMT_PLUGIN_DIR_PATH . 'public/instmt-public.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'public/class-instmt-public.php';
 
+        /**
+         * Clase responsable de definir todos los Custom Post Type (CPT)
+         * creados por el plugin
+         */
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-cpt.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-taxonomy.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-meta-field-dependencias.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-meta-field-usuarios.php';
+
+        /**
+         * Clase responsable de definir todas las taxonomias asociadas a 
+         * los CPT creados por el plugin.
+         */
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-taxonomy.php';
+
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-meta-field-dependencias.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-meta-field-usuarios.php';
 
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-menu-pages-settings.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-menu-rlt.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-menu-ote.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/instmt-menu-documentos.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages-settings.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-rlt.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-ote.php';
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-documentos.php';
 
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-roles.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-http.php';
@@ -216,13 +225,27 @@ class InstitucionalMT_Core {
 
     }
 
+    /**
+     * Registrar todos las clases widgets que serán creados por el plugin
+     * mediante la clase InstitucionalMT_Widgets, pasandole como parametro el nombre de la
+     * clase a la función register_widget()
+     * 
+     * @since       1.0.0
+     * @access      public
+     */
     public function institucionalmt_register_widgets(){
 
         register_widget( 'InstitucionalMT_Widget');
 
     }
 
-    public function institucionalmt_define_admin_hooks(){
+    /**
+     * Registrar todos los ganchos relacionados con la funcionalidad del área de administració del plugin
+     * 
+     * @since       1.0.0
+     * @access      private
+     */
+    private function institucionalmt_define_admin_hooks(){
 
         // Cargando Taxonomias
         $this->loader->add_action( 'init', $this->taxonomy, 'institucionalmt_servicios' );
@@ -233,11 +256,7 @@ class InstitucionalMT_Core {
 
         // Cargando los estilos y scripts del admin
         $this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'institucionalmt_admin_enqueue_styles');
-        $this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'institucionalmt_admin_enqueue_scripts');
-
-        // Cargando los estilos y scripts publicos
-        $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_styles');
-        $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_scripts');
+        $this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'institucionalmt_admin_enqueue_scripts');        
 
         // Cargando los tipos de post personalizados
         $this->loader->add_action( 'init', $this->cpt, 'ministro');
@@ -307,6 +326,18 @@ class InstitucionalMT_Core {
         //$this->loader->add_action('instmt_cron', $this->cron, 'institucionalmt_cron_enviar_ultima_publicacion');
         $this->loader->add_action('init', $this->cron, 'institucionalmt_cron_init' );
 
+    }
+
+    /**
+     * Registrar todos los ganchos relacionados con la funcionalidad del lado cliente/público del plugin
+     * 
+     * @since       1.0.0
+     * @access      private
+     */
+    private function institucionalmt_define_public_hooks(){
+        // Cargando los estilos y scripts publicos
+        $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_styles');
+        $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_scripts');
     }
 
     /**

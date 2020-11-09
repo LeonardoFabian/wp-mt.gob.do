@@ -19,11 +19,7 @@ class InstitucionalMT_Public
      * @access      private
      * @var         string      $version    La versión actual del plugin
      */
-    private $version;
-
-    private $plugin_dir_path;
-    private $plugin_dir_url;
-    private $plugin_dir_url_dir;
+    private $version;  
 
     /**
      * @param   string      $plugin_name    Nombre o identificador único de éste plugin
