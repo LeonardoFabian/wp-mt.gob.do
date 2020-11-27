@@ -37,6 +37,7 @@ abstract class Instmt_Representantes_Locales_Metabox
         $correo = isset($instmt_representante['correo']) ? esc_attr($instmt_representante['correo']) : '';              
 
         $html = "
+            <div class='had-container'>
             <p>" . __('Datos del Representante', 'institucionalmt') . "</p>  
             <label for='instmt_representante_nombre'>" . __('Nombre Completo', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_representante[nombre]' id='instmt_representante_nombre' value='" . esc_attr($nombre) . "'>          
@@ -52,6 +53,7 @@ abstract class Instmt_Representantes_Locales_Metabox
             <br/>           
             <label for='instmt_representante_correo'>" . __('Correo', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_representante[correo]' id='instmt_representante_correo' value='" . esc_attr($correo) . "'>
+            </div>
         ";  
 
         echo $html;        

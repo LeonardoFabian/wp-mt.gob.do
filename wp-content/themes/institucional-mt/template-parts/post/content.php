@@ -1,7 +1,7 @@
-<div id="entry-header" class="entry-header title-bar mb-5 d-none d-sm-block">
+<div id="entry-header" class="entry-header title-bar mb-5 d-none d-sm-block magic">
     <div class="container d-flex text-left overlay text-light h-100">
         <div class="align-self-center">
-            <h2 class="entry-header-title"><?php the_title(); ?></h2>
+            <h2 class="institucionalmt-title"><?php the_title(); ?><span></span></h2>
             <small class="breadcrumbs tex-muted">Mostrar aqui rastro de navegacion publicacion</small>
         </div>
     </div>
@@ -33,7 +33,7 @@
             </div>
 
             <div class="row">
-                <div class="col-md-9 mb-5">
+                <div class="col-sm-12 col-md-8 col-lg-8 mb-5">
 
                     <!-- TO DO: social-vertical-bar -->
                     <!--
@@ -58,17 +58,24 @@
                                     the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid'));
                                 }
                                 ?>
-                            </div>
-
+                            </div>                          
 
                             <div class="single-content-description lead text-justify mb-3">
                                 <?php the_content(); ?>
                             </div>
+                            <div class="signature" style="width:100%;">
+                                <!-- customize action in plugin institucionalmt-cpt/public/class-instmt-public.php -->
+                                <?php do_action('instmt_post_signature'); ?>
+                            </div>
                             <div class="tags-list text-muted mb-5">
                                 <?php the_tags('<span class="tag"><i class="fa fa-tag"></i>', '</span><span class="tag"><i class="fa fa-tag"></i>', '</span>'); ?>
                             </div>
+                            <div class="banner-section col-sm-12 col-md-12 col-lg-12" style="width:100%;">
+                                <?php dynamic_sidebar('banners-post-content'); ?>
+                            </div>
 
                         </div>
+                        <hr>
                         <div class="comments-count my-3">
                             <span class="comment">
                                 <a href="#comments">
@@ -79,14 +86,21 @@
                                 </a>
                             </span>
                         </div>
-                       
+                       <hr>                       
+
+                       <?php if( comments_open() ) : ?>
+                            <div id="comments" class="comments">
+                                <?php comments_template(); ?>
+                            </div>
+                       <?php endif; ?>
 
                     </div>
 
                 </div>
 
                 <!-- Aside -->
-                <div id="single-aside-section" class="col-md-3">
+                <div id="single-aside-section" class="col-sm-12 col-md-4 col-lg-4">
+                    <?php dynamic_sidebar('banners-post-sidebar'); ?>
                     <?php get_sidebar(); ?>
                 </div>
             </div>

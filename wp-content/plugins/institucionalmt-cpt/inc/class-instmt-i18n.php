@@ -3,7 +3,7 @@
  * Define la funcionalidad de internacionalización
  * 
  * Carga y define los archivos de internacionalización de este plugin
- * para que éste listo para su traducción.
+ * para que esté listo para su traducción.
  * 
  * @link        https://misitioweb.com
  * @since       1.0.0

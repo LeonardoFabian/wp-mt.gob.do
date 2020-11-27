@@ -8,7 +8,7 @@
  * 
  * @link            https://misitioweb.com
  * @since           1.0.0
- * @package         InstitucionalMT CPT
+ * @package         InstitucionalMT-CPT
  * 
  * @wordpress-plugin
  * Plugin Name:      InstitucionalMT Custom Post Types
@@ -31,6 +31,14 @@
  */
 
 /**
+* Asegurando que todas las instrucciones se ejecuten desde WordPress
+*/
+if ( ! defined( 'WPINC' ) ) {
+	die;
+}
+// defined('ABSPATH') or die;
+
+/**
  * Instalar (activar) plugin
  */
 global $wpdb;
@@ -39,14 +47,24 @@ define( 'INSTMT_PLUGIN_DIR_PATH', plugin_dir_path( __FILE__ ) );
 define( 'INSTMT_PLUGIN_DIR_URL', plugin_dir_url( __FILE__ ) );
 define( 'INSTMT_PLUGIN_DIR_URL_DIR', plugin_dir_url( __DIR__ ) );
 define( 'INSTMT_TABLE_DOCS', "{$wpdb->prefix}institucionalmt_documentos");
-define( 'INSTMT_TABLE_ITEM', "{$wpdb->prefix}institucionalmt_item");
+define( 'INSTMT_TABLE_ITEMS', "{$wpdb->prefix}institucionalmt_items");
+define( 'INSTMT_TABLE_ITEMS_CATEGORIES', "{$wpdb->prefix}institucionalmt_items_categories");
+define( 'INSTMT_TABLE_HITS', "{$wpdb->prefix}institucionalmt_hits");
 
 /**
  * Código que se ejecuta en la activación del plugin
  */
 if (!function_exists('activate_institucionalmt_cpt')) {
     function activate_institucionalmt_cpt(){
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/activate/class-instmt-activator.php';
+        /**
+        * Incluyendo el archivo upgrade.php 
+        * para crear las tablas utilizando la función dbDelta()
+        */
+        include_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+        require_once( ABSPATH . 'wp-admin/includes/upgrade.php' );
+
+        include_once( INSTMT_PLUGIN_DIR_PATH . 'inc/activate/class-instmt-activator.php' );
+        require_once( INSTMT_PLUGIN_DIR_PATH . 'inc/activate/class-instmt-activator.php' );
         InstitucionalMT_Activator::activate();
     }    
 }
@@ -56,7 +74,8 @@ if (!function_exists('activate_institucionalmt_cpt')) {
  */
 if (!function_exists('deactivate_institucionalmt_cpt')) {
     function deactivate_institucionalmt_cpt() {
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/deactivate/class-instmt-deactivator.php';
+        include_once( INSTMT_PLUGIN_DIR_PATH . 'inc/deactivate/class-instmt-deactivator.php' );
+        require_once( INSTMT_PLUGIN_DIR_PATH . 'inc/deactivate/class-instmt-deactivator.php' );
         InstitucionalMT_Deactivator::deactivate();        
     }    
 }

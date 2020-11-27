@@ -62,6 +62,7 @@ abstract class Instmt_RLT_Metabox
         $representanteActual = get_post( $representanteRLT, 'instmt_representante');               
 
         $html = "
+            <div class='had-container'>
             <p>Datos del Representante</p>            
             <label for='instmt_rlt_representante_rlt'>Cambiar Representante Local actual</label>
             <select class='select-representante-rlt instmt-input-group' id='representante' name='instmt_rlt[representante_rlt]' value=''>
@@ -84,6 +85,7 @@ abstract class Instmt_RLT_Metabox
 
                 wp_reset_postdata();
 
+        #FIXME: Reparar actualizar datos del representante local
         $html .= "
             </select>
             <p class='description'> Listado de los Representantes Locales, añadidos en el menu 'Representantes Locales'.</p>
@@ -173,6 +175,7 @@ abstract class Instmt_RLT_Metabox
             <br>
             <label for='instmt_rlt_horario'>Horario</label>
             <input type='text' class='instmt-input-group' name='instmt_rlt[horario]' id='instmt_rlt_horario' value='" . $horario . "'>
+            </div>
         "; 
 
         echo $html;        

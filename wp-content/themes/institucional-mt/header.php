@@ -15,6 +15,21 @@
 </head>
 
 <body <?php body_class(); ?>>
+    <section id="institucionalmt-top-section">
+        <div class="container">
+            <div class="row">
+                <div id="top-left" class="col-md-4 col-lg-4 col-xl-4">
+                    <?php if( is_active_sidebar( 'top-left-sidebar' ) ) { dynamic_sidebar( 'top-left-sidebar' ); } ?>
+                </div>
+                <div id="top-middle" class="col-md-4 col-lg-4 col-xl-4">
+                    <?php if( is_active_sidebar( 'top-mid-sidebar' ) ) { dynamic_sidebar( 'top-mid-sidebar' ); } ?>
+                </div>
+                <div id="top-right" class="col-md-4 col-lg-4 col-xl-4">
+                    <?php if( is_active_sidebar( 'top-right-sidebar' ) ) { dynamic_sidebar( 'top-right-sidebar' ); } ?>
+                </div>
+            </div>
+        </div>
+    </section>
     <header id="site-header">
         <div class="container">
             <!-- top display mobile -->
@@ -23,8 +38,9 @@
             <!-- site header -->
             <div id="site-header" class="row" style="height: 200px;">
                 <!-- Logo -->
-                <div id="header-brand" class="col-lg-8">
+                <div id="header-left" class="col-lg-8">
                     <div id="logo">
+                        <?php if( is_active_sidebar( 'header-left-sidebar' ) ) { dynamic_sidebar( 'header-left-sidebar' ); } ?>
                         <a href="<?php echo home_url(); ?>" title="" rel="home" class="logo">
                             <?php if ( (get_theme_mod('custom_main_logo') != "") && (get_theme_mod('header-background') == "header-background-off") ) { ?>
                                 <!-- Display main logo using header custom panel -->
@@ -42,10 +58,8 @@
                     </div>
                 </div>
                 <!-- widget area 1 -->
-                <div id="headerbar" class="col-lg-4 align-self-center text-center d-none d-sm-block">
-                    <?php if (is_active_sidebar('header-right-widget-area')) : ?>
-                        <?php dynamic_sidebar('header-right-widget-area'); ?>
-                    <?php endif; ?>
+                <div id="header-right" class="col-lg-4 align-self-center text-center d-none d-sm-block">
+                    <?php if (is_active_sidebar('header-right-sidebar')) { dynamic_sidebar('header-right-sidebar'); } ?>
                     <aside id="nav_menu-3" class="widget widget_nav_menu">
                         <!-- widget title -->                                                
                         <?php wp_nav_menu(array(
@@ -60,6 +74,8 @@
 
                     </aside>
                 </div>
+                <?php if( is_active_sidebar( 'header-float-left' ) ) { dynamic_sidebar('header-float-left'); } ?>
+                <!-- TODO: Crear un widget de social bar vertical -->
             </div>
         </div>
         <!-- NAVBAR WEB -->

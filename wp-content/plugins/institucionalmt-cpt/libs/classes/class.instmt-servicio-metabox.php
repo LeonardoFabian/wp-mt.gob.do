@@ -46,6 +46,7 @@ abstract class Instmt_Servicio_Metabox
         $url = isset($instmt_service['servicio_url']) ? $instmt_service['servicio_url'] : '';
 
         $html = "
+            <div class='had-container'>
             <label for='instmt_servicio_precio'>" . __('Precio', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_servicio[precio]' id='instmt_servicio_precio' value='" . $precio . "'>
         ";
@@ -168,6 +169,8 @@ abstract class Instmt_Servicio_Metabox
         echo $html7;
 
         wp_editor($informacion_adicional, 'instmt_servicio_informacion_adicional', array('textarea_name' => 'instmt_servicio[informacion_adicional]', 'textarea_rows' => 5, 'media_buttons' => false, 'editor_class' => 'editor-informacion-adicional'));
+
+        echo "</div>";
     }
 
     public static function save($post_id)

@@ -20,6 +20,14 @@
  */
 class InstitucionalMT_Ajax
 {
+    /**
+    * Objeto wpdb
+    * 
+    * @since        1.0.0
+    * @access       private
+    * @var          object      $db     @global $wpdb
+    */
+    private $db;
 
     /**
      * Método constructor
@@ -31,6 +39,40 @@ class InstitucionalMT_Ajax
      */
     public function __construct(){
         // Código a ejecutar en la instancia del objeto
+        global $wpdb;
+        $this->db = $wpdb;
+    }
+
+    /**
+    * Método que controla el envio de datos con POST
+    * desde el cliente al servidor
+    * 
+    * @since        1.0.0
+    * @access       public
+    */
+    public function institucionalmt_tables(){
+
+        // verificar nonce para evitar procesar peticiones externas
+        check_ajax_referer( 'instmt_ajax_create_item_nonce', 'nonce' );
+
+        if( current_user_can( 'manage_options' ) ){
+
+            extract( $_POST, EXTR_OVERWRITE );
+
+            $columns = [
+                'nombre'    =>  $nombre,
+                'datos'     =>  ''    
+            ];
+
+            $result = $this->db->insert( INSTMT_TABLE_ITEMS, $columns );
+
+            $json = json_encode([
+                'result' => $result,
+                'nombre' => $nombre
+            ]);
+
+        }
+
     }
 
     public function in_admin_search()

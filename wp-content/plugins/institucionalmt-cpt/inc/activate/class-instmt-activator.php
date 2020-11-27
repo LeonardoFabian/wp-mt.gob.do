@@ -34,6 +34,7 @@ class InstitucionalMT_Activator {
     public static function activate(){
 
         global $wpdb;
+        $charset_collate = $wpdb->get_charset_collate();
 /*
         $sql = "CREATE TABLE IF NOT EXISTS " . INSTMT_TABLE_DOCS . " (
             id INT(11) NOT NULL AUTO_INCREMENT,
@@ -70,14 +71,16 @@ class InstitucionalMT_Activator {
 
         );";            
 */
-        $sql .= "CREATE TABLE IF NOT EXISTS " . INSTMT_TABLE_ITEM. " (
+        $create_items = dbDelta(
+            "CREATE TABLE IF NOT EXISTS " . INSTMT_TABLE_ITEMS . " (
             id INT(11) NOT NULL AUTO_INCREMENT,
-            term_id INT(11) NOT NULL, -- (FK wp_terms.ID leyes, decretos, resoludiones)
-            post_type VARCHAR(255) NULL, -- (instmt-documentos)
-            post_title VARCHAR(255) NULL,
+            category_id INT(11) NOT NULL,
+            post_type VARCHAR(255) NULL,
+            name VARCHAR(255) NULL,
+            description LONGTEXT NULL,
             link VARCHAR(255) NULL,   
             created_date DATETIME,
-            modified_date DATETIME,
+            modified_date TIMESTAMP,
             modified_by INT(11),
             publish_date DATETIME,
             unpublish_date DATETIME,
@@ -91,9 +94,37 @@ class InstitucionalMT_Activator {
             elements LONGTEXT,
             params LONGTEXT,                                     
             PRIMARY KEY(id)
-        );"; 
+            ) $charset_collate;"
+        );     
+        
+        $create_categories = dbDelta(
+            "CREATE TABLE IF NOT EXISTS " . INSTMT_TABLE_ITEMS_CATEGORIES . " (
+            id INT(11) NOT NULL AUTO_INCREMENT,            
+            name VARCHAR(255) NULL, 
+            link VARCHAR(255) NULL,
+            description TEXT NULL,               
+            parent INT(11),
+            ordering INT(11),
+            published TINYINT(1),            
+            params TEXT,                                     
+            PRIMARY KEY(id)
+            ) $charset_collate;"
+        );  
+        
+        $create_hits = dbDelta(
+            "CREATE TABLE IF NOT EXISTS " . INSTMT_TABLE_HITS . "(
+            id INT(11) NOT NULL AUTO_INCREMENT,
+            hit_ip VARCHAR(100) NOT NULL,
+            hit_post_id INT(11) NOT NULL,
+            hit_date DATETIME,
+            PRIMARY KEY(id) 
+            ) $charset_collate ;"
+        );       
 
-        $wpdb->query( $sql );
+        //$wpdb->query( $sql );       
+        
+        
+        //dbDelta( $sql );
         
     }
 }

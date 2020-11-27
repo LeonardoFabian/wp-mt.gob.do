@@ -66,6 +66,7 @@ abstract class Instmt_OTE_Metabox
         $encargadoActual = get_post( $encargadoOTE, 'instmt_encargado_ote');               
 
         $html = "
+            <div class='had-container'>
             <p>" . __('Datos del Encargado', 'institucionalmt') . "</p>            
             <label for='instmt_ote_encargado_ote'>" . __('Cambiar Encargado actual', 'institucionalmt') . "</label>
             <select class='select-encargado-ote instmt-input-group' id='encargado' name='instmt_ote[encargado_ote]' value=''>
@@ -174,6 +175,7 @@ abstract class Instmt_OTE_Metabox
             <br>
             <label for='instmt_ote_horario'>" . __('Horario', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_ote[horario]' id='instmt_ote_horario' value='" . $horario . "'>
+            </div>
         "; 
 
         echo $html;        

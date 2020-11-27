@@ -1,8 +1,29 @@
 <?php
 
-// CUSTOM -> COLOR PALETTE
-function InstitucionalMT_customize_register($wp_customize)
+/**
+ * Customizer include file
+ * Includes all functions for the customizer with this theme
+ * 
+ * @package     Institucional-MT
+ * @subpackage  Institucional-MT/inc
+ * @author      Leonardo Fabian <ramonlfabian@gmail.com>
+ */
+
+/**
+ * Add theme customizer controls, settings, etc
+ * 
+ * @since       1.0.0
+ * @access      public
+ */
+function institucionalmt_customize_register( $wp_customize )
 {
+
+    /*******************************************
+    Define generic controls
+    ********************************************/
+
+    
+
     /*******************************************
     Sections
      ********************************************/
@@ -179,15 +200,17 @@ function InstitucionalMT_customize_register($wp_customize)
 
     // Add copyright text in the footer
     $wp_customize->add_setting("footer_copyright", array(
-        "default" => '&copy 2020 ' .  get_bloginfo('name')  . ' | Todos los Derechos Reservados.',
+        "default" => __( '&copy 2020 ' .  get_bloginfo('name')  . ' | Todos los Derechos Reservados.', 'institucionalmt' ),
         "transport" => "postMessage",
     ));
-    $wp_customize->add_control('footer_copyright', array( // setting id
-        'label'    => __('Copyright', 'copyright'),
-        'section'  => 'footer-options', // section id
-        'type'     => 'text',
-        'priority' => 2,
-    ));
+    $wp_customize->add_control( 
+        $wp_customize,
+        'footer_copyright', array( // setting id
+            'label'    => __('Copyright', 'institucionalmt'),
+            'section'  => 'footer-options', // section id
+            'type'     => 'text',
+            'priority' => 2,
+        ));
 
     // Add Sello NORTIC Web
     $wp_customize->add_setting("footer_nortic", array(
@@ -195,7 +218,7 @@ function InstitucionalMT_customize_register($wp_customize)
         "transport" => "postMessage",
     ));
     $wp_customize->add_control('footer_nortic', array( // setting id
-        'label'    => __('Sello NORTIC', 'nortic'),
+        'label'    => __('Sello NORTIC', 'institucionalmt'),
         'section'  => 'footer-options', // section id
         'type'     => 'textarea',
         'priority' => 3,
@@ -207,14 +230,14 @@ function InstitucionalMT_customize_register($wp_customize)
         "transport" => "postMessage",
     ));
     $wp_customize->add_control('footer_nortic_mobile', array( // setting id
-        'label'    => __('Sello NORTIC (Móvil)', 'nortic_movil'),
+        'label'    => __('Sello NORTIC (Móvil)', 'institucionalmt'),
         'section'  => 'footer-options', // section id
         'type'     => 'textarea',
         'priority' => 4,
     ));
 }
 
-add_action('customize_register', 'InstitucionalMT_customize_register');
+add_action('customize_register', 'institucionalmt_customize_register');
 
 
 
@@ -345,7 +368,7 @@ add_filter('shortcode_atts_inst_googlemap', 'institucionalmt_shortcode_filter', 
 /**
  * Load all our Customizer Custom Controls
  */
-require_once trailingslashit(dirname(__FILE__)) . 'custom-controls.php';
+//require_once trailingslashit(dirname(__FILE__)) . 'custom-controls.php';
 
 // Theme panels
 require get_template_directory() . '/inc/panels/panels.php';

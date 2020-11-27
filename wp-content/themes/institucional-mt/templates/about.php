@@ -2,7 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id="content-contact-header" class="content-contact-header title-bar mb-5 d-none d-sm-block">
+<div id="content-contact-header" class="content-contact-header title-bar  d-none d-sm-block">
     <div class="container d-flex text-left overlay text-light h-100">
         <div class="align-self-center">
             <h2 class="content-contact-header-title"><?php the_title(); ?></h2>
@@ -11,9 +11,11 @@
     </div>
 </div><!-- entry-header -->
 
-<div class="container my-5">
+<div class="content">
+
+<div class="container">
     <div class="row">
-        <div id="contact-section" class="content-area col-md-9 lead text-justify">
+        <div id="contact-section" class="content-area col-sm-12 col-md-8 col-lg-8 lead text-justify">
 
             <?php
             // Show selected front page cotent
@@ -21,7 +23,18 @@
                 if (have_posts()) :
                     while (have_posts()) :
                         the_post();
-                        the_content();
+                        ?>
+                            <div class="post-content-image mb-5">
+                                <?php
+                                    if (has_post_thumbnail()) :
+                                        the_post_thumbnail('post-thumbnail', array('class' => 'img-fluid'));
+                                    endif;
+                                ?>
+                            </div>                           
+                            <div class="single-content-description lead text-justify mb-3">
+                                <?php the_content(); ?>
+                            </div>
+                        <?php
                     //get_template_part('template-parts/page/content', 'contact');
                     endwhile;
                 else :
@@ -34,10 +47,12 @@
 
         </div>
 
-        <div class="col-md-3">
-            <?php get_sidebar('about-us'); ?>
+        <div class="col-md-4 col-lg-4">
+            <?php get_sidebar(); ?>
         </div>
     </div>
+</div>
+
 </div>
 
 <?php get_footer(); ?>

@@ -1,0 +1,31 @@
+/***********************************
+ADMIN CSS INDEX
+************************************/
+/*
+    RESET
+    GENERALS
+
+
+*/
+
+/***********************************
+RESET
+************************************/
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+/***********************************
+GENERALS
+************************************/
+
+/* Widget Radio Buttons */
+input[type="radio"].instmt-cta-radio-buttons {
+    margin-right: .5rem;
+}
+input[type="radio"].instmt-cta-radio-buttons:not(:first-of-type) {
+    margin-left: 2.5rem;
+}
+

@@ -32,7 +32,8 @@ class InstitucionalMT_Taxonomy {
             'sort' => true,
             'args' => ['orderby' => 'term_order'],        
             'rewrite' => ['slug' => 'servicios-categorias'],
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'show_in_rest' => true
         ];
     
         register_taxonomy(
@@ -69,7 +70,8 @@ class InstitucionalMT_Taxonomy {
             'sort' => true,
             'args' => ['orderby' => 'term_order'],        
             'rewrite' => ['slug' => 'dependencias'],
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'show_in_rest' => true
         ];
     
         register_taxonomy(
@@ -110,7 +112,8 @@ class InstitucionalMT_Taxonomy {
             'show_admin_column' => true,
             'show_in_nav_menus' => true,
             'public' => true,
-            'show_ui' => true            
+            'show_ui' => true,
+            'show_in_rest' => true         
         ];
     
         register_taxonomy(
@@ -147,7 +150,8 @@ class InstitucionalMT_Taxonomy {
             'sort' => true,
             'args' => ['orderby' => 'term_order'],        
             'rewrite' => ['slug' => 'ote'],
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'show_in_rest' => true
         ];
     
         register_taxonomy(
@@ -184,7 +188,8 @@ class InstitucionalMT_Taxonomy {
             'sort' => true,
             'args' => ['orderby' => 'term_order'],        
             'rewrite' => ['slug' => 'categorias'],
-            'show_admin_column' => true
+            'show_admin_column' => true,
+            'show_in_rest' => true
         ];
     
         register_taxonomy(

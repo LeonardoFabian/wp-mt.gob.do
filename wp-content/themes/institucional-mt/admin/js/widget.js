@@ -7,7 +7,7 @@ jQuery(document).ready(function ($) {
         wp.media.editor.send.attachment = function (props, attachment) {
           if (_custom_media) {
             $('.' + button_id + '_img').attr('src', attachment.url);
-            $('.' + button_id + '_url').val(attachment.url);
+            $('.' + button_id + '_uri').val(attachment.url);
           } else {
             return _orig_send_attachment.apply($('#' + button_id), [props, attachment]);
           }

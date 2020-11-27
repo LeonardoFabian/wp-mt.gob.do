@@ -1,5 +1,7 @@
 jQuery(document).ready(function($){
 
+     
+
     // Boton para mostrar y ocultar datos de las Representaciones Locales
     var $iconRLT = $('.rlt-icon');
 

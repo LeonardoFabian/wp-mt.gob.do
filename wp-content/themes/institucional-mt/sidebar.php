@@ -20,9 +20,19 @@
 ?>
 
 
-<div id="sidebar">
-    <?php if (is_home()) {
+<div id="sidebar" style="padding:0px 0px 30px 30px;">
+    
+        
+
+    <?php 
+    
+    if (is_home()) {
         // Código para la página de Inicio
+    }
+
+    if( is_page() ){
+        // plugin institucionalmt-cpt/public/class-instmt-public.php
+        do_action('instmt_sidebar_menu');
     }
 
     if (is_page('433')) {
@@ -31,12 +41,16 @@
 
             dynamic_sidebar('service-right-widget-area');
         }
-    }
+    }       
+  
 
     // Sidebar: Quienes somos, Historia, Organigrama, Direcciones y Dependencias, Representaciones Locales
     if ( is_page_template( 'templates/about.php' ) ) {
-        // Código para las páginas About Us
-        include('sidebar-about.php');
+        // Código para las páginas About Us        
+       // include('sidebar-about.php');
+      
+       dynamic_sidebar('about-us-right-sidebar');
+       dynamic_sidebar('banners-pages-sidebar');
     }
 
     if (is_single()) {
@@ -44,6 +58,9 @@
         if (is_active_sidebar('post-right-widget-area')) {
 
             dynamic_sidebar('post-right-widget-area');
+
+            // plugin institucionalmt-cpt/public/class-instmt-public.php
+            do_action('instmt_latest_post_per_category_collection');
         }
     }
 

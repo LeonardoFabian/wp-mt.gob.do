@@ -6,41 +6,86 @@ include_once('inc/customizer.php');
 // Navwalker fix for bootstrap navbar
 require_once('wp-bootstrap-navwalker.php');
 
-function institucionalmt_theme_support()
+/**
+ * Theme setup
+ */
+function institucionalmt_theme_setup()
 {
-    // Add dynamic Title Tag support
+    // title tags
     add_theme_support('title-tag');
-    // Add custom logo
+
+    // translation
+    load_theme_textdomain( 'institucionalmt', get_stylesheet_directory() . '/languages' );
+
+    // post formats
+    add_theme_support( 'post_formats' );
+
+    // custom logo
     add_theme_support('custom-logo');
+
+    // RSS feed links to head
+    add_theme_support( 'automatic-feed-links' );
+
     // page template
     add_theme_support('timeline');
-    add_theme_support('post-thumbnails');
+
+    // post thumbnails or featured images
+    add_theme_support( 'post-thumbnails' );
 }
 
-add_action('after_setup_theme', 'institucionalmt_theme_support');
+add_action('after_setup_theme', 'institucionalmt_theme_setup');
 
-// THEME STYLES
-function InstitucionalMT_register_styles()
+
+/***************************************************************
+ Enqueue styles
+ ***************************************************************/
+function institucionalmt_enqueue_styles()
 {
     $version = wp_get_theme()->get('Version');
     wp_enqueue_style('InstitucionalMT-style', get_template_directory_uri() . '/style.css', array('InstitucionalMT-bootstrap'), $version, 'all');
     wp_enqueue_style('InstitucionalMT-bootstrap', get_template_directory_uri() . '/admin/css/bootstrap/bootstrap.min.css', array(), '4.5.2', 'all');
     wp_enqueue_style('InstitucionalMT-fontawesome', 'https://use.fontawesome.com/releases/v5.14.0/css/all.css', array(), '5.14.0', 'all');
+
+    /**
+     * Custom Carousel Bootstrap 4 
+     * for Banner Slider
+     */
+    wp_enqueue_style('InstitucionalMT-banner-carousel-css', get_template_directory_uri() . '/public/css/custom-banner-bootstrap-carousel.css', array(), '4.5.2', 'all');
 }
 
-add_action('wp_enqueue_scripts', 'InstitucionalMT_register_styles');
+add_action('wp_enqueue_scripts', 'institucionalmt_enqueue_styles');
 
-// THEME SCRIPTS
-function InstitucionalMT_register_scripts()
+
+/***************************************************************
+ Enqueue scripts
+ ***************************************************************/
+function institucionalmt_enqueue_scripts()
 {
+    $version = wp_get_theme()->get('Version');
     wp_enqueue_script('InstitucionalMT-jquery', 'https://code.jquery.com/jquery-3.5.1.slim.min.js', array(), '3.5.1', true);
     wp_enqueue_script('InstitucionalMT-popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js', array(), '1.16.1', true);
     wp_enqueue_script('InstitucionalMT-fontawesome', 'https://kit.fontawesome.com/cece37c6b0.js', array(), '5.14.0', true);
     wp_enqueue_script('InstitucionalMT-bootstrap', get_template_directory_uri() . '/admin/js/bootstrap/bootstrap.min.js', array(), '4.5.2', true);
-    wp_enqueue_script('InstitucionalMT-code', get_template_directory_uri() . '/admin/js/code.js', array('jquery'), '1.0', true);
-}
 
-add_action('wp_enqueue_scripts', 'InstitucionalMT_register_scripts');
+    /**
+     * Libreria TweenMax (javascript)
+     * Herramienta de animaciones
+     * https://greensock.com/get-started
+     */
+    wp_enqueue_script('InstitucionalMT-TweenMax-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js', array('jquery'), '3.5.1', true);
+
+    /**
+     * Libreria ScrollMagic (javascript)
+     * Sincronizar animaciones con el scroll
+     * https://scrollmagic.io/
+     */
+    wp_enqueue_script('InstitucionalMT-ScrollMagic-js', get_template_directory_uri() . '/helpers/scrollmagic/minified/ScrollMagic.min.js', array('jquery'), '2.0.7', true);
+    wp_enqueue_script('InstitucionalMT-ScrollMagic-Animation-js', get_template_directory_uri() . '/helpers/scrollmagic/minified/plugins/animation.gsap.min.js', array('jquery'), '2.0.7', true);
+    wp_enqueue_script('InstitucionalMT-code', get_template_directory_uri() . '/admin/js/code.js', array('jquery'), $version, true);
+    wp_enqueue_script('InstitucionalMT-Public-js', get_template_directory_uri() . '/public/js/institucionalmt-public-code.js', array('jquery'), $version, true);
+    
+}
+add_action('wp_enqueue_scripts', 'institucionalmt_enqueue_scripts');
 
 // THEME MENUS
 function InstitucionalMT_menus()

@@ -1,0 +1,3 @@
+.dashicons-instmt{background: url('../image/domo.svg') 50% 50% no-repeat;}
+a:hover > .dashicons-instmt{background-image: url('../image/domo-hover.svg');}
+a.current > .dashicons-instmt{background-image: url('../image/domo-active.svg');}

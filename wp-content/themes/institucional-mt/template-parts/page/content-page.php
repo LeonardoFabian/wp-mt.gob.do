@@ -42,7 +42,7 @@
 
 
             <!-- Aside -->
-            <div id="single-aside-section" class="col-12 col-md-3">
+            <div id="single-aside-section" class="col-12" style="max-width:300px;">
                 <?php get_sidebar(); ?>                
             </div>
         </div>

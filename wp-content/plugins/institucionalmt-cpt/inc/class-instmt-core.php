@@ -65,14 +65,15 @@ class InstitucionalMT_Core {
 
     protected $build_menupage;
     protected $build_menu_settings;
-    protected $build_menu_rlt;
-    protected $build_menu_ote;
-    protected $build_menu_documentos;
+    //protected $build_menu_rlt;
+    //protected $build_menu_ote;
+    //protected $build_menu_documentos;
 
     protected $roles;
     protected $http;
     protected $ajax;
 
+    protected $hit;
     protected $heartbeat;
     protected $cron;
 
@@ -81,7 +82,7 @@ class InstitucionalMT_Core {
     /**
      * Constructor
      * 
-     * Defina la funcionalidad principal del plugin
+     * Define la funcionalidad principal del plugin
      * 
      * Establece el nombre y la versión del plugin que se puede utilizar en todo el plugin.
      * Cargar las dependencias, carga de instancias, definir la configuración regional (idioma).
@@ -130,6 +131,19 @@ class InstitucionalMT_Core {
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-i18n.php';
 
         /**
+         * Clase responsable de definir los menus del área de administración
+         */
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages.php';
+
+        /**
+         * Menús del área de administración
+         */
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages-settings.php';
+        // require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-rlt.php';
+        // require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-ote.php';
+        // require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-documentos.php';
+
+        /**
          * Clase responsable de definir todas las acciones en el área de 
          * administración
          */
@@ -156,16 +170,13 @@ class InstitucionalMT_Core {
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-meta-field-dependencias.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-meta-field-usuarios.php';
 
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-pages-settings.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-rlt.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-ote.php';
-        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-menu-documentos.php';
+        
 
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-roles.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-http.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-ajax.php';
 
+        require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-hits.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-heartbeat.php';
         require_once INSTMT_PLUGIN_DIR_PATH . 'inc/class-instmt-cron.php';
 
@@ -208,16 +219,17 @@ class InstitucionalMT_Core {
         $this->meta_fields_dependencias = new InstitucionalMT_Meta_Field_Dependencias;
         $this->meta_fields_usuarios = new InstitucionalMT_Meta_Field_Usuarios;
 
-        $this->build_menupage = new InstitucionalMT_Menu_Pages;
+        $this->build_menupage = new InstitucionalMT_Menu_Pages;  
         $this->build_menu_settings = new InstitucionalMT_Menu_Ajustes( $this->build_menupage );
-        $this->build_menu_rlt = new InstitucionalMT_Menu_RLT( $this->build_menupage );
-        $this->build_menu_ote = new InstitucionalMT_Menu_OTE( $this->build_menupage );
-        $this->build_menu_documentos = new InstitucionalMT_Menu_Documentos( $this->build_menupage );
+        //$this->build_menu_rlt = new InstitucionalMT_Menu_RLT( $this->build_menupage );
+        //$this->build_menu_ote = new InstitucionalMT_Menu_OTE( $this->build_menupage );
+        //$this->build_menu_documentos = new InstitucionalMT_Menu_Documentos( $this->build_menupage );
 
         $this->roles = new InstitucionalMT_Roles;
         $this->http = new InstitucionalMT_Http;
         $this->ajax = new InstitucionalMT_Ajax;
 
+        $this->hit = new InstitucionalMT_Hits;
         $this->heartbeat = new InstitucionalMT_Heartbeat;
         $this->cron = new InstitucionalMT_Cron;
 
@@ -235,12 +247,12 @@ class InstitucionalMT_Core {
      */
     public function institucionalmt_register_widgets(){
 
-        register_widget( 'InstitucionalMT_Widget');
+        register_widget( 'InstitucionalMT_Our_Team_Widget');
 
     }
 
     /**
-     * Registrar todos los ganchos relacionados con la funcionalidad del área de administració del plugin
+     * Registrar todos los ganchos relacionados con la funcionalidad del plugin
      * 
      * @since       1.0.0
      * @access      private
@@ -257,6 +269,7 @@ class InstitucionalMT_Core {
         // Cargando los estilos y scripts del admin
         $this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'institucionalmt_admin_enqueue_styles');
         $this->loader->add_action( 'admin_enqueue_scripts', $this->admin, 'institucionalmt_admin_enqueue_scripts');        
+        $this->loader->add_action( 'admin_menu', $this->admin, 'institucionalmt_add_menu_items' );
 
         // Cargando los tipos de post personalizados
         $this->loader->add_action( 'init', $this->cpt, 'ministro');
@@ -293,7 +306,7 @@ class InstitucionalMT_Core {
         $this->loader->add_action( 'admin_menu', $this->build_menu_settings, 'options_page' );
         //$this->loader->add_action( 'admin_menu', $this->build_menu_rlt, 'options_page' );
         //$this->loader->add_action( 'admin_menu', $this->build_menu_ote, 'options_page' );
-        $this->loader->add_action( 'admin_menu', $this->build_menu_documentos, 'options_page' );
+        //$this->loader->add_action( 'admin_menu', $this->build_menu_documentos, 'options_page' );
 
         // Manipulacion de roles
         $this->loader->add_action( 'init', $this->roles, 'manipulate_roles' );
@@ -338,16 +351,30 @@ class InstitucionalMT_Core {
         // Cargando los estilos y scripts publicos
         $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_styles');
         $this->loader->add_action( 'wp_enqueue_scripts', $this->public, 'institucionalmt_public_enqueue_scripts');
+
+        // Posts signature
+        $this->loader->add_action( 'instmt_post_signature', $this->public, 'institucionalmt_signature_below_posts' );
+
+        // Page menu
+        $this->loader->add_action( 'instmt_sidebar_menu', $this->public, 'institucionalmt_page_menu' );
+
+        // Latest post per category collection
+        $this->loader->add_action( 'instmt_latest_post_per_category_collection', $this->public, 'institucionalmt_latest_post_category_collection' );
+
+        // Almacenando las visitas a la página
+        $this->loader->add_filter( 'the_content', $this->hit, 'institucionalmt_register_hit');
     }
 
     /**
-     * Ejecuta el cargador para ejecutar todos los ganchos con WordPress.
+     * Ejecuta el loader para ejecutar todos los ganchos con WordPress.
      * 
      * @since   1.0.0
      * @access  public
      */
     public function run(){
+
         $this->loader->run();
+        
     }
 
     /**
@@ -359,7 +386,9 @@ class InstitucionalMT_Core {
      * @return  string      El nombre del plugin
      */
     public function get_plugin_name(){
+
         return $this->plugin_name;
+
     }
 
     /**
@@ -370,7 +399,9 @@ class InstitucionalMT_Core {
      * @return  InstitucionalMT_Loader      Itera los ganchos del plugin
      */
     public function get_loader(){
+
         return $this->loader;
+
     }
 
     /**
@@ -381,7 +412,9 @@ class InstitucionalMT_Core {
      * @return  string      El número de la versión del plugin
      */
     public function get_version(){
+
         return $this->version;
+
     }
 
 }

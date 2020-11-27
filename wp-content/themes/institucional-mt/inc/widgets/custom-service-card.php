@@ -49,7 +49,8 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
 
     public function widget($args, $instance)
     {
-        $title = apply_filters('widget_title', $instance['title']);
+        
+        $title = apply_filters('widget_title', $instance['front-page-portfolio-title']);
 
         echo $args['before_widget'];
 
@@ -62,7 +63,7 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
         // output
 ?>
         <!-- Grid column -->
-        <div class="mb-4 d-flex align-items-stretch">
+        <div class="mb-4 d-flex align-items-stretch" style="max-height:430px;">
             
                 <!-- Card -->
                 <div class="card card-image" style="background-image: url('<?php echo esc_url($instance['image_uri']); ?>');">
@@ -73,22 +74,27 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
                         <div class="card-body">
                             <a href="" class="text-decoration-none">
                                 <div class="icon-wrapper">
-                                    <h2 class="text-center"><i class="<?php echo apply_filters('fontawesome_icon', $instance['fontawesome_icon']); ?>"></i></h2>
-
-                                    <?php
-                                    if (empty(apply_filters('fontawesome_icon', $instance['fontawesome_icon']))) {
-                                    ?>
+                                    <?php if(! empty( $instance['front-page-portfolio-fontawesome-icon'])) : ?>
+                                        <h2 class="text-center"><i class="<?php echo apply_filters('front-page-portfolio-fontawesome-icon', $instance['front-page-portfolio-fontawesome-icon']); ?>"></i></h2>
+                                    <?php endif; ?>
+                                    <?php if (empty(apply_filters('front-page-portfolio-fontawesome-icon', $instance['front-page-portfolio-fontawesome-icon']))
+                                        
+                                    ) : ?>
                                         <img src="<?php echo esc_url($instance['custom_icon_uri']); ?>" class="custom_icon_uri img-fluid" style="max-height: 100px;" />
-
-                                    <?php
-                                    }
-                                    ?>
+                                    <?php else : ?>
+                                    <?php endif; ?>
                                 </div>
                             </a>
-                            <h4 class="home-card-title card-title pt-2"><?php echo apply_filters('widget_title', $instance['title']); ?></h4>
-                            <div class="card-text-wrapper d-none d-sm-block">
-                                <p><?php echo apply_filters('description', $instance['description']); ?></p>
+                            <?php if(! empty( $instance['front-page-portfolio-title'])) : ?>
+                                <h4 class="home-card-title card-title pt-2"><?php echo apply_filters('widget_title', $instance['front-page-portfolio-title']); ?></h4>
+                            <?php else : ?>
+                            <?php endif; ?>
+                            <?php if(! empty( $instance['front-page-portfolio-description'])) : ?>
+                            <div class="card-text-wrapper d-none d-sm-block" style="white-space: initial;overflow:hidden;">
+                                <p><?php echo apply_filters('description', $instance['front-page-portfolio-description']) . '...'; ?></p>
                             </div>
+                            <?php else : ?>
+                            <?php endif; ?>
                             <div class="service-card-footer text-center d-none d-sm-block">
                                 <a href="<?php echo esc_url($instance['service_uri']); ?>" class="btn btn-lg btn-primary btn-outline-white">Consultar</a>
                             </div>
@@ -110,27 +116,38 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
 
     public function form($instance)
     {
-        if (isset($instance['title']))
-            $title = $instance['title'];
+        if (isset($instance['front-page-portfolio-title']))
+            $title = $instance['front-page-portfolio-title'];
         else {
-            $title = __('Default title', 'institucionalmt');
+            $title = '';
         }
+        if (isset($instance['front-page-portfolio-description']))
+            $description = $instance['front-page-portfolio-description'];
+        else {
+            $description = '';
+        }
+        if (isset($instance['front-page-portfolio-fontawesome-icon']))
+            $fontawesome_icon = $instance['front-page-portfolio-fontawesome-icon'];
+        else {
+            $fontawesome_icon = '';
+        }        
+        
     ?>
 
         <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>">Title</label><br />
-            <input type="text" name="<?php echo $this->get_field_name('title'); ?>" id="<?php echo $this->get_field_id('title'); ?>" value="<?php echo $instance['title']; ?>" class="widefat" maxlengt="50" />
+            <label for="<?php echo $this->get_field_id('front-page-portfolio-title'); ?>">Title</label><br />
+            <input type="text" name="<?php echo $this->get_field_name('front-page-portfolio-title'); ?>" id="<?php echo $this->get_field_id('front-page-portfolio-title'); ?>" value="<?php echo $title; ?>" class="widefat" maxlengt="50" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('fontawesome_icon'); ?>">Fontawesome icon</label><br />
+            <label for="<?php echo $this->get_field_id('front-page-portfolio-fontawesome-icon'); ?>">Fontawesome icon</label><br />
             <small class="text-muted font-italic">Ex.: "fas fa-hand-holding"</small>
-            <input type="text" name="<?php echo $this->get_field_name('fontawesome_icon'); ?>" id="<?php echo $this->get_field_id('fontawesome_icon'); ?>" value="<?php echo $instance['fontawesome_icon']; ?>" class="widefat" />
+            <input type="text" name="<?php echo $this->get_field_name('front-page-portfolio-fontawesome-icon'); ?>" id="<?php echo $this->get_field_id('front-page-portfolio-fontawesome-icon'); ?>" value="<?php echo $fontawesome_icon; ?>" class="widefat" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('custom_icon_uri'); ?>">Custom icon image</label><br />
-            <img class="<?php echo $this->id ?>_ico" src="<?php echo (!empty($instance['custom_icon_uri'])) ? $instance['custom_icon_uri'] : ''; ?>" style="margin:0;padding:0;max-width:100%;display:block;background:#f5f5f5;" />
+            <label for="<?php echo $this->get_field_id('custom_icon_uri'); ?>">Custom icon</label><br />
+            <img class="<?php echo $this->id ?>_ico" src="<?php echo (!empty($instance['custom_icon_uri'])) ? $instance['custom_icon_uri'] : ''; ?>" style="margin:0;padding:0;max-width:100%;display:block;" />
             <input type="text" class="widefat <?php echo $this->id ?>_uri" name="<?php echo $this->get_field_name('custom_icon_uri'); ?>" value="<?php echo $instance['custom_icon_uri']; ?>" style="margin-top:5px;" />
-            <input type="button" id="<?php echo "btn-" . $this->id ?>" class="button button-primary js_custom_upload_icon" value="Upload custom icon image" style="margin-top:5px;" />
+            <input type="button" id="<?php echo $this->id ?>" class="button button-primary js_custom_upload_icon" value="Upload image" style="margin-top:5px;" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('image_uri'); ?>">Background image</label><br />
@@ -139,22 +156,14 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
             <input type="button" id="<?php echo $this->id ?>" class="button button-primary js_custom_upload_media" value="Upload image" style="margin-top:5px;" />
         </p>
         <p>
-            <label for="<?php echo $this->get_field_id('description'); ?>">Description</label><br />
-            <input type="textarea" name="<?php echo $this->get_field_name('description'); ?>" id="<?php echo $this->get_field_id('description'); ?>" value="<?php echo $instance['description']; ?>" class="widefat" maxlengt="75"/>
+            <label for="<?php echo $this->get_field_id('front-page-portfolio-description'); ?>">Description</label><br />
+            <input type="text" name="<?php echo $this->get_field_name('front-page-portfolio-description'); ?>" id="<?php echo $this->get_field_id('front-page-portfolio-description'); ?>" value="<?php echo $description; ?>" class="widefat" maxlength="80"/>
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('service_uri'); ?>">Service URL</label><br />
             <input type="text" name="<?php echo $this->get_field_name('service_uri'); ?>" id="<?php echo $this->get_field_id('service_uri'); ?>" value="<?php echo $instance['service_uri']; ?>" class="widefat" />
         </p>
-        <!-- 
-        <p>
-            <label for="<?php echo $this->get_field_id('title'); ?>">
-                <?php _e('Title:'); ?>
-            </label>
-
-            <input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo esc_attr($title); ?>" />
-        </p>
-    -->
+        
 <?php
     }
 
@@ -162,11 +171,11 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
     {
         $instance = $old_instance;
 
-        $instance['title'] = (!empty($new_instance['title'])) ? strip_tags($new_instance['title']) : '';
-        $instance['fontawesome_icon'] = (!empty($new_instance['fontawesome_icon'])) ? strip_tags($new_instance['fontawesome_icon']) : '';
+        $instance['front-page-portfolio-title'] = (!empty($new_instance['front-page-portfolio-title'])) ? strip_tags($new_instance['front-page-portfolio-title']) : '';
+        $instance['front-page-portfolio-fontawesome-icon'] = (!empty($new_instance['front-page-portfolio-fontawesome-icon'])) ? strip_tags($new_instance['front-page-portfolio-fontawesome-icon']) : '';
         $instance['custom_icon_uri'] = (!empty($new_instance['custom_icon_uri'])) ? strip_tags($new_instance['custom_icon_uri']) : '';
         $instance['image_uri'] = (!empty($new_instance['image_uri'])) ? strip_tags($new_instance['image_uri']) : '';
-        $instance['description'] = (!empty($new_instance['description'])) ? strip_tags($new_instance['description']) : '';
+        $instance['front-page-portfolio-description'] = (!empty($new_instance['front-page-portfolio-description'])) ? strip_tags($new_instance['front-page-portfolio-description']) : '';
         $instance['service_uri'] = (!empty($new_instance['service_uri'])) ? strip_tags($new_instance['service_uri']) : '';
 
         return $instance;

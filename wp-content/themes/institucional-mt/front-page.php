@@ -1,4 +1,17 @@
-<?php get_header(); ?>
+<?php 
+
+/* Template Name: Home */ 
+
+/**
+ * Página para mostrar el contenido principal del sitio web
+ * 
+ * Se debe asignar una página estatica
+ * y seleccionar en los "Atributos de página" la plantilla: Home
+ */
+
+get_header(); 
+
+?>
 
 <div id="" class="content-area">
     <main id="main" class="site-main" role="main">

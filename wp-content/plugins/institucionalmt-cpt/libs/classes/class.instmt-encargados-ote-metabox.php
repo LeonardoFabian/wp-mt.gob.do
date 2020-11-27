@@ -37,6 +37,7 @@ abstract class Instmt_Encargados_OTE_Metabox
         $correo = isset($instmt_representante['correo']) ? esc_attr($instmt_representante['correo']) : '';              
 
         $html = "
+            <div class='had-container'>
             <p>" . __('Datos del Encargado', 'institucionalmt') . "</p>  
             <label for='instmt_encargado_ote_nombre'>" . __('Nombre Completo', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_encargado_ote[nombre]' id='instmt_encargado_ote_nombre' value='" . esc_attr($nombre) . "'>          
@@ -52,6 +53,7 @@ abstract class Instmt_Encargados_OTE_Metabox
             <br/>           
             <label for='instmt_encargado_ote_correo'>" . __('Correo', 'institucionalmt') . "</label>
             <input type='email' class='instmt-input-group' name='instmt_encargado_ote[correo]' id='instmt_encargado_ote_correo' value='" . esc_attr($correo) . "'>
+            </div>
         ";  
 
         echo $html;        

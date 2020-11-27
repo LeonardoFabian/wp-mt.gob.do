@@ -33,7 +33,9 @@ delete_option( $institucionalmt_option_name );
  */
 global $wpdb;
 
-$sql = "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_item";
+$sql = "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_items;";
+$sql .= "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_items_categories;";
+$sql .= "DROP TABLE IF EXISTS {$wpdb->prefix}institucionalmt_hits;";
 
 $wpdb->query( $sql );
 

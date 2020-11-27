@@ -10,15 +10,15 @@ add_action('customize_register', 'institucionalmt_register_custom_layout');
 function institucionalmt_register_custom_layout($wp_customize)
 {
 
-    $mytheme = 'institucionalmt';
+    $textdomain = 'institucionalmt';
     $panel = 'layout_panel';
 
     // Create custom panel
     $wp_customize->add_panel($panel, array(
         'priority' => 300,
         'theme_supports' => '',
-        'title' => __('Opciones de diseño', $mytheme),
-        'description' => __('Especifique el diseño de las  paginas, esquema de colores y fondo', $mytheme),
+        'title' => __('Opciones de diseño', $textdomain),
+        'description' => __('Especifique el diseño de las  paginas, esquema de colores y fondo', $textdomain),
 
     ));
 
@@ -26,7 +26,7 @@ function institucionalmt_register_custom_layout($wp_customize)
 
     // add the section to contain the settings
     $wp_customize->add_section('colors_section', array(
-        'title' =>  __('Colores', $mytheme),
+        'title' =>  __('Colores', $textdomain),
         'panel' => $panel,
         'priority' => 301
     ));
@@ -110,7 +110,7 @@ function institucionalmt_register_custom_layout($wp_customize)
 
     // add the section to contain the settings
     $wp_customize->add_section('backgrounds_section', array(
-        'title' =>  __('Ajustes de fondo', $mytheme),
+        'title' =>  __('Ajustes de fondo', $textdomain),
         'panel' => $panel,
         'priority' => 302
     ));
@@ -172,6 +172,49 @@ function institucionalmt_register_custom_layout($wp_customize)
             )
         );
     }
+
+    // --- LAYOUT SECTIONS ---//
+
+    // add the section to contain the settings
+    $wp_customize->add_section('instmt_layout_sections', array(
+        'title' =>  __('Ajustes del Diseño', $textdomain),
+        'panel' => $panel,
+        'priority' => 303
+    ));
+
+    $wp_customize->add_setting('instmt-top-section-settings');
+
+        // add the control for the top section
+        $wp_customize->add_control(
+            'instmt-top-section-control',
+            array(
+                'label'      => __('Mostrar la barra superior?', $textdomain ),
+                'section'    => 'instmt_layout_sections',
+                'settings'   => 'instmt-top-section-settings',
+                'type'       => 'radio',
+                'choices'    => array(
+                    'instmt-top-section' . '-off'   => 'No',
+                    'instmt-top-section' . '-on'  => 'Si',
+                )
+            )
+        );
+
+        $wp_customize->add_setting('instmt-front-page-portfolio-section-settings');
+
+        // add the control for the Front Page Portfolio section
+        $wp_customize->add_control(
+            'instmt-front-page-portfolio-section-control',
+            array(
+                'label'      => __('Mostrar la sección "Portafolio" en la página principal?', $textdomain ),
+                'section'    => 'instmt_layout_sections',
+                'settings'   => 'instmt-front-page-portfolio-section-settings',
+                'type'       => 'radio',
+                'choices'    => array(
+                    'instmt-front-page-portfolio-section' . '-off'   => 'No',
+                    'instmt-front-page-portfolio-section' . '-on'  => 'Si',
+                )
+            )
+        );
 }
 
 
@@ -210,6 +253,12 @@ function institucioanlmt_add_body_class($classes)
     // set the contact map width
     $map_width = get_theme_mod('custom_map_width_setting');
     $classes[] = $map_width;
+
+    $top_section = get_theme_mod('instmt-top-section-settings');
+    $classes[] = $top_section;
+
+    $front_page_portfolio_section = get_theme_mod('instmt-front-page-portfolio-section-settings');
+    $classes[] = $front_page_portfolio_section;
 
     return $classes;
 }

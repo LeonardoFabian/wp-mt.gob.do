@@ -15,110 +15,65 @@ Este tema tiene licencia bajo la GPL. Siéntete libre de utilizarlo, hacerle las
 y compartir lo aprendido con los demás.
 */
 
-/* JS */
+/******************************* 
+CSS INDEX 
+********************************/
 /*
-.fixedOnScroll {
-    position: fixed;
-    top: 0;
-    width: 100%;
-}
+    RESET
+    GENERAL
+    TYPOGRAPHY
+    LAYOUT
+    HEADER
+    NAV
+    FOOTER
+    SIDEBAR
+    HOMEPAGE
+    ABOUT PAGE
+    MEDIA QUERIES
+
 */
 
-*{
-    /* border: 1px solid #ff6600; */
+/******************************* 
+RESET 
+********************************/
+html, body {
     margin: 0;
     padding: 0;
-} 
-
-.main-container {
-    max-width: 84% !important;
+    width: 100%;
+    height: 100%;   
 }
 
+section {
+    position: relative;
+    box-sizing: border-box;
+}
+
+.institucionalmt-title > span {    
+    width: 75px;
+    background: red;
+    display: block;
+    height: 3px;
+    margin-top: 16px;    
+}
+
+/* buscador-web */
+.btn-outline-secondary {
+    border-color: #ced4da;
+}
+
+/******************************* 
+GENERAL 
+********************************/
 img, button, .btn, .btn-social {
     transition:all .5s ease-in-out;
 }
-
-i.fas,
-i.fab,
-i.fa {
+.img-cover {
+    height: 100%;
+    display: cover;
+}
+i.fas, i.fab, i.fa {
     transition:all .3s ease-in-out;
 }
-
-.icon-wrapper:hover img {
-    -webkit-transform:scale(0.8);
-    transform: scale(0.8);
-}
- /* 
-i.fas:hover,
-i.fab:hover,
-i.fa:hover {
-  -webkit-transform:scale(1.5);    transform: scale(1.5);
-}
-*/
-
-/* BUTTONS */
-.btn-template {
-    padding: 18px 32px;
-    border-radius: 4px;
-}
-
-.btn-template:not(:disabled):not(.disabled) {
-    cursor: pointer;
-}
-
-a.btn-template:hover {
-    text-decoration: none;
-}
-
-/* MENU GENERALS */
-
-.list-inline li {
-    display: inline-block;
-}
-
-#site-main-navbar .current-menu-item,
-#site-main-navbar .current_page_parent {
-    background-color: rgba(255, 255, 255, 0.3) !important;
-}
-
-#site-main-navbar .nav-link span:hover,
-#site-main-navbar .current-menu-item .nav-link span,
-#site-main-navbar .current_page_parent .nav-link span {
-    color: #4491cc !important;
-}
-
-#site-main-navbar .dropdown-menu {
-    width: 300px;
-}
-
-.dropdown-menu .menu-item {
-    padding-left: 1.5rem;
-    padding-right: 1.5rem;
-}
-
-#menu-menu-de-navegacion {
-    margin-bottom: 0;
-}
-
-/* TEXTOS */
-
-
-
-/* DIVISORES */
-
-/* Titles Underline */
-.title-bar h2:after {
-    content: ' ';
-    width: 75px;
-    display: block;
-    margin-top: 8px;
-    border: 2px solid #EE2A24;
-}
-
-#navbarSupportedContent ul.navbar li:not(:last-child) {
-    border-right: 1px solid #8bbce0;
-}
-
 .divisor-center {
     display: block;
     width: 70px;
@@ -128,7 +83,6 @@ a.btn-template:hover {
     margin: 0 auto;
     padding: 0;
 }
-
 .divisor-left {
     display: block;
     width: 70px;
@@ -138,12 +92,94 @@ a.btn-template:hover {
     margin-left: 0;
     padding: 0;
 }
+.icon-wrapper:hover img {
+    -webkit-transform:scale(0.8);
+    transform: scale(0.8);
+}
+.btn-template {
+    padding: 18px 32px;
+    border-radius: 4px;
+}
+.btn-template:not(:disabled):not(.disabled) {
+    cursor: pointer;
+}
 
-/* BUSCADOR */
+a.btn-template:hover {
+    text-decoration: none;
+}
+.list-inline li {
+    display: inline-block;
+}
+/* .title-bar h2:after {
+    content: ' ';
+    width: 75px;
+    display: block;
+    margin-top: 8px;
+    border: 2px solid #EE2A24;
+} */
 
-/* buscador-web */
-.btn-outline-secondary {
-    border-color: #ced4da;
+/******************************* 
+TYPOGRAPHY
+********************************/
+
+/******************************* 
+LAYOUT
+********************************/
+#institucionalmt-top-section {
+    display: none;
+    background: #242424;
+    color: #FFFFFF;
+    height: 35px;
+    max-height: 35px;
+    line-height: 40px;
+    padding: 8px 0;  
+    overflow: hidden;  
+}
+#institucionalmt-top-section h3,
+#institucionalmt-top-section span,
+#institucionalmt-top-section p{    
+    font-size: 12px;
+}
+#institucionalmt-top-section #top-middle {
+    align-content: center !important;
+}
+#institucionalmt-front-page-portfolio-section {
+    display: none;
+}
+
+#institucionalmt-mobile-app-section-background {
+    background: #04d1e5;
+}
+
+
+/******************************* 
+HEADER
+********************************/
+
+/******************************* 
+NAV 
+********************************/
+#site-main-navbar .current-menu-item,
+#site-main-navbar .current_page_parent {
+    background-color: rgba(255, 255, 255, 0.3) !important;
+}
+#site-main-navbar .nav-link span:hover,
+#site-main-navbar .current-menu-item .nav-link span,
+#site-main-navbar .current_page_parent .nav-link span {
+    color: #4491cc !important;
+}
+#site-main-navbar .dropdown-menu {
+    width: 300px;
+}
+.dropdown-menu .menu-item {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+}
+#menu-menu-de-navegacion {
+    margin-bottom: 0;
+}
+#navbarSupportedContent ul.navbar li:not(:last-child) {
+    border-right: 1px solid #8bbce0;
 }
 
 
@@ -354,21 +390,17 @@ i.service-card-icon {
 }
 
 /* SERVICES CARDS */
-/*
-.overlay {
-  position: fixed; 
-  display: none; 
-  width: 100%; 
-  height: 100%; 
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: 
-  z-index: 2; 
-  cursor: pointer; 
+
+.section-overlay {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
 }
-*/
+
 
 #home-service-cards .card-title-wrapper {
     display: box;
@@ -858,6 +890,57 @@ span.tag a:active {
 }
 
 /* SOCIAL */
+
+/* Fixed/sticky icon bar (vertically aligned 50% from the top of the screen) */
+.icon-vertical-bar {
+    position: fixed;
+    z-index: 999999;
+    left: 0;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+  
+  /* Style the icon bar links */
+  .icon-vertical-bar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 20px;
+  }
+  
+  /* Style the social media icons with color, if you want */
+  .icon-vertical-bar a:hover {
+    background-color: #000;
+  }
+  
+  .facebook {
+    background: #3B5998;
+    color: white;
+  }
+  
+  .twitter {
+    background: #55ACEE;
+    color: white;
+  }
+  
+  .google {
+    background: #dd4b39;
+    color: white;
+  }
+  
+  .linkedin {
+    background: #007bb5;
+    color: white;
+  }
+  
+  .youtube {
+    background: #bb0000;
+    color: white;
+  }
 
 .btn-social i {
     padding: 10px;

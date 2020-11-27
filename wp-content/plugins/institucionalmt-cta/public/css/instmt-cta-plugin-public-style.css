@@ -1,0 +1,70 @@
+/*
+    CSS INDEX:
+        RESET
+        GENERAL
+        TYPOGRAPHY
+        LAYOUT
+        HEADER
+        NAV
+        FOOTER
+        SIDEBAR
+        HOMEPAGE
+        ABOUT PAGE
+        MEDIA QUERIES
+*/
+
+/**********************************
+RESET
+***********************************/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+div.instmt-cta {    
+    padding: 32px 0;    
+}
+
+div.instmt-cta a {
+    margin: 0 auto;
+    display: inline-block;
+    white-space: nowrap;
+}
+
+.instmt-cta a:hover {  
+    text-decoration: none;
+}
+
+/**********************************
+GENERAL
+***********************************/
+
+/* Small Buttons */
+.btn-instmt-cta-sm {
+    padding: 4px 16px;
+    font-size: 14px;
+    border-radius: 4px;
+}
+
+/* Medium Buttons */
+.btn-instmt-cta-md {
+    padding: 8px 16px;
+    font-size: 1rem;
+    border-radius: .15rem;
+}
+
+/* Large Buttons */
+.btn-instmt-cta-lg {
+    padding: 12px 22px;
+    font-size: 1.15rem;
+    border-radius: .2rem;
+}
+
+/* Extra Large Buttons */
+.btn-instmt-cta-xl {
+    padding: 16px 32px;
+    font-size: 1.25rem;
+    line-height: 1.5;
+    border-radius: .3rem;   
+}

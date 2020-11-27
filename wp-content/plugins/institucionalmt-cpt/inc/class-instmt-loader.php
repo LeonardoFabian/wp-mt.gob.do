@@ -15,7 +15,7 @@
  * 
  * Mantener una lista de todos los ganchos que están registrados
  * en todo el plugin, y registrarlos con la API de WordPress.
- * Llame a la función run para ejecutar la lista de acciones y filtros.
+ * Llame a la función run() para ejecutar la lista de acciones y filtros.
  * 
  * @since       1.0.0
  * @package     InstitucionalMT-CPT

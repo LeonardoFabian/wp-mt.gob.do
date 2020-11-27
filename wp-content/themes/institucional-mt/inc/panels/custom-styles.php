@@ -89,7 +89,7 @@ styling
             background-color: <?php echo $primary_color; ?>;
         }
 
-        .header-background-on #site-main-navbar ul li:hover,
+        /* .header-background-on #site-main-navbar ul li:hover, */
         .header-background-on #site-main-navbar .current-menu-parent,
         .header-background-on #site-main-navbar .current-menu-ancestor {
             background-color: rgba(255, 255, 255, 0.2) !important;
@@ -120,7 +120,7 @@ styling
             color: <?php echo $light_color; ?> !important;
         }
 
-        .menu-background-on #site-main-navbar .nav-link:hover,
+        /* .menu-background-on #site-main-navbar .nav-link:hover, */
         .menu-background-on #site-main-navbar .current_page_parent,
         .menu-background-on #site-main-navbar .current-menu-parent,
         .menu-background-on #site-main-navbar .current-menu-ancestor {
@@ -295,6 +295,20 @@ styling
 
 
         /* FOOTER */
+
+        /********************************** 
+        LAYOUT SETTINGS 
+        ***********************************/
+        /* 
+        Mostrar u ocultar las secciones
+        */
+        .instmt-top-section-on #institucionalmt-top-section {
+            display: block;
+        }
+        .instmt-front-page-portfolio-section-on #institucionalmt-front-page-portfolio-section {
+            display: block;
+        }
+
     </style>
 
 <?php

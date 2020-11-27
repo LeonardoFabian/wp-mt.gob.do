@@ -1,5 +1,18 @@
-<?php
+<?php 
+
+/**
+ *  Template Name: Blog
+ */
+
+/**
+ * Página para listar las entradas del blog
+ * 
+ * Se debe asignar una página estatica
+ * y seleccionar en los "Atributos de página" la plantilla: Blog
+ */
+
 get_header();
+
 ?>
 
 <div id="posts-header" class="posts-header title-bar mb-5 d-none d-sm-block">

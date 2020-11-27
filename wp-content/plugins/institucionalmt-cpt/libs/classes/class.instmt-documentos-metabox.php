@@ -36,6 +36,7 @@ abstract class Instmt_Documentos_Metabox
        
 
         $html = "
+            <div class='had-container'>
             <label for='instmt_documentos_archivo'>" . __('Añadir un documento', 'institucionalmt') . "</label>
             <input type='text' class='instmt-input-group' name='instmt_documentos[archivo]' id='instmt_documentos_archivo' value='' >
             <button type='button' class='btn btn-lg btn-primary brnArchivo' id='btnCargarArchivos'>Seleccionar archivo</button>
@@ -44,7 +45,8 @@ abstract class Instmt_Documentos_Metabox
             <br>
             <span class='document-file-size'></span>
             <br>
-            <span class='document-file-type'></span>                
+            <span class='document-file-type'></span>       
+            </div>         
         ";      
 
         echo $html;        

@@ -1,0 +1,59 @@
+/* show 3 items */
+.banner-carousel .banner-carousel-inner .active,
+.banner-carousel .banner-carousel-inner .active + .banner-item,
+.banner-carousel .banner-carousel-inner .active + .banner-item + .banner-item {
+    display: block;
+}
+
+.banner-carousel .banner-carousel-inner .banner-item.active:not(.banner-item-right):not(.banner-item-left),
+.banner-carousel .banner-carousel-inner .banner-item.active:not(.banner-item-right):not(.banner-item-left) + .banner-item,
+.banner-carousel .banner-carousel-inner .banner-item.active:not(.banner-item-right):not(.banner-item-left) + .banner-item + .banner-item {
+    transition: none;
+}
+
+.banner-carousel .banner-carousel-inner .banner-item-next,
+.banner-carousel .banner-carousel-inner .banner-item-prev {
+    position: relative;
+    transform: translate3d(0, 0, 0);
+}
+
+.banner-carousel .banner-carousel-inner .active.banner-item + .banner-item + .banner-item + .banner-item {
+    position: absolute;
+    top: 0;
+    right: -33.333%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* left or forward direction */
+.banner-carousel .active.banner-item-left + .banner-item-next.banner-item-left,
+.banner-carousel .banner-item-next.banner-item-left + .banner-item,
+.banner-carousel .banner-item-next.banner-item-left + .banner-item + .banner-item,
+.banner-carousel .banner-item-next.banner-item-left + .banner-item + .banner-item + .banner-item {
+    position: relative;
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+}
+
+/* farthest right hidden item must be abso position for animations */
+.banner-carousel .banner-carousel-inner .banner-item-prev.banner-item-right {
+    position: absolute;
+    top: 0;
+    left: 0%;
+    z-index: -1;
+    display: block;
+    visibility: visible;
+}
+
+/* right or prev direction */
+.banner-carousel .active.banner-item-right + .banner-item-prev.banner-item-right,
+.banner-carousel .banner-item-prev.banner-item-right + .banner-item,
+.banner-carousel .banner-item-prev.banner-item-right + .banner-item + .banner-item,
+.banner-carousel .banner-item-prev.banner-item-right + .banner-item + .banner-item + .banner-item {
+    position: relative;
+    transform: translate3d(100%, 0, 0);
+    visibility: visible;
+    display: block;
+    visibility: visible;
+}

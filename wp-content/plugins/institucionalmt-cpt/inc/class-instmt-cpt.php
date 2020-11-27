@@ -57,7 +57,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'servicios'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt' // $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_servicio', $args );
@@ -109,7 +109,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'direcciones'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt'// $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_dependencias', $args );
@@ -162,7 +162,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'rlt'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt'// $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
             // 'taxonomies' => array (
             //     'rlt_taxonomy'
             // )
@@ -218,7 +218,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'ote'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt'// $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
             // 'taxonomies' => array (
             //     'ote_taxonomy'
             // )
@@ -274,7 +274,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'ministro'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt'// $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_ministro', $args );
@@ -327,7 +327,7 @@ class InstitucionalMT_CPT {
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'viceministros'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt'// $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_viceministro', $args );
@@ -378,11 +378,11 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'editor', 'revisions', 'page-attributes'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => 'menu_documentos_mt', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
             'show_in_nav_menus' => true, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'marco-legal'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt', //$this->plugin_dir_url_dir . 'admin/image/domo.svg', // icon 20px x 20px
             'taxonomies' => array (
                 'documentos_taxonomy'
             )
@@ -394,6 +394,7 @@ class InstitucionalMT_CPT {
 
     }
 
+    #TODO: Agregar al menu Representaciones Locales en la administracion
     public function representantes_locales(){
 
         $item = 'Representante Local';
@@ -434,11 +435,11 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'revisions', 'page-attributes', 'thumbnail'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => 'menu_rlt', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
             'show_in_nav_menus' => false, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'representantes-locales'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt' // $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_representante', $args );
@@ -446,6 +447,9 @@ class InstitucionalMT_CPT {
         flush_rewrite_rules();
 
     }
+
+   
+    #TODO: Agregar al menu Oficinas territoriales en la administración  
 
     public function encargados_ote(){
 
@@ -487,11 +491,11 @@ class InstitucionalMT_CPT {
             'supports' => ['title', 'revisions', 'page-attributes', 'thumbnail'],
             'capability_type' => 'post',
             'show_ui' => true, // mostrar interfaz
-            'show_in_menu' => 'menu_ote', // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
+            'show_in_menu' => true, // mostrar en el menu, puede recibir el slug del menu que queremos que aparezca 'servicios.php'
             'show_in_nav_menus' => false, // mostrar en el administrador de menus
             'show_in_admin_bar' => true, // mostrar en la barra superior de admin
             'rewrite' => array('slug' => 'encargados-ote'),
-            'menu_icon' => $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
+            'menu_icon' => 'dashicons-instmt' // $this->plugin_dir_url_dir . 'admin/image/domo.svg' // icon 20px x 20px
         ];
 
         register_post_type( 'instmt_encargado_ote', $args );

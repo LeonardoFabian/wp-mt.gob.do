@@ -182,7 +182,6 @@
 <?php
 wp_footer();
 ?>
-<!-- InstitucionalMT_register_scripts -->
 
 </body>
 
