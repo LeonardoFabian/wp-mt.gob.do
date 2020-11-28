@@ -21,7 +21,7 @@
  * Author URI:      https://www.linkedin.com/in/leonardofabian/
  * License:         GPL2
  * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain:     institucionalmt
+ * Text Domain:     institucionalmtcta
  * Domain Path:     /languages
  */
 
@@ -33,7 +33,7 @@ if (!defined('WPINC')) {
 }
 
 /**
- * Instalar (Activar) plugin
+ * Definiendo las constantes
  */
 define('INSTMT_CTA_REALPATH_BASENAME_PLUGIN', dirname(plugin_basename(__FILE__)) . '/');
 define('INSTMT_CTA_PLUGIN_DIR_PATH', plugin_dir_path(__FILE__));
