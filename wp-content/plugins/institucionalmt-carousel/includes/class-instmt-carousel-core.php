@@ -130,6 +130,23 @@ class InstitucionalMT_Carousel_Core {
          */
         require_once( INSTMT_CAROUSEL_PLUGIN_DIR_PATH . 'includes/instmt-carousel-shortcodes.php' );
 
+    }    
+
+    /**
+     * Carga todas las instancias necesarias para el uso de los
+     * archivos de las clases agregadas
+     * 
+     * @since           1.0.0
+     * @access          private
+     */
+    private function institucionalmt_carousel_load_instances(){
+
+        // Instancia del loader que se utiliza para registrar los ganchos con WordPress
+        $this->instmt_carousel_loader = new InstitucionalMT_Carousel_Loader;
+
+        $this->admin = new InstitucionalMT_Carousel_Admin( $this->get_plugin_name(), $this->get_plugin_version() );
+        $this->public = new InstitucionalMT_Carousel_Public( $this->get_plugin_name(), $this->get_plugin_version() );
+
     }
 
     /**
@@ -146,23 +163,6 @@ class InstitucionalMT_Carousel_Core {
         $instmt_carousel_i18n = new InstitucionalMT_Carousel_i18n;
 
         $this->instmt_carousel_loader->add_action( 'plugins_loaded', $instmt_carousel_i18n, 'institucionalmt_carousel_load_plugin_textdomain' );
-
-    }
-
-    /**
-     * Carga todas las instancias necesarias para el uso de los
-     * archivos de las clases agregadas
-     * 
-     * @since           1.0.0
-     * @access          private
-     */
-    private function institucionalmt_carousel_load_instances(){
-
-        // Instancia del loader que se utiliza para registrar los ganchos con WordPress
-        $this->instmt_carousel_loader = new InstitucionalMT_Carousel_Loader;
-
-        $this->admin = new InstitucionalMT_Carousel_Admin( $this->get_plugin_name(), $this->get_plugin_version() );
-        $this->public = new InstitucionalMT_Carousel_Public( $this->get_plugin_name(), $this->get_plugin_version() );
 
     }
 

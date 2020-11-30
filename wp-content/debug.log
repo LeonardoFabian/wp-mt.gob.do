@@ -20132,3 +20132,370 @@ Stack trace:
 [28-Nov-2020 05:18:17 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
 [28-Nov-2020 05:18:17 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
 [28-Nov-2020 05:18:17 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 13:57:21 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 15:02:54 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 18:50:21 UTC] PHP Notice:  Trying to get property 'error' of non-object in C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php on line 2628
+[30-Nov-2020 18:50:21 UTC] PHP Notice:  Trying to get property 'error' of non-object in C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php on line 2628
+[30-Nov-2020 21:12:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'institucionalmt_slideshow_activation_hook' not found or invalid function name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:16:32 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:23:30 UTC] PHP Fatal error:  Uncaught Error: Class 'InstitucionalMT_Slideshow_Admin' not found in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php:157
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php(83): InstitucionalMT_Slideshow_Core->institucionalmt_slideshow_load_instances()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(104): InstitucionalMT_Slideshow_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(109): institucionalmt_slideshow_run_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(115): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php on line 157
+[30-Nov-2020 21:23:30 UTC] PHP Notice:  register_post_type ha sido llamada <strong>de forma incorrecta</strong>. Los nombres de un tipo de contenido deben tener entre 1 y 20 caracteres de longitud. Por favor, visita <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Depuración en WordPress</a> para más información. (Este mensaje fue añadido en la versión 4.2.0). in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\functions.php on line 5225
+[30-Nov-2020 21:23:31 UTC] PHP Notice:  register_post_type ha sido llamada <strong>de forma incorrecta</strong>. Los nombres de un tipo de contenido deben tener entre 1 y 20 caracteres de longitud. Por favor, visita <a href="https://wordpress.org/support/article/debugging-in-wordpress/">Depuración en WordPress</a> para más información. (Este mensaje fue añadido en la versión 4.2.0). in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\functions.php on line 5225
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 66
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:23:32 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:24:34 UTC] PHP Fatal error:  Uncaught Error: Class 'InstitucionalMT_Slideshow_Admin' not found in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php:157
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php(83): InstitucionalMT_Slideshow_Core->institucionalmt_slideshow_load_instances()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(104): InstitucionalMT_Slideshow_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(109): institucionalmt_slideshow_run_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(115): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php on line 157
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 66
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:24:37 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:25:12 UTC] PHP Fatal error:  Uncaught Error: Class 'InstitucionalMT_Slideshow_Admin' not found in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php:157
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php(83): InstitucionalMT_Slideshow_Core->institucionalmt_slideshow_load_instances()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(104): InstitucionalMT_Slideshow_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(109): institucionalmt_slideshow_run_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(115): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php on line 157
+[30-Nov-2020 21:25:38 UTC] PHP Fatal error:  Uncaught Error: Class 'InstitucionalMT_Slideshow_Admin' not found in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php:157
+Stack trace:
+#0 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php(83): InstitucionalMT_Slideshow_Core->institucionalmt_slideshow_load_instances()
+#1 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(104): InstitucionalMT_Slideshow_Core->__construct()
+#2 C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\institucionalmt-slideshow.php(109): institucionalmt_slideshow_run_core()
+#3 C:\xampp\htdocs\www\wp-mt.gob.do\wp-settings.php(377): include_once('C:\\xampp\\htdocs...')
+#4 C:\xampp\htdocs\www\wp-mt.gob.do\wp-config.php(115): require_once('C:\\xampp\\htdocs...')
+#5 C:\xampp\htdocs\www\wp-mt.gob.do\wp-load.php(37): require_once('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\www in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-core.php on line 157
+[30-Nov-2020 21:26:30 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_styles' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:26:30 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_scripts' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:33:15 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_styles' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:33:15 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_scripts' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:34:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_styles' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:34:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_scripts' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:34:53 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'institucionalmt_slideshow_deactivation_hook' not found or invalid function name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:35:07 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, function 'institucionalmt_slideshow_activation_hook' not found or invalid function name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:35:14 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_styles' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:35:14 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_scripts' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:35:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_styles' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:35:17 UTC] PHP Warning:  call_user_func_array() expects parameter 1 to be a valid callback, class 'InstitucionalMT_Slideshow_Public' does not have a method 'institucionalmt_slideshow_public_enqueue_scripts' in C:\xampp\htdocs\www\wp-mt.gob.do\wp-includes\class-wp-hook.php on line 287
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 64
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:36:25 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 64
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:36:59 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:39:47 UTC] PHP Notice:  Trying to get property 'error' of non-object in C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php on line 2628
+[30-Nov-2020 21:39:47 UTC] PHP Notice:  Trying to get property 'error' of non-object in C:\xampp\htdocs\www\wp-mt.gob.do\wp-admin\includes\ajax-actions.php on line 2628
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 64
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:55:25 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:55:26 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:55:26 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:55:26 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:55:26 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:55:26 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 96
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: fontawesome_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 101
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 106
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: description in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 111
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-card-deck-panel.php on line 115
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-carousel\includes\class-instmt-carousel-widgets.php on line 157
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 163
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: map_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 167
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: float_btn_icon in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 172
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: contact_name in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 176
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: contact_position in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 180
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: contact_phone in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 184
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: contact_mobile in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 188
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: address in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 192
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: email in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 196
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: schedule in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-map-card.php on line 200
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cpt\inc\class-instmt-widgets.php on line 144
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: custom_icon_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 149
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: image_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 155
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: service_uri in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\themes\institucional-mt\inc\widgets\custom-service-card.php on line 164
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: title in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-slideshow\includes\class-instmt-slideshow-widgets.php on line 64
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 125
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 129
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: alignment in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 133
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 140
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 142
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined variable: target in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\institucionalmt-cta\includes\class-instmt-cta-widgets.php on line 143
+[30-Nov-2020 21:55:42 UTC] PHP Notice:  Undefined index: showf in C:\xampp\htdocs\www\wp-mt.gob.do\wp-content\plugins\ultimate-social-media-icons\libs\sfsi_widget.php on line 92

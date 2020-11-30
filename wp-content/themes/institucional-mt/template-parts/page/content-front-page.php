@@ -4,84 +4,12 @@ Template part para mostrar paginas en la portada
 */
 ?>
 
-
-
-<?php
-
-if (function_exists('institucionalmt_display_carousel')) {
-    //institucionalmt_display_carousel();
-} else {
-}
-
-$featuredNews = new WP_Query(array(
-    'cat' => 1,
-    'posts_per_page'      => 1,
-    'post_status'         => 'publish',
-    'ignore_sticky_posts' => true,
-    'no_found_rows'       => true,
-
-));
-
-if ($featuredNews->have_posts()) :
-    while ($featuredNews->have_posts()) :
-        $featuredNews->the_post();
-?>
-
-        <!-- Front Hero Area -->
-        <div class="main-carousel">
-
-            <?php if (is_active_sidebar('front-hero-area')) : ?>
-                <?php dynamic_sidebar('front-hero-area'); ?>
-            <?php else : ?>
-                <div id="main-carousel-captions" class="carousel slide carousel-fade" data-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active text-center">
-                            <a href="<?php the_permalink(); ?>">
-                                <?php
-                                if (has_post_thumbnail()) {
-                                    the_post_thumbnail('post_thumbnail', array('class' => 'd-block w-100 img-fluid'));
-                                }
-                                ?>
-                            </a>
-                            <div class="carousel-caption d-none d-md-block">
-                                <div class="container">
-                                    <div class="text-left">
-                                        <a href="<?php the_permalink(); ?>">
-                                            <h2 class="carousel-item-title"><?php the_title(); ?></h2>
-                                        </a>
-                                    </div>
-                                    <div class="carousel-item-description-wrapper text-left">
-                                        <p class="carousel-item-description lead">
-                                            <?php the_excerpt(); ?>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
-                    <a class="carousel-control-prev" href="#main-carousel-captions" role="button" data-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#main-carousel-captions" role="button" data-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="sr-only">Next</span>
-                    </a>
-                </div>
-            <?php endif; ?>
-        </div>
-
-<?php
-
-    endwhile;
-else :
-// fallback no content message here
-endif;
-
-wp_reset_postdata();
-
-?>
+<!-- Front Hero Area -->
+<div class="main-carousel">
+    <?php if (is_active_sidebar('front-hero-area')) : ?>
+        <?php dynamic_sidebar('front-hero-area'); ?>    
+    <?php endif; ?>
+</div>
 
 <!-- Front Page Portfolio -->
 <section id="institucionalmt-front-page-portfolio-section" class="section scrollspy service-scene" style="max-height: 760px;">
@@ -462,48 +390,11 @@ wp_reset_postdata();
     <?php endif; ?>
 </section>
 
-<div class="container">
-    <div id="bannerCarousel" class="banner-carousel carousel slide" data-ride="carousel" data-interval="false">
-        <div class="banner-carousel-inner row w-100 mx-auto" role="listbox">
-            <div class="banner-item col-md-4  active">
-               <div class="panel panel-default">
-                  <div class="panel-thumbnail">
-                    <a href="#" title="image 1" class="thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/admin/image/banners/internos/banner-omlad.png" class="img-fluid">
-                    </a>
-                  </div>
-                </div>
-            </div>
-            <div class="banner-item col-md-4 ">
-               <div class="panel panel-default">
-                  <div class="panel-thumbnail">
-                    <a href="#" title="image 2" class="thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/admin/image/banners/internos/banner-utelain.png" class="img-fluid">
-                    </a>
-                  </div>
-                </div>
-            </div>
-            <div class="banner-item col-md-4 ">
-               <div class="panel panel-default">
-                  <div class="panel-thumbnail">
-                    <a href="#" title="image 3" class="thumb">
-                    <img src="<?php echo get_template_directory_uri(); ?>/admin/image/banners/internos/banner-omlad.png" class="img-fluid">
-                    </a>
-                  </div>
-                </div>
-            </div>           
-            
-        </div>
-        <a class="carousel-control-prev" href="#bannerCarousel" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next text-faded" href="#bannerCarousel" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
+<section id="institucionalmt-mobile-app-section" class="mobile-scene">
+    <?php if( is_active_sidebar('customers-sidebar') ) : ?>
+        <?php dynamic_sidebar('customers-sidebar'); ?>
+    <?php endif; ?>
+</section>
 
 
 

@@ -76,9 +76,9 @@
         // if( $hook != "toplevel_page_XXXXX" ){
         //     return;
         // }
-        if( $hook != "widgets.php" ){
-            return;
-        }
+        // if( $hook != "widgets.php" ){
+        //     return;
+        // }
 
         /**
          * Framework Bootstrap CSS

@@ -159,7 +159,7 @@ class InstitucionalMT_Carousel_Widget extends WP_Widget
         $form = "
         <p>
             <label for='$title_id'>" . __('Título', 'institucionalmt') . "</label><br />
-            <input type='text' name='$title_name' id='$title_id' value='$title_val' class='' maxlength='50' />            
+            <input type='text' name='$title_name' id='$title_id' value='$title_val' class='widefat' maxlength='50' />            
         </p>
         ";
 

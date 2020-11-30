@@ -10,19 +10,36 @@
  * @link            https://misitioweb.com
  * @since           1.0.0
  * @package         InstitucionalMT-CTA
+ * @author          Leonardo Fabián <ramonlfabian@gmail.com>
+ * @copyright       2020 Ministerio de Trabajo, República Dominicana
  * 
  * @wordpress-plugin
- * 
  * Plugin Name:     InstitucionalMT Call To Action (CTA)
  * Plugin URI:
  * Description:     Añade los distintos CTA (Call to Action) estratégicos que quieres que tu audiencia realice (Registro, suscripción, descarga, etc.), mediante el uso de Widgets y Shortcodes, de forma fácil y sencilla.
  * Version:         1.0.0
  * Author:          Leonardo Fabián
  * Author URI:      https://www.linkedin.com/in/leonardofabian/
- * License:         GPL2
- * License URI:     https://www.gnu.org/licenses/gpl-2.0.html
+ * License:         GPL v3
+ * License URI:     http://www.gnu.org/licenses/gpl-3.0.html
  * Text Domain:     institucionalmtcta
  * Domain Path:     /languages
+ * 
+ * Institucional MT Call To Action
+ * Copyright (C) 2020-2024, Leonardo Fabián
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 
 /**

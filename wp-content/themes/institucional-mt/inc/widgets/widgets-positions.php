@@ -306,6 +306,17 @@ function institucionalmt_register_widgets()
         'after_title' => '</h3>'
     ));
 
+    // Customers Sidebar 
+    register_sidebar(array(
+        'name' => __('Customers Sidebar', 'institucionalmt'),
+        'id' => 'customers-sidebar',
+        'description' => esc_html__('Sección para colocar banners, logotipos con enlaces externos, testimonios de clientes, etc', 'institucionalmt'),
+        'before_widget' => '<div id="%1$s" class="widget-container %2$s">',
+        'after_widget' => '</div>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>'
+    ));
+
     // Representaciones Locales right sidebar
     register_sidebar(array(
         'name' => __('RLTs - Content Widget Area', 'institucionalmt'),
