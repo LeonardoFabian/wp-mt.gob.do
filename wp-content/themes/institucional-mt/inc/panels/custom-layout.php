@@ -9,16 +9,15 @@ add_action('customize_register', 'institucionalmt_register_custom_layout');
 
 function institucionalmt_register_custom_layout($wp_customize)
 {
-
-    $textdomain = 'institucionalmt';
+   
     $panel = 'layout_panel';
 
     // Create custom panel
     $wp_customize->add_panel($panel, array(
         'priority' => 300,
         'theme_supports' => '',
-        'title' => __('Opciones de diseño', $textdomain),
-        'description' => __('Especifique el diseño de las  paginas, esquema de colores y fondo', $textdomain),
+        'title' => __('Opciones de diseño', 'institucionalmt'),
+        'description' => __('Especifique el diseño de las  paginas, esquema de colores y fondo', 'institucionalmt'),
 
     ));
 
@@ -26,7 +25,7 @@ function institucionalmt_register_custom_layout($wp_customize)
 
     // add the section to contain the settings
     $wp_customize->add_section('colors_section', array(
-        'title' =>  __('Colores', $textdomain),
+        'title' =>  __('Colores', 'institucionalmt'),
         'panel' => $panel,
         'priority' => 301
     ));
@@ -110,7 +109,7 @@ function institucionalmt_register_custom_layout($wp_customize)
 
     // add the section to contain the settings
     $wp_customize->add_section('backgrounds_section', array(
-        'title' =>  __('Ajustes de fondo', $textdomain),
+        'title' =>  __('Ajustes de fondo', 'institucionalmt'),
         'panel' => $panel,
         'priority' => 302
     ));
@@ -177,7 +176,7 @@ function institucionalmt_register_custom_layout($wp_customize)
 
     // add the section to contain the settings
     $wp_customize->add_section('instmt_layout_sections', array(
-        'title' =>  __('Ajustes del Diseño', $textdomain),
+        'title' =>  __('Ajustes del Diseño', 'institucionalmt'),
         'panel' => $panel,
         'priority' => 303
     ));
@@ -188,7 +187,7 @@ function institucionalmt_register_custom_layout($wp_customize)
         $wp_customize->add_control(
             'instmt-top-section-control',
             array(
-                'label'      => __('Mostrar la barra superior?', $textdomain ),
+                'label'      => __('Mostrar la barra superior?', 'institucionalmt' ),
                 'section'    => 'instmt_layout_sections',
                 'settings'   => 'instmt-top-section-settings',
                 'type'       => 'radio',
@@ -205,7 +204,7 @@ function institucionalmt_register_custom_layout($wp_customize)
         $wp_customize->add_control(
             'instmt-front-page-portfolio-section-control',
             array(
-                'label'      => __('Mostrar la sección "Portafolio" en la página principal?', $textdomain ),
+                'label'      => __('Mostrar la sección "Portafolio" en la página principal?', 'institucionalmt' ),
                 'section'    => 'instmt_layout_sections',
                 'settings'   => 'instmt-front-page-portfolio-section-settings',
                 'type'       => 'radio',

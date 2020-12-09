@@ -1,11 +1,9 @@
-<div id="entry-header" class="entry-header title-bar mb-5 d-none d-sm-block magic">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="institucionalmt-title"><?php the_title(); ?><span></span></h2>
-            <small class="breadcrumbs tex-muted">Mostrar aqui rastro de navegacion publicacion</small>
-        </div>
-    </div>
-</div><!-- entry-header -->
+<?php
+$title = get_the_title();
+$content = get_the_content();
+?>
+
+<?php institucionalmt_page_header(); ?>
 
 <div class="container">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -13,7 +11,7 @@
         <div id="single-post-wrapper" class="single-post-wrapper">
             <!-- title visible only xs -->
             <header class="article-header my-3">
-                <h2 class="the-post-title mb-3 d-block d-sm-none"><?php the_title(); ?></h2>
+                <h2 class="the-post-title mb-3 d-block d-sm-none"><?php echo esc_html( $title ); ?></h2>
             </header>
 
             <div id="single-post-author" class="pt-3 mb-5 align-self-center text-muted">
@@ -21,15 +19,17 @@
                 <div class="avatar rounded-circle float-left mr-3 d-none d-sm-block">
                     <img src="<?php echo get_template_directory_uri(); ?>/admin/image/avatar.png" class="img-fluid">
                 </div>
-                <p>Publicado por: <?php the_author_posts_link(); ?><br />
-                <?php the_date(); ?></p>
+                
+                <!-- helpers -->
+                <?php institucionalmt_post_meta(); ?>
+
             </div>
 
             <div class="row px-3 mb-3">
+
                 <!-- widget for social plugin -->
-                <?php
-                dynamic_sidebar('post-social-icons');
-                ?>
+                <?php dynamic_sidebar('post-social-icons'); ?>
+
             </div>
 
             <div class="row">
@@ -61,7 +61,7 @@
                             </div>                          
 
                             <div class="single-content-description lead text-justify mb-3">
-                                <?php the_content(); ?>
+                                <?php echo $content; ?>
                             </div>
                             <div class="signature" style="width:100%;">
                                 <!-- customize action in plugin institucionalmt-cpt/public/class-instmt-public.php -->
@@ -80,9 +80,9 @@
                             <span class="comment">
                                 <a href="#comments">
                                     <i class="fa fa-comment"></i>
-                                    <?php                                    
-                                    comments_number(); 
-                                    ?>
+
+                                    <?php comments_number(); ?>
+
                                 </a>
                             </span>
                         </div>
@@ -90,7 +90,9 @@
 
                        <?php if( comments_open() ) : ?>
                             <div id="comments" class="comments">
+
                                 <?php comments_template(); ?>
+
                             </div>
                        <?php endif; ?>
 

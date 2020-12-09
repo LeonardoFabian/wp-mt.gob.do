@@ -4,8 +4,8 @@
             <!-- Card date -->
             <div class="date-container text-center bg-secondary-color overlay">
                 <div class="post-date align-self-center">
-                    <h4 class="post-date-day"><?php echo get_the_date('j'); ?></h4>
-                    <small class="post-date-month text-uppercase"><?php echo get_the_date('M'); ?></small>
+                    <h4 class="post-date-day"><?php echo esc_html( get_the_date('j') ); ?></h4>
+                    <small class="post-date-month text-uppercase"><?php echo esc_html( get_the_date('M') ); ?></small>
                 </div>
             </div>
             <!--Card image-->

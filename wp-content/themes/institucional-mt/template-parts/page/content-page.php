@@ -1,15 +1,6 @@
-<div id="content-page-header" class="content-page-header title-bar mb-5 d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="content-page-header-title"><?php the_title(); ?></h2>
-            <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
-        </div>
-    </div>
-</div><!-- entry-header -->
+<?php institucionalmt_page_header(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-
 
     <div class="container">
 
@@ -39,16 +30,11 @@
 
             </div>
 
-
-
             <!-- Aside -->
             <div id="single-aside-section" class="col-12" style="max-width:300px;">
                 <?php get_sidebar(); ?>                
             </div>
         </div>
-
-
-
 
     </div>
 

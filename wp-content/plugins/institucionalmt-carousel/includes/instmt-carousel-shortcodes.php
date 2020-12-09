@@ -45,7 +45,7 @@ function institucionalmt_carousel_shortcode_atts( $atts, $content = null ){
 
                     <div class="carousel-item text-center">      
                         
-                        <a href="<?php the_permalink(); ?>">
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
                             <?php
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('post_thumbnail', array('class' => 'd-block w-100 img-fluid'));
@@ -56,7 +56,7 @@ function institucionalmt_carousel_shortcode_atts( $atts, $content = null ){
                         <div class="carousel-caption d-none d-md-block">
                             <div class="container">
                                 <div class="text-left">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
                                         <h3 class="carousel-item-title"><?php the_title(); ?></h3>
                                     </a>
                                 </div>

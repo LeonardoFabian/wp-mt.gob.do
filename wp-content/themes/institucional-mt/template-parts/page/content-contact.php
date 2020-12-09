@@ -1,11 +1,4 @@
-<div id="content-contact-header" class="content-contact-header title-bar mb-5 d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="content-contact-header-title"><?php the_title(); ?></h2>
-            <small class="breadcrumbs tex-muted">Mostrar aqui rastro de navegacion</small>
-        </div>
-    </div>
-</div><!-- entry-header -->
+<?php institucionalmt_page_header(); ?>
 
 <div id="post-<?php the_ID(); ?>">
     <div class="container">

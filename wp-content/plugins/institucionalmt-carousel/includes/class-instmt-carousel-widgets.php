@@ -3,7 +3,8 @@
 /**
  * Función para mostrar el carousel
  */
-function display_institucionalmt_carousel(){
+function display_institucionalmt_carousel()
+{
 
     $args = array(
         'post_type' => 'post',
@@ -14,22 +15,22 @@ function display_institucionalmt_carousel(){
                 'field' => 'slug',
                 'terms' => 'noticias-destacadas'
             )
-         )
+        )
     );
 
     $query = new WP_Query($args);   ?>
 
     <?php if ($query->have_posts()) : ?>
-     
+
         <div id="institucionalmtCarousel" class="carousel slide" data-ride="carousel">
             <div class="carousel-inner">
 
-                <!-- ul width adjust to the (N*100)% of container -->   
+                <!-- ul width adjust to the (N*100)% of container -->
                 <?php while ($query->have_posts()) : $query->the_post(); ?>
 
-                    <div class="carousel-item text-center">      
-                        
-                        <a href="<?php the_permalink(); ?>">
+                    <div class="carousel-item text-center">
+
+                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
                             <?php
                             if (has_post_thumbnail()) {
                                 the_post_thumbnail('post_thumbnail', array('class' => 'd-block w-100 img-fluid'));
@@ -40,21 +41,22 @@ function display_institucionalmt_carousel(){
                         <div class="carousel-caption d-none d-md-block">
                             <div class="container">
                                 <div class="text-left">
-                                    <a href="<?php the_permalink(); ?>">
+                                    <time datetime="<?php echo esc_attr( get_the_date('c') ) ?>"><?php echo esc_html( get_the_date() ) ?></time>
+                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
                                         <h3 class="carousel-item-title"><?php the_title(); ?></h3>
                                     </a>
                                 </div>
-                                <div class="carousel-item-description-wrapper text-left">
-                                    <p class="carousel-item-description lead">
+                                <div class="carousel-item-description-wrap text-left">
+                                    <div class="carousel-item-description lead">
                                         <?php the_excerpt(); ?>
-                                    </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
                     </div>
 
-                <?php endwhile; ?>                  
+                <?php endwhile; ?>
 
             </div>
 
@@ -69,6 +71,8 @@ function display_institucionalmt_carousel(){
 
         </div>
 
+    <?php else : ?>
+        <?php __('No hay publicaciones para mostrar', 'instmtcarousel'); ?>
     <?php endif; ?>
 
     <?php wp_reset_postdata(); ?>
@@ -108,53 +112,55 @@ class InstitucionalMT_Carousel_Widget extends WP_Widget
     /**
      * Función para mostrar el widget en el sitio web
      */
-    public function widget($args, $instance){
+    public function widget($args, $instance)
+    {
 
-        extract( $args, EXTR_SKIP );
+        extract($args, EXTR_SKIP);
 
-        $title = isset( $instance['title'] ) ? $instance['title'] : '';       
+        $title = isset($instance['title']) ? $instance['title'] : '';
 
         // Vista
-        echo $before_widget; 
-        
-        ?>           
-           
+        echo $before_widget;
 
-            <?php if( ! empty( $title ) ) : ?>
-                
-                <?php echo $before_title . '<h4 class="widget-title">' . $title . '</h4>' . $after_title; ?>
+    ?>
 
-            <?php endif; ?>
 
-            <?php display_institucionalmt_carousel(); ?>
+        <?php if (!empty($title)) : ?>
 
-           
+            <?php echo $before_title . '<h4 class="widget-title">' . $title . '</h4>' . $after_title; ?>
 
-        <?php
-    
-        echo $after_widget; 
+        <?php endif; ?>
+
+        <?php display_institucionalmt_carousel(); ?>
+
+
+
+<?php
+
+        echo $after_widget;
     }
 
     /**
      * Función para definir los datos almacenados por el widget
      */
-    public function update($new_instance, $old_instance){
+    public function update($new_instance, $old_instance)
+    {
 
         $instance = $old_instance;
-        $instance['title'] = strip_tags( $new_instance['title'] );
+        $instance['title'] = strip_tags($new_instance['title']);
         return $instance;
-
     }
 
     /**
      * Función para mostrar el formulario del widget
      * en el área de Widgets
      */
-    public function form($instance) { 
-      
-        $title_id = $this->get_field_id( 'title' );
-        $title_name = $this->get_field_name( 'title' );
-        $title_val = esc_attr( $instance['title'] );        
+    public function form($instance)
+    {
+
+        $title_id = $this->get_field_id('title');
+        $title_name = $this->get_field_name('title');
+        $title_val = esc_attr($instance['title']);
 
         $form = "
         <p>
@@ -164,6 +170,5 @@ class InstitucionalMT_Carousel_Widget extends WP_Widget
         ";
 
         echo $form;
-        
     }
 }

@@ -6,7 +6,7 @@ Template part para mostrar un mensaje cuando una pagina no este disponible
 
 <section class="no-results not-found">
     <header class="page-header">
-        <h1 class="page-title"><?php _e( 'Nothing Found', 'Institucional-MT') ?></h1>
+        <h1 class="page-title"><?php _e( 'Nothing Found', 'institucionalmt') ?></h1>
     </header>
     <div class="page-content">
         <?php 
@@ -14,7 +14,7 @@ Template part para mostrar un mensaje cuando una pagina no este disponible
         ?>
         <p>
             <?php 
-                printf( __('¿Listo para publicar tu primera entrada?') );
+                printf( __('¿Listo para publicar tu primera entrada?', 'institucionalmt') );
             ?>
         </p>
         <?php

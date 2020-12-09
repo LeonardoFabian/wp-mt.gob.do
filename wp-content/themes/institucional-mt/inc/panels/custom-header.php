@@ -4,16 +4,14 @@ add_action('customize_register', 'institucionalmt_register_custom_header');
 
 
 function institucionalmt_register_custom_header($wp_customize)
-{
-
-    $mytheme = 'institucionalmt';
+{    
 
     // CUSTOM HEADER PANEL
     $wp_customize->add_panel('custom_header_panel', array(
         'priority' => 400,
         'theme_supports' => '',
-        'title' => __('Cabecera personalizada', $mytheme),
-        'description' => __('Cabecera personalizada (logo, color de fondo)', $mytheme),
+        'title' => __('Cabecera personalizada', 'institucionalmt'),
+        'description' => __('Cabecera personalizada (logo, color de fondo)', 'institucionalmt'),
 
     ));
 
@@ -21,7 +19,7 @@ function institucionalmt_register_custom_header($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_main_logo_section', array(
-        'title' => __('Logotipo', $mytheme),
+        'title' => __('Logotipo', 'institucionalmt'),
         'panel' => 'custom_header_panel',
         'priority' => 401
     ));
@@ -36,7 +34,7 @@ function institucionalmt_register_custom_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_main_logo', array(
-        'label'    => __('Logotipo'),
+        'label'    => __('Logotipo', 'institucionalmt'),
         'description' => 'Logotipo personalizado (390px x 200px) | SVG, PNG, JPEG',
         'section'  => 'custom_main_logo_section', // section id
         'settings' => 'custom_main_logo',
@@ -52,7 +50,7 @@ function institucionalmt_register_custom_header($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_second_logo_section', array(
-        'title' => __('Logotipo (fondo oscuro)', $mytheme),
+        'title' => __('Logotipo (fondo oscuro)', 'institucionalmt'),
         'panel' => 'custom_header_panel',
         'priority' => 402
     ));
@@ -67,7 +65,7 @@ function institucionalmt_register_custom_header($wp_customize)
     ));
 
     $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'custom_second_logo', array(
-        'label'    => __('Logotipo (fondo oscuro)'),
+        'label'    => __('Logotipo (fondo oscuro)', 'institucionalmt'),
         'description' => 'Logotipo personalizado, recomendado para cabeceras con color de fondo oscuro (390px x 200px) | SVG, PNG, JPEG',
         'section'  => 'custom_second_logo_section', // section id
         'settings' => 'custom_second_logo',

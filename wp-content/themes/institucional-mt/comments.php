@@ -1,71 +1,59 @@
-<hr>
-<div class="comment-list" id="comments">
-
-    <div class="comments-header">
-        <h2 class="comment-reply-title">
-            <?php 
-            if( !have_comments()){
-                echo "Deja un comentario.";
-            } else {
-                echo get_comments_number() . " Comentarios.";
-            }
+<?php
+/**
+ * The template for displaying Comments.
+ *
+ * The area of the page that contains comments and the comment form.
+ *
+ * @package Institucional_MT
+ * @subpackage Institucional_MT
+ * @since Institucional MT 1.0.0
+ */
+ 
+/*
+ * If the current post is protected by a password and the visitor has not yet
+ * entered the password we will return early without loading the comments.
+ */
+if ( post_password_required() )
+    return;
+?>
+ 
+<div id="comments" class="comments-area">
+ 
+    <?php if ( have_comments() ) : ?>
+        <h2 class="comments-title">
+            <?php
+                printf( _nx( 'One thought on "%2$s"', '%1$s thoughts on "%2$s"', get_comments_number(), 'comments title', 'twentythirteen' ),
+                    number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
             ?>
         </h2>
-    </div>
-
-    <div class="comments-inner">
-
-    <?php
-        wp_list_comments(
-            array(
-                'avatar_size' => 120,
-                'style' => 'div'                
-            )
-        );
-    ?>
-        <!--
-        <div id="comment-1" class="comment eve thread-even depth-1 parent">
-            <article id="div-comment-1" class="comment-body">
-                <footer class="comment-meta">
-                    <div class="comment-author vcard">
-                        <a href="#" rel="external" alt="">
-                            <img src="" class="avatar avatar-120 photo" height="120">
-                            <span class="fn">A wordpress commenter</span>
-                            <span class="says sr-only">says:</span>
-
-                            <div class="comment-metadata">
-                                <a href="">
-                                    <time datetime="200-03-25T20:07:51+00:00" title="September 16, 2020 at 9:00 am">September 16, 2020 at 9:00 am</time>
-                                </a>
-                            </div>
-                        </a>
-                    </div>
-                </footer>
-            </article>
-        </div>
-        -->
-    </div> <!-- .comments-inner -->
-</div> <!-- #comments -->
-
-<hr class="" aria-hidden="true">
-
-<?php 
-    /* Si la pagina permite comentarios */
-    if ( comments_open() ){
-        comment_form(
-            array(
-                'class_form' => '',
-                'title_reply_before' => '<h2 id="reply-title" class="comment-reply-title">',
-                'title_reply_after' => '</h2>'
-            )
-        );
-    }
-?>
-
-<!--
-<div id="respond" class="comment-respond">
-    <h2 id="reply-title" class="comment-reply-title">Deja un respuesta
-        <small><a rel="nofollow" id="cancel-comment-reply-link" href="" style="display:none;" ></a></small>
-    </h2>
-</div>
-    -->
+ 
+        <ol class="comment-list">
+            <?php
+                wp_list_comments( array(
+                    'style'       => 'ol',
+                    'short_ping'  => true,
+                    'avatar_size' => 74,
+                ) );
+            ?>
+        </ol><!-- .comment-list -->
+ 
+            <?php
+            // Are there comments to navigate through?
+            if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) :
+            ?>
+                <nav class="navigation comment-navigation" role="navigation">
+                    <h1 class="screen-reader-text section-heading"><?php _e( 'Comment navigation', 'twentythirteen' ); ?></h1>
+                    <div class="nav-previous"><?php previous_comments_link( __( '&amp;larr; Older Comments', 'twentythirteen' ) ); ?></div>
+                    <div class="nav-next"><?php next_comments_link( __( 'Newer Comments &amp;rarr;', 'twentythirteen' ) ); ?></div>
+                </nav><!-- .comment-navigation -->
+            <?php endif; // Check for comment navigation ?>
+ 
+            <?php if ( ! comments_open() && get_comments_number() ) : ?>
+        <p class="no-comments"><?php _e( 'Comments are closed.' , 'twentythirteen' ); ?></p>
+        <?php endif; ?>
+ 
+    <?php endif; // have_comments() ?>
+ 
+    <?php comment_form(); ?>
+ 
+</div><!-- #comments -->

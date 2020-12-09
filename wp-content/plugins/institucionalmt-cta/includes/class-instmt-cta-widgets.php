@@ -55,7 +55,7 @@ class InstitucionalMT_CTA_Button_Widget extends WP_Widget
 
                 $before_title  $title $after_title                         
 
-               <a href='$link' target='$target' class='btn-instmt-cta-xl btn-primary {$class}'>$text</a>              
+               <a href='$link' title='$title' target='$target' class='btn-instmt-cta-xl btn-primary {$class}'>$text</a>              
 
             </div>
         

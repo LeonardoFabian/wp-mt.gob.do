@@ -108,7 +108,7 @@ class InstitucionalMT_Card_Deck_Panel_Widget extends WP_Widget
         </p>        
         <p>
             <label for="<?php echo $this->get_field_id('description'); ?>">Description</label><br />
-            <input type="textarea" name="<?php echo $this->get_field_name('description'); ?>" id="<?php echo $this->get_field_id('description'); ?>" value="<?php echo $instance['description']; ?>" class="widefat" maxlengt="75" />
+            <input type="text" name="<?php echo $this->get_field_name('description'); ?>" id="<?php echo $this->get_field_id('description'); ?>" value="<?php echo $instance['description']; ?>" class="widefat" maxlengt="75" />
         </p>
         <p>
             <label for="<?php echo $this->get_field_id('service_uri'); ?>">Service URL</label><br />

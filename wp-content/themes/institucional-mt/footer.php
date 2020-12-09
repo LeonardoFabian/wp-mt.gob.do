@@ -140,23 +140,7 @@
         <!-- Footer bottom -->
         <div class="container">
             <!-- Footer Menu -->
-
-            <!-- TODO: ELIMINAR -->
-            <!--
-        <div class="text-center" id="theme-footer-menu">
-            <ul class="list-unstyled list-inline">
-                <li class="list-inline-item">
-                    <a href="">Item 1</a>
-                </li> |
-                <li class="list-inline-item">
-                    <a href="">Item 2</a>
-                </li> |
-                <li class="list-inline-item">
-                    <a href="">Item 3</a>
-                </li>
-            </ul>
-        </div>
-                    -->
+            
             <?php if (has_nav_menu('footer-menu')) : ?>
                 <nav class="footer-navigation" role="navigation" aria-label="" id="theme-footer-menu">
                     <?php wp_nav_menu(array(
@@ -179,9 +163,8 @@
 </footer>
 <!-- /Footer -->
 
-<?php
-wp_footer();
-?>
+<!-- WordPress Scripts -->
+<?php wp_footer(); ?>
 
 </body>
 

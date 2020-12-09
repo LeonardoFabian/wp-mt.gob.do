@@ -4,16 +4,14 @@ add_action('customize_register', 'institucionalmt_register_custom_contact_page')
 
 
 function institucionalmt_register_custom_contact_page($wp_customize)
-{
-
-    $mytheme = 'institucionalmt';
+{    
 
     // Create custom panel
     $wp_customize->add_panel('contact_page_panel', array(
         'priority' => 600,
         'theme_supports' => '',
-        'title' => __('Ajustes de la página de contacto', $mytheme),
-        'description' => __('Puedes elegir qué mostrar en la página de contacto de tu sitio. ', $mytheme),
+        'title' => __('Ajustes de la página de contacto', 'institucionalmt'),
+        'description' => __('Puedes elegir qué mostrar en la página de contacto de tu sitio. ', 'institucionalmt'),
 
     ));
 
@@ -22,7 +20,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_map_location_section', array(
-        'title' => __('Mapa', $mytheme),
+        'title' => __('Mapa', 'institucionalmt'),
         'panel' => 'contact_page_panel',
         'priority' => 601
     ));
@@ -37,8 +35,8 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_map_location_control',
         array(
-            'label'    => __('Marcador', $mytheme),
-            'description' => 'Copia y pega aquí el Código HTML del marcador del mapa',
+            'label'    => __('Marcador', 'institucionalmt'),
+            'description' => __('Copia y pega aquí el Código HTML del marcador del mapa', 'institucionalmt'),
             'section'  => 'custom_map_location_section',
             'settings'   => 'custom_html_map_code_setting',
             'type'     => 'textarea',
@@ -55,7 +53,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
 
     // add the control for the header background
     $wp_customize->add_control('custom_map_width_control', array(
-        'label'      => 'Ajustar el ancho del mapa al 100% del contenedor?',
+        'label'      => __('Ajustar el ancho del mapa al 100% del contenedor?', 'institucionalmt'),
         'section'    => 'custom_map_location_section',
         'settings'   => 'custom_map_width_setting',
         'type'       => 'radio',
@@ -71,7 +69,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_contact_form_section', array(
-        'title' => __('Formulario de contacto', $mytheme),
+        'title' => __('Formulario de contacto', 'institucionalmt'),
         'panel' => 'contact_page_panel',
         'priority' => 602
     ));
@@ -86,8 +84,8 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_form_title_control',
         array(
-            'label'    => __('Título del formulario', $mytheme),
-            'description' => 'Escribe un título para mostrarlo en la cabecera del formulario (Default: "Contáctanos")',
+            'label'    => __('Título del formulario', 'institucionalmt'),
+            'description' => __('Escribe un título para mostrarlo en la cabecera del formulario (Default: "Contáctanos")', 'institucionalmt'),
             'section'  => 'custom_contact_form_section',
             'settings'   => 'custom_form_title_setting',
             'type'     => 'text',
@@ -105,7 +103,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'first_form_control_label_control',
         array(
-            'label'    => __('First form control label', $mytheme),
+            'label'    => __('First form control label', 'institucionalmt'),
             'description' => 'Label para mostrar en el primer campo (Default: "Nombre")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'first_form_control_label_setting',
@@ -124,7 +122,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'second_form_control_label_control',
         array(
-            'label'    => __('Second form control label', $mytheme),
+            'label'    => __('Second form control label', 'institucionalmt'),
             'description' => 'Label para mostrar en el segundo campo (Default: "Correo Electrónico")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'second_form_control_label_setting',
@@ -143,7 +141,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'third_form_control_label_control',
         array(
-            'label'    => __('Third form control label', $mytheme),
+            'label'    => __('Third form control label', 'institucionalmt'),
             'description' => 'Label para mostrar en el tercer campo (Default: "Asunto")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'third_form_control_label_setting',
@@ -162,7 +160,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'fourth_form_control_label_control',
         array(
-            'label'    => __('Fourth form control label', $mytheme),
+            'label'    => __('Fourth form control label', 'institucionalmt'),
             'description' => 'Label para mostrar en el cuarto campo (Default: "Mensaje")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'fourth_form_control_label_setting',
@@ -181,7 +179,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'button_submit_text_control',
         array(
-            'label'    => __('Texto del botón (Llamada a la acción)', $mytheme),
+            'label'    => __('Texto del botón (Llamada a la acción)', 'institucionalmt'),
             'description' => 'Texto para mostrar en el botón (Default: "Enviar")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'button_submit_text_setting',
@@ -200,7 +198,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'button_submit_icon_control',
         array(
-            'label'    => __('Ícono del botón', $mytheme),
+            'label'    => __('Ícono del botón', 'institucionalmt'),
             'description' => 'Ícono para mostrar en el botón (Este tema es compatible con Fontawesome, importante agregar ml-2 al final del texto; Default: "far fa-paper-plane ml-2")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'button_submit_icon_setting',
@@ -219,7 +217,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_form_legal_warning_control',
         array(
-            'label'    => __('Aviso Legal', $mytheme),
+            'label'    => __('Aviso Legal', 'institucionalmt'),
             'description' => 'Escribe un Aviso Legal para mostrarlo al pie del formulario (Default: "En caso de que tenga alguna duda acerca de este formulario o quiera realizar cualquier comentario sobre este sitio Web, puede enviar un mensaje de correo electrónico a la dirección que aparece al pié de este formulario.")',
             'section'  => 'custom_contact_form_section',
             'settings'   => 'custom_form_legal_warning_setting',
@@ -235,7 +233,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
 
     // Add sections
     $wp_customize->add_section( 'custom_social_section', array(
-        'title' => __( 'Redes Sociales', $mytheme ),
+        'title' => __( 'Redes Sociales', 'institucionalmt' ),
         'panel' => 'contact_page_panel',
         'priority' => 603
     ));
@@ -250,7 +248,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_social_title_control',
         array(
-            'label'    => __('Título de la sección Redes Sociales', $mytheme),
+            'label'    => __('Título de la sección Redes Sociales', 'institucionalmt'),
             'description' => 'Introduce un título para esta sección (Default: "Síguenos en")',
             'section'  => 'custom_social_section',
             'settings'   => 'custom_social_title_setting',
@@ -269,7 +267,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_facebook_control',
         array(
-            'label'    => __( 'Facebook', $mytheme ),
+            'label'    => __( 'Facebook', 'institucionalmt' ),
             'description' => 'URL del perfíl de Facebook',
             'section'  => 'custom_social_section', 
             'settings'   => 'custom_facebook_setting',
@@ -288,7 +286,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_twitter_control',
         array(
-            'label'    => __( 'Twitter', $mytheme ),
+            'label'    => __( 'Twitter', 'institucionalmt' ),
             'description' => 'URL del perfíl de Twitter',
             'section'  => 'custom_social_section', 
             'settings'   => 'custom_twitter_setting',
@@ -307,7 +305,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_instagram_control',
         array(
-            'label'    => __( 'Instagram', $mytheme ),
+            'label'    => __( 'Instagram', 'institucionalmt' ),
             'description' => 'URL del perfíl de Instagram',
             'section'  => 'custom_social_section', 
             'settings'   => 'custom_instagram_setting',
@@ -326,7 +324,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_youtube_control',
         array(
-            'label'    => __( 'YouTube', $mytheme ),
+            'label'    => __( 'YouTube', 'institucionalmt' ),
             'description' => 'URL del perfíl de YouTube',
             'section'  => 'custom_social_section', 
             'settings'   => 'custom_youtube_setting',
@@ -342,7 +340,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_contact_days_section', array(
-        'title' => __('Horario', $mytheme),
+        'title' => __('Horario', 'institucionalmt'),
         'panel' => 'contact_page_panel',
         'priority' => 604
     ));
@@ -357,7 +355,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
         $wp_customize,
         'custom_contact_day_title_control',
         array(
-            'label'    => __('Título', $mytheme),
+            'label'    => __('Título', 'institucionalmt'),
             'description' => 'Escribe un título la sección "Horarios" (Default: "Horario de atención")',
             'section'  => 'custom_contact_days_section',
             'settings'   => 'custom_contact_day_title_setting',
@@ -429,7 +427,7 @@ function institucionalmt_register_custom_contact_page($wp_customize)
             $wp_customize,
             'custom_start_time_control',
             array(
-                'label' => __( 'Hora de inicio' ),
+                'label' => __( 'Hora de inicio', 'institucionalmt'),
                 'description' => esc_html__( 'Seleccione la hora de inicio de la jornada de trabajo'),
                 'section' => 'custom_contact_days_section',
                 'settings' => 'custom_start_time_setting',
@@ -455,8 +453,8 @@ $wp_customize->add_control(
         $wp_customize,
         'custom_end_time_control',
         array(
-            'label' => __( 'Hora de término' ),
-            'description' => esc_html__( 'Seleccione la hora de término de la jornada de trabajo'),
+            'label' => __( 'Hora de término', 'institucionalmt' ),
+            'description' => esc_html__( 'Seleccione la hora de término de la jornada de trabajo', 'institucionalmt'),
             'section' => 'custom_contact_days_section',
             'settings' => 'custom_end_time_setting',
             'type' => 'time',            
@@ -469,7 +467,7 @@ $wp_customize->add_control(
 
     // Add sections
     $wp_customize->add_section('custom_another_contact_days_section', array(
-        'title' => __('Otros Horarios', $mytheme),
+        'title' => __('Otros Horarios', 'institucionalmt'),
         'panel' => 'contact_page_panel',
         'priority' => 605
     ));
@@ -484,8 +482,8 @@ $wp_customize->add_control(
         $wp_customize,
         'custom_contact_day_title_control',
         array(
-            'label'    => __('Título', $mytheme),
-            'description' => 'Escribe un título para este horario',
+            'label'    => __('Título', 'institucionalmt'),
+            'description' => __('Escribe un título para este horario', 'institucionalmt'),
             'section'  => 'custom_another_contact_days_section',
             'settings'   => 'custom_another_contact_day_title_setting',
             'type'     => 'text',
@@ -497,8 +495,8 @@ $wp_customize->add_control(
     $wp_customize->add_setting('custom_another_start_day_setting');
 
     $wp_customize->add_control('custom_another_start_day_control', array(
-        'label'      => 'Desde',
-        'description' => 'Seleccione el día en que inicia la jornada de trabajo',
+        'label'      => __('Desde', 'institucionalmt'),
+        'description' => __('Seleccione el día en que inicia la jornada de trabajo','institucionalmt'),
         'section'    => 'custom_another_contact_days_section',
         'settings'   => 'custom_another_start_day_setting',
         'type'       => 'select',
@@ -556,7 +554,7 @@ $wp_customize->add_control(
             $wp_customize,
             'custom_another_start_time_control',
             array(
-                'label' => __( 'Hora de inicio' ),
+                'label' => __( 'Hora de inicio', 'institucionalmt' ),
                 'description' => esc_html__( 'Seleccione la hora de inicio de la jornada de trabajo'),
                 'section' => 'custom_another_contact_days_section',
                 'settings' => 'custom_another_start_time_setting',
@@ -582,7 +580,7 @@ $wp_customize->add_control(
         $wp_customize,
         'custom_another_end_time_control',
         array(
-            'label' => __( 'Hora de término' ),
+            'label' => __( 'Hora de término', 'institucionalmt'),
             'description' => esc_html__( 'Seleccione la hora de término de la jornada de trabajo'),
             'section' => 'custom_another_contact_days_section',
             'settings' => 'custom_another_end_time_setting',

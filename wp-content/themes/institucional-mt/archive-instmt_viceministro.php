@@ -1,17 +1,8 @@
 <?php /* Template Name: Nuestro Equipo */ ?>
 
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-<div id="posts-header" class="posts-header title-bar mb-5 d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="posts-header-title"><?php the_title(); ?></h2>
-            <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
-        </div>
-    </div>
-</div><!-- the_posts-header -->
+<?php institucionalmt_page_header(); ?>
 
 <div class="container py-5">
 

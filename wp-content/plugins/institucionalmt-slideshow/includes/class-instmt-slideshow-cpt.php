@@ -21,10 +21,7 @@ if( ! class_exists( 'InstitucionalMT_Slideshow_CPT' ) ){
                 'labels' => $labels,
                 'description' => __( 'Almacena todos los Banners que se mostrarán en el slider del plugin', 'instmtslideshow' ),
                 'public' => true,
-                'supports' => [
-                    'title',
-                    'thumbnail'
-                ],
+                'supports' => [ 'title', 'editor', 'thumbnail' ],
                 'capability_type' => 'post',
                 'show_ui' => true,
                 'show_in_menu' => true,

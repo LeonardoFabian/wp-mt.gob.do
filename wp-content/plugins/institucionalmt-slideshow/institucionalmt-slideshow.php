@@ -50,6 +50,9 @@ if( ! defined( 'WPINC' ) ){
     die;
 }
 
+add_theme_support( 'post-thumbnails' );
+add_image_size( 'banner_inline_rectangle', 300, 250, true );
+
 /**
  * Constantes del plugin
  */

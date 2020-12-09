@@ -6,46 +6,13 @@
 get_header();
 ?>
 
-<div id="posts-header" class="posts-header title-bar mb-5 d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="institucionalmt-title"><?php the_title(); ?><span></span></h2>
-            <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
-        </div>
-    </div>
-</div><!-- the_posts-header -->
+<?php institucionalmt_page_header(); ?>
 
 <div class="container py-5">
 
     <div class="row">
-        <?php
-/*
-        $terms = get_terms('dependencias_taxonomy', array(            
-            'orderby' => 'name',
-            'order' => 'asc',
-            'parent' => 0,
-            'hide_empty' => 0,
-            
-        ));
-        
-        if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) {
-            $count = count( $terms );
-            $i = 0;
-            $term_list = '<div class="col-xl-3">';
-            foreach ( $terms as $term ) {
-                $i++;
-                $term_list .= '<a href="' . esc_url( get_term_link( $term ) ) . '" alt="' . esc_attr( sprintf( __( 'View all post filed under %s', 'my_localization_domain' ), $term->name ) ) . '"><h2>' . $term->name . '</h2></a>';
-                if ( $count != $i ) {
-                    $term_list .= ' &middot; ';
-                }
-                else {
-                    $term_list .= '</div>';
-                }
-            }
-            echo $term_list;
-        }          
-        */
-        
+
+        <?php        
 
         $args = [
             'post_type' => 'instmt_ministro',
@@ -83,9 +50,7 @@ get_header();
 
                 <?php wp_reset_postdata(); ?>
 
-            <?php endif; ?>
-
-          
+            <?php endif; ?>          
 
     </div>
 

@@ -6,6 +6,9 @@ include_once('inc/customizer.php');
 // Navwalker fix for bootstrap navbar
 require_once('wp-bootstrap-navwalker.php');
 
+// Helpers fumctions
+require_once('lib/helpers.php');
+
 /**
  * Theme setup
  */
@@ -148,9 +151,10 @@ function institucionalmt_set_excerpt_length($length)
 add_filter('excerpt_length', 'institucionalmt_set_excerpt_length');
 
 function institucionalmt_add_readmore_to_excerpt($more)
-{
+{       
     if (!is_single()) {
-        $more = sprintf('&nbsp;<a class="read-more" href="%1$s">%2$s</a>', get_permalink(get_the_ID()), __('Leer más...', 'institucionalmt'));
+        
+        $more = sprintf('&nbsp;<a class="read-more" href="%1$s">%2$s<span class="u-screen-reader-text d-none">acerca de %3$s </span></a>', esc_url( get_permalink( get_the_ID() ) ), __('Leer más ', 'institucionalmt'), get_the_title() );
     }
     return $more;
 }
@@ -171,8 +175,8 @@ add_action('after_setup_theme', 'institucionalmt_images_size');
 function institucionalmt_images_size_choose($sizes)
 {
     return array_merge($sizes, array(
-        'justified-in-posts-image' => __('Tamaño ajustado al ancho de las entradas'),
-        'middle-post-image' => __('Tamaño medio en las entradas'),
+        'justified-in-posts-image' => __('Tamaño ajustado al ancho de las entradas', 'institucionalmt'),
+        'middle-post-image' => __('Tamaño medio en las entradas', 'institucionalmt'),
         'carousel-image' => __('Tamaño carousel'),
     ));
 }
@@ -180,6 +184,14 @@ function institucionalmt_images_size_choose($sizes)
 add_filter('image_size_names_choose', 'institucionalmt_images_size_choose');
 
 
+/**
+ * Theme favicon
+ */
+function institucionalmt_favicon(){
+    echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" /> ';
+}
+
+add_action( 'wp_head', 'institucionalmt_favicon');
 
 
 /**
@@ -198,12 +210,12 @@ function mytheme_get_svg($args = array())
 {
     // Make sure $args are an array.
     if (empty($args)) {
-        return __('Please define default parameters in the form of an array.', 'mytheme');
+        return __('Please define default parameters in the form of an array.', 'institucionalmt');
     }
 
     // Define an icon.
     if (false === array_key_exists('icon', $args)) {
-        return __('Please define an SVG icon filename.', 'mytheme');
+        return __('Please define an SVG icon filename.', 'institucionalmt');
     }
 
     // Set defaults.
@@ -352,7 +364,7 @@ function the_breadcrumb() {
                 $anc = get_post_ancestors( $post->ID );
                 $title = get_the_title();
                 foreach ( $anc as $ancestor ) {
-                    $output = '<li><a href="'.get_permalink($ancestor).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                    $output = '<li><a href="'. esc_url( get_permalink($ancestor) ).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
                 }
                 echo $output;
                 echo '<strong title="'.$title.'"> '.$title.'</strong>';

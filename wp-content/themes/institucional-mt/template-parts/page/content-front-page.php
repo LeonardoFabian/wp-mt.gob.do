@@ -62,19 +62,23 @@ Template part para mostrar paginas en la portada
                                     while ($latestPosts->have_posts()) : $latestPosts->the_post();
 
                                 ?>
-                                        <div class="card mb-4">
+                                        <div class="card mb-4" style="width:100%;">
 
                                             <!-- Card date -->
                                             <div class="date-container text-center bg-secondary-color overlay">
                                                 <div class="post-date align-self-center">
-                                                    <h4 class="post-date-day"><?php echo get_the_date('j'); ?></h4>
-                                                    <small class="post-date-month text-uppercase"><?php echo get_the_date('M'); ?></small>
+                                                    <a href="<?php echo esc_url( get_permalink() ) ?>" class="text-decoration-none" style="color:#fff;">
+                                                        <h4 class="post-date-day"><time datetime="<?php echo esc_attr( get_the_date('c') ) ?>"><?php echo esc_html( get_the_date('j') ); ?></time></h4>
+                                                    </a>
+                                                    <a href="<?php echo esc_url( get_permalink() ) ?>" class="text-decoration-none" style="color:#fff;">
+                                                        <time datetime="<?php echo esc_attr( get_the_date('c') ) ?>" class="post-date-month text-uppercase"><?php echo esc_html( get_the_date('M') ); ?></time>
+                                                    </a>
                                                 </div>
                                             </div>
                                             <!--Card image-->
                                             <div class="view overlay">
 
-                                                <a href="<?php the_permalink(); ?>">
+                                                <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>">
                                                     <div class="post-thumbnail-primary mask rgba-white-slight">
                                                         <!-- card-img-top img-fluid -->
                                                         <?php
@@ -88,14 +92,14 @@ Template part para mostrar paginas en la portada
                                             <!--Card content-->
                                             <div class="last-post-card-body card-body">
                                                 <div class="wrap-content">
-                                                    <div class="wrap-content-title">
+                                                    <div class="content-title">
                                                         <!--Title-->
-                                                        <a href="<?php the_permalink(); ?>" class="text-decoration-none">
+                                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>" class="text-decoration-none">
                                                             <h3 class="post-card-title card-title d-none d-sm-block">
                                                                 <?php the_title(); ?>
                                                             </h3>
                                                         </a>
-                                                        <a href="<?php the_permalink(); ?>" class="text-decoration-none">
+                                                        <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>" class="text-decoration-none">
                                                             <h6 class="post-card-title card-title d-block d-sm-none">
                                                                 <?php the_title(); ?>
                                                             </h6>
@@ -126,18 +130,19 @@ Template part para mostrar paginas en la portada
 
                             <!-- other posts here -->
 
-                            <div class="col-md-6 ">
+                            <div class="col-sm-12 col-md-6 col-lg-6">
 
-
+                                <div class="row">
 
                                 <?php
 
                                 $otherPosts = new WP_Query(array(
                                     'cat' => 2,
-                                    'posts_per_page'      => 2,
+                                    'posts_per_page'      => 4,
                                     'post_status'         => 'publish',
                                     'ignore_sticky_posts' => true,
                                     'no_found_rows'       => true,
+                                    'offset'              => 1,
                                     'order' => 'DESC'
                                 ));
 
@@ -146,21 +151,25 @@ Template part para mostrar paginas en la portada
                                         $otherPosts->the_post();
                                 ?>
 
-                                        <div class="col-6 d-inline-block">
+                                        <div class="col-sm-12 col-md-6 col-lg-6 d-inline-block">
                                             <!-- Card 2 -->
 
-                                            <div class="card mb-4">
+                                            <div class="card mb-4" style="height:95%;">
                                                 <!-- Card date -->
                                                 <div class="date-container text-center bg-secondary-color overlay">
                                                     <div class="post-date align-self-center">
-                                                        <h4 class="post-date-day"><?php echo get_the_date('j'); ?></h4>
-                                                        <small class="post-date-month text-uppercase"><?php echo get_the_date('M'); ?></small>
+                                                        <a href="<?php echo esc_url( get_permalink() ) ?>" class="text-decoration-none" style="color:#fff;">
+                                                            <h4 class="post-date-day"><time datetime="<?php echo esc_attr( get_the_date('c') ) ?>"><?php echo esc_html( get_the_date('j') ); ?></time></h4>
+                                                        </a>
+                                                        <a href="<?php echo esc_url( get_permalink() ) ?>" class="text-decoration-none" style="color:#fff;">
+                                                            <time datetime="<?php echo esc_attr( get_the_date('c') ) ?>" class="post-date-month text-uppercase"><?php echo esc_html( get_the_date('M') ); ?></time>
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <!--Card image-->
                                                 <div class="view overlay">
 
-                                                    <a href="<?php the_permalink(); ?>">
+                                                    <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>">
                                                         <div class="post-thumbnail-columns mask rgba-white-slight">
                                                             <!-- card-img-top img-fluid -->
                                                             <?php
@@ -177,7 +186,7 @@ Template part para mostrar paginas en la portada
                                                     <div class="wrap-content">
                                                         <div class="wrap-content-title">
                                                             <!--Title-->
-                                                            <a href="<?php the_permalink(); ?>" class="text-decoration-none">
+                                                            <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute() ?>" class="text-decoration-none">
                                                                 <h6 class="post-card-title card-title">
                                                                     <?php
                                                                     the_title();
@@ -207,6 +216,8 @@ Template part para mostrar paginas en la portada
                                 endif;
                                 wp_reset_postdata();
                                 ?>
+
+                                </div>
 
                             </div>
                         </div>
@@ -390,9 +401,13 @@ Template part para mostrar paginas en la portada
     <?php endif; ?>
 </section>
 
-<section id="institucionalmt-mobile-app-section" class="mobile-scene">
+<section id="institucionalmt-customers-sidebar-section">
     <?php if( is_active_sidebar('customers-sidebar') ) : ?>
-        <?php dynamic_sidebar('customers-sidebar'); ?>
+        <div class="institucionalmt-customers-sidebar-section-background">
+            <div class="container">
+                <?php dynamic_sidebar('customers-sidebar'); ?>
+            </div>
+        </div>
     <?php endif; ?>
 </section>
 

@@ -16,7 +16,7 @@ get_header();
     <div class="container d-flex text-left overlay text-light h-100">
         <div class="align-self-center">
             <h2 class="archive-header-title">                
-                <?php _e( 'Resultados para: "', 'locale' ); ?>
+                <?php _e( 'Resultados para: "', 'institucionalmt' ); ?>
                 <?php the_search_query(); ?>
                 <?php echo '"'; ?>
             </h2>

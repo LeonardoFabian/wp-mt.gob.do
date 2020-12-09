@@ -1,19 +1,12 @@
 <!DOCTYPE html>
-<html lang="<?php language_attributes(); ?>">
-
+<html <?php language_attributes(); ?> >
 <head>
     <!-- Required meta tags -->
-    <meta charset="<?php bloginfo('charset') ?>">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <!-- <meta http-equiv="Expires" content="0">
-  <meta http-equiv="Last-Modified" content="0">
-  <meta http-equiv="Cache-Control" content="no-cache, mustrevalidate">
-  <meta http-equiv="Pragma" content="no-cache"> -->
-    <title><?php echo bloginfo('name'); ?></title>
+    <meta charset="<?php bloginfo( 'charset' ); ?>" >
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
     <?php wp_head(); ?>
     <!-- InstitucionalMT_register_styles -->
 </head>
-
 <body <?php body_class(); ?>>
     <section id="institucionalmt-top-section">
         <div class="container">

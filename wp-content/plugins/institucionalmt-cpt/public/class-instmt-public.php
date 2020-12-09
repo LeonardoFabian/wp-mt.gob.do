@@ -61,7 +61,9 @@ class InstitucionalMT_Public
 
             <div class="post-signature text-left mb-5">
                 <p>
-                    <span><?php the_author_posts_link(); ?></span><br>
+                    <a href="<?php echo esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) ?>">
+                        <?php esc_html( the_author_posts_link() ); ?>
+                    </a><br>
                     <span>Contacto: </span><a href="tel:8095354404">Tel.: (809) 535-4404</a><br>
                     <span>Extensión: 3207</span>
                 </p>
@@ -135,7 +137,7 @@ class InstitucionalMT_Public
                     <div class="mb-5" style="margin-left:20px;">
                     
                         <h3 class="widget-title pl-3 py-3">
-                            <a href="<?php echo get_permalink( $ancestor ); ?>" class="text-dark text-decoration-none"><?php echo get_the_title( $ancestor ); ?></a> 
+                            <a href="<?php echo esc_url( get_permalink( $ancestor ) ); ?>" class="text-dark text-decoration-none"><?php echo get_the_title( $ancestor ); ?></a> 
                         </h3>
 
                         <ul class="list-unstyled subpages">
@@ -236,7 +238,7 @@ class InstitucionalMT_Public
                                                     <h6><a class="text-secondary" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h6>
 
                                                     <!-- <p style="font-size: 16px;"><?php echo get_the_excerpt(); ?></p> -->
-                                                    <span class="text-muted"><?php the_date('d M Y'); ?></span>
+                                                    <time datetime="<?php echo esc_attr( get_the_date('c') ) ?>" class="text-muted"><?php echo esc_html( get_the_date() ); ?></time>
                                                 </div>
                                             
                                             </div>

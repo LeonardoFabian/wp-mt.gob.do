@@ -8,7 +8,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"PO-Revision-Date: 2020-11-03 15:39-0400\n"
+"PO-Revision-Date: 2020-12-08 09:47-0400\n"
 "Language-Team: Leonardo Fabian <ramonlfabian@gmail.com>\n"
 "X-Generator: Poedit 2.4.1\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
@@ -42,19 +42,19 @@ msgstr "Add New"
 #: inc/instmt-cpt.php:199 inc/instmt-cpt.php:255 inc/instmt-cpt.php:308
 #: inc/instmt-cpt.php:362 inc/instmt-cpt.php:415 inc/instmt-cpt.php:468
 msgid "Establecer imagen de portada"
-msgstr ""
+msgstr "Set cover image"
 
 #: inc/instmt-cpt.php:39 inc/instmt-cpt.php:91 inc/instmt-cpt.php:144
 #: inc/instmt-cpt.php:200 inc/instmt-cpt.php:256 inc/instmt-cpt.php:309
 #: inc/instmt-cpt.php:363 inc/instmt-cpt.php:416 inc/instmt-cpt.php:469
 msgid "Eliminar imagen de portada"
-msgstr ""
+msgstr "Delete cover image"
 
 #: inc/instmt-cpt.php:40 inc/instmt-cpt.php:92 inc/instmt-cpt.php:145
 #: inc/instmt-cpt.php:201 inc/instmt-cpt.php:257 inc/instmt-cpt.php:310
 #: inc/instmt-cpt.php:364 inc/instmt-cpt.php:417 inc/instmt-cpt.php:470
 msgid "Usar como imagen de portada"
-msgstr ""
+msgstr "Use as cover image"
 
 #: inc/instmt-cpt.php:50
 msgid "Contiene nuestros servicios y datos específicos de los servicios"
@@ -62,25 +62,31 @@ msgstr ""
 
 #: inc/instmt-cpt.php:79 inc/instmt-cpt.php:132 inc/instmt-cpt.php:188
 msgid "Añadir Nueva"
-msgstr ""
+msgstr "Add New"
 
 #: inc/instmt-cpt.php:102
 msgid ""
 "Contiene una lista de todas las Direcciones y sus dependencias, así como "
 "tambien datos específicos de las mismas"
 msgstr ""
+"It contains a list of all Addresses and their dependencies, as well as "
+"specific data from them"
 
 #: inc/instmt-cpt.php:155
 msgid ""
 "Contiene una lista de todas las Representaciones Locales de Trabajo (RLT), "
 "así como tambien datos específicos de las mismas"
 msgstr ""
+"It contains a list of all Local Labour Representations (RTTs), as well as "
+"data specific to them"
 
 #: inc/instmt-cpt.php:211
 msgid ""
 "Contiene una lista de todas las Oficinas Territoriales de Empleo (OTE), así "
 "como tambien datos específicos de las mismas"
 msgstr ""
+"It contains a list of all Territorial Employment Offices (TEEs), as well as "
+"specific data on them"
 
 #: inc/instmt-cpt.php:267
 msgid ""
@@ -122,7 +128,7 @@ msgstr ""
 
 #: inc/instmt-menu-pages-settings.php:20
 msgid "Configuración"
-msgstr ""
+msgstr "Settings"
 
 #: inc/instmt-menu-pages-settings.php:37
 msgid "Escribe tu nombre"
@@ -245,7 +251,7 @@ msgstr ""
 
 #: inc/instmt-taxonomy.php:55
 msgid "Buscar tipos de Dependencias"
-msgstr ""
+msgstr "Search for Types of Dependencies"
 
 #: inc/instmt-taxonomy.php:56
 msgid "Todas los tipos de Dependencias"

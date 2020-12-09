@@ -6,14 +6,12 @@ add_action('customize_register', 'institucionalmt_register_custom_brand_info');
 function institucionalmt_register_custom_brand_info($wp_customize)
 {
 
-    $mytheme = 'institucionalmt';
-
     // Create custom panel
     $wp_customize->add_panel('brand_info_panel', array(
         'priority' => 200,
         'theme_supports' => '',
-        'title' => __('Datos de la organización', $mytheme),
-        'description' => __('Información del organismo', $mytheme),
+        'title' => __('Datos de la organización', 'institucionalmt'),
+        'description' => __('Información del organismo', 'institucionalmt'),
 
     ));
 
@@ -22,7 +20,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
 
     // Add sections
     $wp_customize->add_section( 'custom_site_release', array(
-        'title' => __( 'Lanzamiento del portal institucional', $mytheme ),
+        'title' => __( 'Lanzamiento del portal institucional', 'institucionalmt' ),
         'panel' => 'brand_info_panel',
         'priority' => 201
     ));
@@ -33,7 +31,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         "sanitize_callback" => "institucional_sanitize_release_date",
     ));
     $wp_customize->add_control( 'custom_site_release_date', array( // setting id
-        'label'    => __( 'Lanzamiento del Portal Institucional' ),
+        'label'    => __( 'Lanzamiento del Portal Institucional', 'institucionalmt' ),
         'description' => 'Especifique el día, mes y año en que fue lanzado este portal',
         'section'  => 'custom_site_release', // section id
         'type'     => 'date',
@@ -52,7 +50,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
 
     // Add sections
     $wp_customize->add_section( 'custom_contact_section', array(
-        'title' => __( 'Información de contacto', $mytheme),
+        'title' => __( 'Información de contacto', 'institucionalmt'),
         'panel' => 'brand_info_panel',
         'priority' => 202
     ));
@@ -84,7 +82,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_street',
         array(
-            'label'    => __( 'Calle / Avenida', $mytheme ),
+            'label'    => __( 'Calle / Avenida', 'institucionalmt' ),
             'description' => 'Colocar la calle o avenida donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -102,7 +100,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_number',
         array(
-            'label'    => __( 'Número localidad', $mytheme ),
+            'label'    => __( 'Número localidad', 'institucionalmt' ),
             'description' => 'Colocar el número de la localidad donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -120,7 +118,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_reference',
         array(
-            'label'    => __( 'Paraje o Sector', $mytheme ),
+            'label'    => __( 'Paraje o Sector', 'institucionalmt' ),
             'description' => 'Colocar el paraje o sector donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -139,7 +137,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_municipio',
         array(
-            'label'    => __( 'Municipio localidad', $mytheme ),
+            'label'    => __( 'Municipio localidad', 'institucionalmt' ),
             'description' => 'Colocar el municipio donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -157,7 +155,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_state',
         array(
-            'label'    => __( 'Provincia localidad', $mytheme ),
+            'label'    => __( 'Provincia localidad', 'institucionalmt' ),
             'description' => 'Colocar la provincia donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -176,7 +174,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_country',
         array(
-            'label'    => __( 'País localidad', $mytheme ),
+            'label'    => __( 'País localidad', 'institucionalmt' ),
             'description' => 'Colocar el país donde reside el organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -194,7 +192,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_contact_phone',
         array(
-            'label'    => __( 'Teléfono del organismo', $mytheme ),
+            'label'    => __( 'Teléfono del organismo', 'institucionalmt' ),
             'description' => 'Colocar el teléfono del organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -212,7 +210,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_contact_email',
         array(
-            'label'    => __( 'Correo del organismo', $mytheme ),
+            'label'    => __( 'Correo del organismo', 'institucionalmt' ),
             'description' => 'Colocar el correo del organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -231,7 +229,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_contact_fax',
         array(
-            'label'    => __( 'Fax del organismo', $mytheme ),
+            'label'    => __( 'Fax del organismo', 'institucionalmt' ),
             'description' => 'Colocar el fax del organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -249,7 +247,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_latitude',
         array(
-            'label'    => __( 'Latitud', $mytheme ),
+            'label'    => __( 'Latitud', 'institucionalmt' ),
             'description' => 'Latitud de ubicación del organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -267,7 +265,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_location_longitude',
         array(
-            'label'    => __( 'Longitud', $mytheme ),
+            'label'    => __( 'Longitud', 'institucionalmt' ),
             'description' => 'Longitud de ubicación del organismo',
             'section'  => 'custom_contact_section', 
             'type'     => 'text',
@@ -282,7 +280,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
 
     // Add sections
     $wp_customize->add_section('custom_basic_info_section', array(
-        'title' => __('Información básica del organismo', $mytheme),
+        'title' => __('Información básica del organismo', 'institucionalmt'),
         'panel' => 'brand_info_panel',
         'priority' => 203
     ));
@@ -316,7 +314,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_law_order_number',
         array(
-            'label'    => __( 'Ley / Decreto No.:', $mytheme ),
+            'label'    => __( 'Ley / Decreto No.:', 'institucionalmt' ),
             'section'  => 'custom_basic_info_section', 
             'type'     => 'text',
             'priority' => 2,
@@ -329,7 +327,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         "sanitize_callback" => "institucionalmt_sanitize_foundation_date",
     ));
     $wp_customize->add_control('custom_brand_foundation_date', array( // setting id
-        'label'    => __('Organismo fundado el'),
+        'label'    => __('Organismo fundado el', 'institucionalmt'),
         'description' => 'Fecha de fundación del organismo',
         'section'  => 'custom_basic_info_section', // section id
         'type'     => 'date',
@@ -352,7 +350,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_brand_release_president',
         array(
-            'label'    => __( 'Fundado en la gestión del Presidente:', $mytheme ),
+            'label'    => __( 'Fundado en la gestión del Presidente:', 'institucionalmt' ),
             'section'  => 'custom_basic_info_section', 
             'type'     => 'text',
             'priority' => 4,
@@ -364,7 +362,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
 
     // Add sections
     $wp_customize->add_section( 'custom_site_analitycs_section', array(
-        'title' => __( 'Analítica', $mytheme),
+        'title' => __( 'Analítica', 'institucionalmt'),
         'panel' => 'brand_info_panel',
         'priority' => 205
     ));
@@ -379,7 +377,7 @@ function institucionalmt_register_custom_brand_info($wp_customize)
         $wp_customize,
         'custom_site_analitycs',
         array(
-            'label'    => __( 'Código UA de Google Analytics:', $mytheme ),
+            'label'    => __( 'Código UA de Google Analytics:', 'institucionalmt' ),
             'section'  => 'custom_site_analitycs_section', 
             'type'     => 'text',
             'priority' => 1,

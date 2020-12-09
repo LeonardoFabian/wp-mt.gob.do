@@ -1,15 +1,19 @@
 /*
-Theme Name: Institucional MT
-Theme URI:
-Author: Leonardo Fabian
-Author URI: https://www.linkedin.com/in/leonardofabian/
-Description: Plantilla diseñada para el desarrollo de un sitio web institucional.
-Version: 1.0
-License: 
-License URI: 
-Text Domain: institucionalmt
-Tags: blog, Dos columnas, colores personalizados, logo customizable, custom-menu, editor-style, featured-images, footer-widgets, sticky-post, threaded-comments, block-styles, wide-blocks, accessibility-ready, right-sidebar, responsive
-Domain Path: /languages
+Theme Name:         Institucional MT
+Theme URI:          https://mt.gob.do/
+Version:            1.0.0
+Requires at least:  5.0
+Tested up to:       5.5.1
+Requires PHP:       7.0
+Description:        Plantilla diseñada para el desarrollo de un sitio web institucional.
+Author:             Leonardo Fabian
+Author URI:         https://www.linkedin.com/in/leonardofabian/
+Tags:               blog, news, portfolio, two-columns, right-sidebar, custom-colors, custom-header, custom-logo, custom-menu, featured-images, footer-widgets, front-page-post-form, post-formats, theme-options, translation-ready
+License:            GNU General Public License version 3.0
+License URI:        https://www.gnu.org/licenses/gpl-3.0.html
+Text Domain:        institucionalmt
+Domain Path:        /languages
+
 
 Este tema tiene licencia bajo la GPL. Siéntete libre de utilizarlo, hacerle las modificaciones que quieras
 y compartir lo aprendido con los demás.
