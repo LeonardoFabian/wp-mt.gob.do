@@ -1,29 +1,14 @@
-// const { series } = require( 'gulp' );
-
-// function defaultTask(cb) {
-//     console.log('The default gulp task');
-//   // place code for your default task here
-//   // para ejecutar una función, utilizar gulp TASK_FUNCTION_NAME en la consola
-//   cb();
-// }
-
-// function hello(done){
-//     console.log('Hello World');
-//     done();
-// }
-
-// exports.default = defaultTask;
-// // exports.hello = hello;
-// exports.default = series(defaultTask, hello);
-
 import gulp from 'gulp';
+import babel from 'gulp-babel';
 import yargs from 'yargs';
-//import sass from 'gulp-sass';
+//import less from 'gulp-less';
+import sass from 'gulp-sass';
 import cleanCSS from 'gulp-clean-css';
 import gulpif from 'gulp-if';
 import sourcemaps from 'gulp-sourcemaps';
 import imagemin from 'gulp-imagemin';
 import del from 'del';
+import webpack from 'webpack-stream';
 
 const PRODUCTION = yargs.argv.prod;
 const paths = {
@@ -32,7 +17,7 @@ const paths = {
     dest: 'dist/assets/css'
   },
   scripts: {
-    src: 'src/assets/js/*.js',
+    src: 'src/assets/js/bundle.js',
     dest: 'dist/assets/js'
   },
   images: {
@@ -54,7 +39,8 @@ export const clean = () => del(['dist']);
 export const styles = () => {
   return gulp.src(paths.styles.src)
   .pipe(gulpif(!PRODUCTION, sourcemaps.init()))
-  //.pipe(sass.sync().on('error', sass.logError))
+  .pipe(sass.sync().on('error', sass.logError))
+  //.pipe(less())
   .pipe(gulpif(PRODUCTION, cleanCSS({compatibility: 'ie8'})))
   .pipe(gulpif(!PRODUCTION, sourcemaps.write()))
   .pipe(gulp.dest(paths.styles.dest));
@@ -76,6 +62,26 @@ export const images = () => {
 export const copy = () => {
   return gulp.src(paths.other.src)
     .pipe(gulp.dest(paths.other.dest));
+}
+
+export const scripts = () => {
+  return gulp.src(paths.scripts.src)
+    .pipe(webpack({
+      module: {
+        rules: [
+          {
+            test: /\.js$/,
+            use: {
+              loader: 'babel-loader',
+              options: {
+                presets: ['@babel/preset-env']
+              }
+            }
+          }
+        ]
+      }
+    }))
+    .pipe(gulp.dest(paths.scripts.dest));
 }
 
 /**
