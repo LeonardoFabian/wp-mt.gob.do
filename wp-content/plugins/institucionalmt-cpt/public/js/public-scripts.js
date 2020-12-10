@@ -51,4 +51,9 @@ jQuery(document).ready(function($){
 
     });
 
+    var $sidebar_menu_current_page_item = $('.instmt-page-section-menu .current_page_item');
+
+    $sidebar_menu_current_page_item.addClass('bg-primary text-light');
+    $sidebar_menu_current_page_item.children('a').addClass('text-light');
+
 });

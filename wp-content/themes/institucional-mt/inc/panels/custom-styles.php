@@ -63,6 +63,12 @@ styling
      ****************************************/
 ?>
     <style>
+
+        /* COLORS */
+        .bg-primary {
+            background-color: <?php echo $primary_color; ?> !important;
+        }
+
         /* BUTTONS */
 
         .btn-lg {

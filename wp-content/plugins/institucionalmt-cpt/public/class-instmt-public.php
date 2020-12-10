@@ -122,7 +122,7 @@ class InstitucionalMT_Public
                 'child_of' => $ancestor,
                 'depth' => '-1',
                 'title_li' => '',
-                'link_before'  => '<div class="pl-3 py-2 bg-secondary text-light text-decoration-none" style="border-bottom:1px solid #bdbdbd;">',
+                'link_before'  => '<div class="pl-3 py-2 text-decoration-none" style="border-bottom:1px solid #bdbdbd;">',
                 'link_after'   => '</div>',
             );            
 
@@ -132,7 +132,7 @@ class InstitucionalMT_Public
 
             if( $list_pages ){ ?>
 
-                <section class='section-menu sidebar widget'>
+                <section class='instmt-page-section-menu sidebar widget'>
 
                     <div class="mb-5" style="margin-left:20px;">
                     
