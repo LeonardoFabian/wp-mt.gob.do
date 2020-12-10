@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "gulp",
+    "build": "gulp build --prod"
   },
   "author": "Leonardo Fabián",
   "license": "ISC",
@@ -23,6 +24,7 @@
     "gulp-sourcemaps": "^3.0.0"
   },
   "dependencies": {
+    "del": "^6.0.0",
     "styles": "^0.2.1",
     "yargs": "^16.2.0"
   }
