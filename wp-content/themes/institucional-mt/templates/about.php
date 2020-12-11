@@ -2,14 +2,7 @@
 
 <?php get_header(); ?>
 
-<div id="content-contact-header" class="content-contact-header title-bar  d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="content-contact-header-title"><?php the_title(); ?></h2>
-            <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
-        </div>
-    </div>
-</div><!-- entry-header -->
+<?php _themename_page_header(); ?>
 
 <div class="content">
 

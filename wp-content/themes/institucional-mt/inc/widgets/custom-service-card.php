@@ -6,12 +6,12 @@
  * @since 1.0
  */
 
-function institucionalmt_register_service_card_widget()
+function _themename_register_service_card_widget()
 {
-    register_widget('InstitucionalMT_Service_Cards_Widget');
+    register_widget('_themename_Service_Cards_Widget');
 }
 
-add_action('widgets_init', 'institucionalmt_register_service_card_widget');
+add_action('widgets_init', '_themename_register_service_card_widget');
 
 // Enqueue additional admin scripts
 add_action('admin_enqueue_scripts', 'custom_service_card_script');
@@ -19,24 +19,24 @@ add_action('admin_enqueue_scripts', 'custom_service_card_script');
 function custom_service_card_script()
 {
     wp_enqueue_media();
-    wp_enqueue_script('institucionalmt-custom-service-card', get_template_directory_uri() . '/admin/js/widget.js', false, '1.0', true);
-    wp_enqueue_script('institucionalmt-custom-service-icon', get_template_directory_uri() . '/admin/js/icon-upload.js', false, '1.0', true);
+    wp_enqueue_script('_themename-custom-service-card', get_template_directory_uri() . '/admin/js/widget.js', false, '1.0', true);
+    wp_enqueue_script('_themename-custom-service-icon', get_template_directory_uri() . '/admin/js/icon-upload.js', false, '1.0', true);
 }
 
 
-class InstitucionalMT_Service_Cards_Widget extends WP_Widget
+class _themename_Service_Cards_Widget extends WP_Widget
 {
 
     function __construct()
     {
         parent::__construct(
             // widget ID
-            'institucionalmt_service_card',
+            '_themename_service_card',
             // widget name
-            __('InstitucionalMT Service Card Widget', 'institucionalmt'),
+            __('_themename Service Card Widget', '_themename'),
             // widget description
             array(
-                'description' => __('Three equal columns service cards layout (InstitucionalMT)', 'institucionalmt'),
+                'description' => __('Three equal columns service cards layout (_themename)', '_themename'),
             )
         );
     }
@@ -109,7 +109,7 @@ class InstitucionalMT_Service_Cards_Widget extends WP_Widget
         <!-- Grid column -->
 
     <?php
-        //echo __('Buscador', 'institucionalmt');
+        //echo __('Buscador', '_themename');
 
         echo $args['after_widget'];
     }

@@ -3,9 +3,9 @@
 /**
  * The template for displaying search results pages.
  *
- * @package WordPress
- * @subpackage Institucional MT
- * @since Institucional MT 1.0
+ * @package     WordPress
+ * @subpackage  _themename
+ * @since       1.0.0
  */
 
 get_header();
@@ -16,11 +16,11 @@ get_header();
     <div class="container d-flex text-left overlay text-light h-100">
         <div class="align-self-center">
             <h2 class="archive-header-title">                
-                <?php _e( 'Resultados para: "', 'institucionalmt' ); ?>
+                <?php _e( 'Resultados para: "', '_themename' ); ?>
                 <?php the_search_query(); ?>
                 <?php echo '"'; ?>
             </h2>
-            <small class="breadcrumbs tex-muted">Rastro de navegacion pagina de search</small>
+            <small class="breadcrumbs tex-muted"><?php _themename_breadcrumbs(); ?></small>
         </div>
     </div>
 </div><!-- archive-header -->

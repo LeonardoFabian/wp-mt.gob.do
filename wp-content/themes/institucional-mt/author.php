@@ -9,7 +9,7 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
     <div class="container d-flex text-left overlay text-light h-100">
         <div class="align-self-center">
             <h2 class="entry-header-title"><?php echo $curauth->display_name; ?></h2>
-            <small class="breadcrumbs tex-muted">Mostrar aqui rastro de navegacion publicacion</small>
+            <small class="breadcrumbs tex-muted"><?php _themename_breadcrumb() ?></small>
         </div>
     </div>
 </div><!-- entry-header -->
@@ -18,16 +18,17 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
 
 
     <dl>
-        <dt>Website</dt>
+        <dt><?php echo apply_filters( '_themename_author_website_label', esc_html__('Website', '_themename') ) ?></dt>
         <dd><a href="<?php echo $curauth->user_url; ?>"><?php echo $curauth->user_url; ?></a></dd>
-        <dt>Profile</dt>
+        <dt><?php echo apply_filters( '_themename_author_profile_label', esc_html__('Profile', '_themename') ) ?></dt>
         <dd><?php echo $curauth->user_description; ?></dd>
-        <dt>Correo</dt>
+        <dt><?php echo apply_filters( '_themename_author_email_label', esc_html__('Correo', '_themename') ) ?></dt>
         <dd><?php echo $curauth->user_email; ?></dd>
     </dl>
 
     <div class="my-5">
-    Publicaciones realizadas por <h3><?php echo $curauth->display_name; ?>:</h3>
+    <?php echo apply_filters( '_themename_author_name_label', esc_html__('Publicaciones realizadas por', '_themename') ) ?>
+    <h3><?php echo $curauth->display_name; ?>:</h3>
     </div>
 
     <ul class="list-unstyled">
@@ -47,15 +48,17 @@ $curauth = (isset($_GET['author_name'])) ? get_user_by('slug', $author_name) : g
                         <div class="col-md-4">
                             <a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link: <?php the_title(); ?>">
                                 <strong><?php the_title(); ?></strong></a>,
-                            <p class="text-muted"><?php the_time('d M Y'); ?><br>
-                            Categorías: <?php the_category('&'); ?></p>
+                            <p class="text-muted">
+                            <?php the_time('d M Y'); ?><br>
+                            <?php esc_html_e('Categorías:', '_themename') ?><?php the_category('&'); ?>
+                            </p>
                         </div>                        
                     </div>
                 </li>
 
             <?php endwhile;
         else : ?>
-            <p><?php _e('No posts by this author.','institucionalmt'); ?></p>
+            <p><?php echo apply_filters( '_themename_no_post_by_author', esc_html__('No hay publicaciones de este autor.','_themename') ); ?></p>
 
         <?php endif; ?>
 

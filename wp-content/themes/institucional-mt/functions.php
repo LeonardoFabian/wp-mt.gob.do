@@ -10,59 +10,59 @@ require_once('wp-bootstrap-navwalker.php');
 require_once('lib/helpers.php');
 
 // Theme enqueue styles and scripts
-require_once('lib/institucionalmt-enqueue-scripts.php');
+require_once('lib/enqueue-scripts.php');
 
 /**
  * Theme setup
  */
-function institucionalmt_theme_setup()
-{
-    // title tags
-    add_theme_support('title-tag');
-
-    // translation
-    load_theme_textdomain( 'institucionalmt', get_stylesheet_directory() . '/languages' );
-
-    // post formats
-    add_theme_support( 'post_formats' );
-
-    // custom logo
-    add_theme_support('custom-logo');
-
-    // RSS feed links to head
-    add_theme_support( 'automatic-feed-links' );
-
-    // page template
-    add_theme_support('timeline');
-
-    // post thumbnails or featured images
-    add_theme_support( 'post-thumbnails' );
+if( !function_exists( '_themename_theme_setup' ) ){
+    function _themename_theme_setup(){
+        // title tags
+        add_theme_support('title-tag');
+    
+        // translation
+        load_theme_textdomain( '_themename', get_stylesheet_directory() . '/languages' );
+    
+        // post formats
+        add_theme_support( 'post_formats' );
+    
+        // custom logo
+        add_theme_support('custom-logo');
+    
+        // RSS feed links to head
+        add_theme_support( 'automatic-feed-links' );
+    
+        // page template
+        add_theme_support('timeline');
+    
+        // post thumbnails or featured images
+        add_theme_support( 'post-thumbnails' );
+    }
 }
-
-add_action('after_setup_theme', 'institucionalmt_theme_setup');
+add_action('after_setup_theme', '_themename_theme_setup');
 
 
 // THEME MENUS
-function InstitucionalMT_menus()
-{
+if( !function_exists( '_themename_menus' ) ){
+    function _themename_menus(){
 
-    $locations = array(
-        'main' => 'Menu Principal',
-        'footer-menu' => "Footer Menu",
-        'headerbar-menu' => "Header Bar Menu",
-        'sidebar-primary' => "Right Sidebar Menu",
-        'footer_column_1' => 'Footer Column 1',
-        'footer_column_2' => 'Footer Column 2',
-        'footer_column_3' => 'Footer Column 3',
-        'footer_column_4' => 'Footer Column 4',
-        'footer_top_2' => 'Footer Top 2',
-        'about-us-menu' => 'About Us',
-    );
-
-    register_nav_menus($locations);
+        $locations = array(
+            'main' => 'Menu Principal',
+            'footer-menu' => "Footer Menu",
+            'headerbar-menu' => "Header Bar Menu",
+            'sidebar-primary' => "Right Sidebar Menu",
+            'footer_column_1' => 'Footer Column 1',
+            'footer_column_2' => 'Footer Column 2',
+            'footer_column_3' => 'Footer Column 3',
+            'footer_column_4' => 'Footer Column 4',
+            'footer_top_2' => 'Footer Top 2',
+            'about-us-menu' => 'About Us',
+        );
+    
+        register_nav_menus($locations);
+    }
 }
-
-add_action('init', 'InstitucionalMT_menus');
+add_action('init', '_themename_menus');
 
 // Allow shortcodes on widgets
 add_filter('widget_text', 'do_shortcode');
@@ -71,79 +71,87 @@ add_filter('widget_text', 'do_shortcode');
 add_filter('the_content', 'do_shortcode');
 
 
-// LINKS CLASS (anchor <a>)
-add_filter('nav_menu_link_attributes', 'temp_addNavMenuLinkClass', 10, 3);
-
-function temp_addNavMenuLinkClass($atts, $item, $args)
-{
-    $class = 'nav-link';
-    $atts['class'] = $class;
-    return $atts;
+if( !function_exists( '_themename_add_navmenu_link_class' ) ){
+    function _themename_add_navmenu_link_class($atts, $item, $args){
+        $class = 'nav-link';
+        $atts['class'] = $class;
+        return $atts;
+    }
 }
+// LINKS CLASS (anchor <a>)
+add_filter('nav_menu_link_attributes', '_themename_add_navmenu_link_class', 10, 3);
+
 
 // soporte para entradas embed con formato embed-{post_type}-{post_format}
-function institucionalmt_embed_post_format_support()
-{
-    add_theme_support('post-formats', ['video', 'gallery','link']);
+if( !function_exists( '_themename_embed_post_format_support' ) ){
+    function _themename_embed_post_format_support(){
+        add_theme_support('post-formats', ['video', 'gallery','link']);
+    }
 }
-add_action('after_setup_theme', 'institucionalmt_embed_post_format_support');
+add_action('after_setup_theme', '_themename_embed_post_format_support');
 
 // agregar soporte para entradas [video, gallery] en las paginas 
-function institucionalmt_add_post_support_to_page_format()
-{
-    add_post_type_support('page', 'post-formats');
+if( !function_exists( '_themename_add_post_support_to_page_format' ) ){
+    function _themename_add_post_support_to_page_format(){
+        add_post_type_support('page', 'post-formats');
+    }
 }
-add_action('init', 'institucionalmt_add_post_support_to_page_format');
+add_action('init', '_themename_add_post_support_to_page_format');
+
 
 // excerpt length
-function institucionalmt_set_excerpt_length($length)
-{
-    return 15;
-}
-add_filter('excerpt_length', 'institucionalmt_set_excerpt_length');
-
-function institucionalmt_add_readmore_to_excerpt($more)
-{       
-    if (!is_single()) {
-        
-        $more = sprintf('&nbsp;<a class="read-more" href="%1$s">%2$s<span class="u-screen-reader-text d-none">acerca de %3$s </span></a>', esc_url( get_permalink( get_the_ID() ) ), __('Leer más ', 'institucionalmt'), get_the_title() );
+if( !function_exists( '_themename_set_excerpt_length' ) ){
+    function _themename_set_excerpt_length($length){
+        return 15;
     }
-    return $more;
 }
-add_filter('excerpt_more', 'institucionalmt_add_readmore_to_excerpt');
+add_filter('excerpt_length', '_themename_set_excerpt_length');
+
+
+if( !function_exists( '_themename_add_readmore_to_excerpt' ) ){
+    function _themename_add_readmore_to_excerpt($more){       
+        if (!is_single()) {
+            
+            $more = sprintf('&nbsp;<a class="read-more" href="%1$s">%2$s<span class="u-screen-reader-text d-none">acerca de %3$s </span></a>', esc_url( get_permalink( get_the_ID() ) ), __('Leer más ', '_themename'), get_the_title() );
+        }
+        return $more;
+    }
+}
+add_filter('excerpt_more', '_themename_add_readmore_to_excerpt');
 
 // REGISTER NEW IMAGE SIZE
-function institucionalmt_images_size()
-{
-    // additional image sizes
-    add_image_size('justified-in-posts-image', 755, 400, true);
-    add_image_size('middle-post-image', 375, 300, true);
-    add_image_size('carousel-image', 1140, 500, true);
+if( !function_exists( '_themename_images_size' ) ){
+    function _themename_images_size(){
+        // additional image sizes
+        add_image_size('justified-in-posts-image', 755, 400, true);
+        add_image_size('middle-post-image', 375, 300, true);
+        add_image_size('carousel-image', 1140, 500, true);
+    }
 }
-
-add_action('after_setup_theme', 'institucionalmt_images_size');
+add_action('after_setup_theme', '_themename_images_size');
 
 // ADD IMAGE SIZE TO IMAGES OPTIONS
-function institucionalmt_images_size_choose($sizes)
-{
-    return array_merge($sizes, array(
-        'justified-in-posts-image' => __('Tamaño ajustado al ancho de las entradas', 'institucionalmt'),
-        'middle-post-image' => __('Tamaño medio en las entradas', 'institucionalmt'),
-        'carousel-image' => __('Tamaño carousel'),
-    ));
+if( !function_exists( '_themename_images_size_choose' ) ){
+    function _themename_images_size_choose($sizes){
+        return array_merge($sizes, array(
+            'justified-in-posts-image' => __('Tamaño ajustado al ancho de las entradas', '_themename'),
+            'middle-post-image' => __('Tamaño medio en las entradas', '_themename'),
+            'carousel-image' => __('Tamaño carousel'),
+        ));
+    }
 }
-
-add_filter('image_size_names_choose', 'institucionalmt_images_size_choose');
+add_filter('image_size_names_choose', '_themename_images_size_choose');
 
 
 /**
  * Theme favicon
  */
-function institucionalmt_favicon(){
-    echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" /> ';
+if( !function_exists( '_themename_favicon' ) ){
+    function _themename_favicon(){
+        echo '<link rel="Shortcut Icon" type="image/x-icon" href="'.get_bloginfo('wpurl').'/favicon.ico" /> ';
+    }
 }
-
-add_action( 'wp_head', 'institucionalmt_favicon');
+add_action( 'wp_head', '_themename_favicon');
 
 
 /**
@@ -158,16 +166,17 @@ add_action( 'wp_head', 'institucionalmt_favicon');
  * }
  * @return string SVG markup.
  */
-function mytheme_get_svg($args = array())
+if( !function_exists( '_themename_get_svg' ) ){
+    function _themename_get_svg($args = array())
 {
     // Make sure $args are an array.
     if (empty($args)) {
-        return __('Please define default parameters in the form of an array.', 'institucionalmt');
+        return __('Please define default parameters in the form of an array.', '_themename');
     }
 
     // Define an icon.
     if (false === array_key_exists('icon', $args)) {
-        return __('Please define an SVG icon filename.', 'institucionalmt');
+        return __('Please define an SVG icon filename.', '_themename');
     }
 
     // Set defaults.
@@ -225,56 +234,58 @@ function mytheme_get_svg($args = array())
 
     return $svg;
 }
+}
 
 
 // ADD BOOTSTRAP PAGINATION TO THEME
-function bootstrap_pagination(\WP_Query $wp_query = null, $echo = true, $params = [])
-{
-    if (null === $wp_query) {
-        global $wp_query;
-    }
-
-    $add_args = [];
-
-    //add query (GET) parameters to generated page URLs
-    /*if (isset($_GET[ 'sort' ])) {
-        $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
-    }*/
-
-    $pages = paginate_links(array_merge([
-        'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
-        'format'       => '?paged=%#%',
-        'current'      => max(1, get_query_var('paged')),
-        'total'        => $wp_query->max_num_pages,
-        'type'         => 'array',
-        'show_all'     => false,
-        'end_size'     => 3,
-        'mid_size'     => 1,
-        'prev_next'    => true,
-        'prev_text'    => __('« Anterior'),
-        'next_text'    => __('Siguiente »'),
-        'add_args'     => $add_args,
-        'add_fragment' => ''
-    ], $params));
-
-    if (is_array($pages)) {
-        //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
-        $pagination = '<div class="pagination"><ul class="pagination">';
-
-        foreach ($pages as $page) {
-            $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+if( !function_exists( 'bootstrap_pagination' ) ){
+    function bootstrap_pagination(\WP_Query $wp_query = null, $echo = true, $params = []){
+        if (null === $wp_query) {
+            global $wp_query;
         }
-
-        $pagination .= '</ul></div>';
-
-        if ($echo) {
-            echo $pagination;
-        } else {
-            return $pagination;
+    
+        $add_args = [];
+    
+        //add query (GET) parameters to generated page URLs
+        /*if (isset($_GET[ 'sort' ])) {
+            $add_args[ 'sort' ] = (string)$_GET[ 'sort' ];
+        }*/
+    
+        $pages = paginate_links(array_merge([
+            'base'         => str_replace(999999999, '%#%', esc_url(get_pagenum_link(999999999))),
+            'format'       => '?paged=%#%',
+            'current'      => max(1, get_query_var('paged')),
+            'total'        => $wp_query->max_num_pages,
+            'type'         => 'array',
+            'show_all'     => false,
+            'end_size'     => 3,
+            'mid_size'     => 1,
+            'prev_next'    => true,
+            'prev_text'    => __('« Anterior'),
+            'next_text'    => __('Siguiente »'),
+            'add_args'     => $add_args,
+            'add_fragment' => ''
+        ], $params));
+    
+        if (is_array($pages)) {
+            //$current_page = ( get_query_var( 'paged' ) == 0 ) ? 1 : get_query_var( 'paged' );
+            $pagination = '<div class="pagination"><ul class="pagination">';
+    
+            foreach ($pages as $page) {
+                $pagination .= '<li class="page-item' . (strpos($page, 'current') !== false ? ' active' : '') . '"> ' . str_replace('page-numbers', 'page-link', $page) . '</li>';
+            }
+    
+            $pagination .= '</ul></div>';
+    
+            if ($echo) {
+                echo $pagination;
+            } else {
+                return $pagination;
+            }
         }
+    
+        return null;
     }
-
-    return null;
 }
 
 
@@ -282,57 +293,60 @@ function bootstrap_pagination(\WP_Query $wp_query = null, $echo = true, $params 
 
 // ADD CATEGORIES FOR PAGES
 
-function add_cats_and_tags_to_pages_definition()
-{
-    register_taxonomy_for_object_type('post_tag', 'page');
-    register_taxonomy_for_object_type('category', 'page');
+if( !function_exists( '_themename_add_cats_and_tags_to_pages_definition' ) ){
+    function _themename_add_cats_and_tags_to_pages_definition(){
+        register_taxonomy_for_object_type('post_tag', 'page');
+        register_taxonomy_for_object_type('category', 'page');
+    }
 }
-add_action('init', 'add_cats_and_tags_to_pages_definition');
 
+add_action('init', '_themename_add_cats_and_tags_to_pages_definition');
 
 
 /**
 * ADD BREADCRUMBS TO THEME
 */
-function the_breadcrumb() {
-    global $post;
-    echo '<ul id="breadcrumbs" class="list-unstyled list-inline">';
-    if (!is_home()) {
-        echo '<li><a href="';
-        echo get_option('home');
-        echo '">';
-        echo 'Home';
-        echo '</a></li><li class="separator"> / </li>';
-        if (is_category() || is_single() ) {
-            echo '<li>';
-            the_category(' </li><li class="separator"> / </li><li> ');
-            if (is_single()) {
-                echo '</li><li class="separator"> / </li><li>';
-                the_title();
-                echo '</li>';
-            }
-        } elseif (is_page()) {
-            if($post->post_parent){
-                $anc = get_post_ancestors( $post->ID );
-                $title = get_the_title();
-                foreach ( $anc as $ancestor ) {
-                    $output = '<li><a href="'. esc_url( get_permalink($ancestor) ).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+if( !function_exists( '_themename_breadcrumb' ) ){
+    function _themename_breadcrumb() {
+        global $post;
+        echo '<ul id="breadcrumbs" class="list-unstyled list-inline">';
+        if (!is_home()) {
+            echo '<li><a href="';
+            echo get_option('home');
+            echo '">';
+            echo 'Home';
+            echo '</a></li><li class="separator"> / </li>';
+            if (is_category() || is_single() ) {
+                echo '<li>';
+                the_category(' </li><li class="separator"> / </li><li> ');
+                if (is_single()) {
+                    echo '</li><li class="separator"> / </li><li>';
+                    the_title();
+                    echo '</li>';
                 }
-                echo $output;
-                echo '<strong title="'.$title.'"> '.$title.'</strong>';
-            } else {
-                echo '<li><strong> '.get_the_title().'</strong></li>';
+            } elseif (is_page()) {
+                if($post->post_parent){
+                    $anc = get_post_ancestors( $post->ID );
+                    $title = get_the_title();
+                    foreach ( $anc as $ancestor ) {
+                        $output = '<li><a href="'. esc_url( get_permalink($ancestor) ).'" title="'.get_the_title($ancestor).'">'.get_the_title($ancestor).'</a></li> <li class="separator">/</li>';
+                    }
+                    echo $output;
+                    echo '<strong title="'.$title.'"> '.$title.'</strong>';
+                } else {
+                    echo '<li><strong> '.get_the_title().'</strong></li>';
+                }
             }
         }
+        elseif (is_tag()) {single_tag_title();}
+        elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
+        elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
+        elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
+        elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
+        elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
+        elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
+        echo '</ul>';
     }
-    elseif (is_tag()) {single_tag_title();}
-    elseif (is_day()) {echo"<li>Archive for "; the_time('F jS, Y'); echo'</li>';}
-    elseif (is_month()) {echo"<li>Archive for "; the_time('F, Y'); echo'</li>';}
-    elseif (is_year()) {echo"<li>Archive for "; the_time('Y'); echo'</li>';}
-    elseif (is_author()) {echo"<li>Author Archive"; echo'</li>';}
-    elseif (isset($_GET['paged']) && !empty($_GET['paged'])) {echo "<li>Blog Archives"; echo'</li>';}
-    elseif (is_search()) {echo"<li>Search Results"; echo'</li>';}
-    echo '</ul>';
 }
 
 /*
@@ -362,7 +376,7 @@ add_action( 'pre_get_posts', 'add_cats_and_tags_to_queries');
  * Descomentar solo para depurar
  */
 /*
-function institucionalmt_depurar(){
+function _themename_depurar(){
     echo "<script>
     
     console.log('actions', ". current_action() .")
@@ -370,7 +384,7 @@ function institucionalmt_depurar(){
     </script>";
 }
 
-add_action( 'all', 'institucionalmt_depurar' );
+add_action( 'all', '_themename_depurar' );
 */
 
 // Process contact form

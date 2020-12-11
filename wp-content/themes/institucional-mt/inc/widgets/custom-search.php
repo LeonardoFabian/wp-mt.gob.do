@@ -6,27 +6,27 @@
  * @since 1.0
  */
 
-function institucionalmt_register_widget()
+function _themename_register_widget()
 {
-    register_widget('institucionalmt_search_widget');
+    register_widget('_themename_search_widget');
 }
 
-add_action('widgets_init', 'institucionalmt_register_widget');
+add_action('widgets_init', '_themename_register_widget');
 
 
-class institucionalmt_search_widget extends WP_Widget
+class _themename_search_widget extends WP_Widget
 {
 
     function __construct()
     {
         parent::__construct(
             // widget ID
-            'institucionalmt_searchform',
+            '_themename_searchform',
             // widget name
-            __('InstitucionalMT Searchform Widget', 'institucionalmt'),
+            __('_themename Searchform Widget', '_themename'),
             // widget description
             array(
-                'description' => __('Formulario de búsqueda personalizado (InstitucionalMT)', 'institucionalmt'),
+                'description' => __('Formulario de búsqueda personalizado (_themename)', '_themename'),
             )
         );
     }
@@ -60,7 +60,7 @@ class institucionalmt_search_widget extends WP_Widget
 
 
     <?php
-        //echo __('Buscador', 'institucionalmt');
+        //echo __('Buscador', '_themename');
 
         echo $args['after_widget'];
     }
@@ -70,7 +70,7 @@ class institucionalmt_search_widget extends WP_Widget
         if (isset($instance['title']))
             $title = $instance['title'];
         else {
-            $title = __('', 'institucionalmt');
+            $title = __('', '_themename');
         }
     ?>
         <p>

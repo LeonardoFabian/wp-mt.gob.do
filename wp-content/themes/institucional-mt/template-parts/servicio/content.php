@@ -52,7 +52,7 @@ foreach ($datos as $key => $dato) {
                     <div class="row" style="height:150px;">
                         <div class="col-xl-12 col-md-12 mb-5 text-left">
                             <?php if (function_exists('the_ratings')) : ?>
-                                <?php _e('Valoración del servicio', 'institucionalmt') ?>
+                                <?php _e('Valoración del servicio', '_themename') ?>
                                 <?php the_ratings(); ?>
                             <?php endif; ?>
                         </div>

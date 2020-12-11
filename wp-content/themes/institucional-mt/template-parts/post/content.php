@@ -3,7 +3,7 @@ $title = get_the_title();
 $content = get_the_content();
 ?>
 
-<?php institucionalmt_page_header(); ?>
+<?php _themename_page_header(); ?>
 
 <div class="container">
     <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -21,7 +21,7 @@ $content = get_the_content();
                 </div>
                 
                 <!-- helpers -->
-                <?php institucionalmt_post_meta(); ?>
+                <?php _themename_post_meta(); ?>
 
             </div>
 
@@ -64,7 +64,7 @@ $content = get_the_content();
                                 <?php echo $content; ?>
                             </div>
                             <div class="signature" style="width:100%;">
-                                <!-- customize action in plugin institucionalmt-cpt/public/class-instmt-public.php -->
+                                <!-- customize action in plugin _themename-cpt/public/class-instmt-public.php -->
                                 <?php do_action('instmt_post_signature'); ?>
                             </div>
                             <div class="tags-list text-muted mb-5">

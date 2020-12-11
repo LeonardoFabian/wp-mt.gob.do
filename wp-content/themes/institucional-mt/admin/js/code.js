@@ -13,7 +13,7 @@ jQuery(document).ready(function ($) {
     
 
     var service = new TimelineMax({ onUpdate: updateService });
-    const $service_item = document.querySelectorAll(`#institucionalmt-front-page-portfolio-section .card`);
+    const $service_item = document.querySelectorAll(`#_themename-front-page-portfolio-section .card`);
     
     service.from($service_item[0], 1, {x:-100, opacity: 0 }, "=-1");
     service.from($service_item[1], 1, {y:100, opacity: 0 }, "=-1" );

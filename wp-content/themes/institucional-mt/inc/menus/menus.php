@@ -1,37 +1,39 @@
 <?php
 
-if (!function_exists('institucionalmt_add_services_menu')) {
+if (!function_exists('_themename_add_services_menu')) {
 
-    add_action('admin_menu', 'institucionalmt_add_services_menu');
+    add_action('admin_menu', '_themename_add_services_menu');
 
-    function institucionalmt_add_services_menu()
-    {
+    if( !function_exists( '_themename_add_services_menu' ) ){
+        function _themename_add_services_menu()
+            {
 
-        add_menu_page(
-            'Servicios Ministerio de Trabajo',
-            'Servicios',
-            'manage_options',
-            'institucionalmt-servicios',
-            'institucionalmt_add_services_menu_html',
-            get_theme_file_uri('admin/image/domo.svg'),
-            21
-        );
+                add_menu_page(
+                    'Servicios Ministerio de Trabajo',
+                    'Servicios',
+                    'manage_options',
+                    '_themename-servicios',
+                    '_themename_add_services_menu_html',
+                    get_theme_file_uri('admin/image/domo.svg'),
+                    21
+                );
 
-        add_submenu_page(
-            'institucionalmt-servicios', // parent slug
-            'Servicios Empleador', // page title
-            'Servicios Empleador', // menu title 
-            'manage_options', // capability 
-            'submenu-servicios-empleador', // slug 
-            'institucionalmt_add_services_submenu_html'
-        );
+                add_submenu_page(
+                    '_themename-servicios', // parent slug
+                    'Servicios Empleador', // page title
+                    'Servicios Empleador', // menu title 
+                    'manage_options', // capability 
+                    'submenu-servicios-empleador', // slug 
+                    '_themename_add_services_submenu_html'
+                );
 
-        // add another menu page
+                // add another menu page
+            }
     }
 
-    if (!function_exists('institucionalmt_add_services_menu_html')) {
+    if (!function_exists('_themename_add_services_menu_html')) {
 
-        function institucionalmt_add_services_menu_html()
+        function _themename_add_services_menu_html()
         {
             // view
             if (current_user_can('manage_options')) {
@@ -62,9 +64,9 @@ if (!function_exists('institucionalmt_add_services_menu')) {
         }
     }
 
-    if (!function_exists('institucionalmt_add_services_submenu_html')) {
+    if (!function_exists('_themename_add_services_submenu_html')) {
 
-        function institucionalmt_add_services_submenu_html()
+        function _themename_add_services_submenu_html()
         {
             // view
             if (current_user_can('manage_options')) {

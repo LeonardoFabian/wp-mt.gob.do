@@ -1,4 +1,4 @@
-<?php institucionalmt_page_header(); ?>
+<?php _themename_page_header(); ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

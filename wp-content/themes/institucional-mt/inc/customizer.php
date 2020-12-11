@@ -4,8 +4,8 @@
  * Customizer include file
  * Includes all functions for the customizer with this theme
  * 
- * @package     Institucional-MT
- * @subpackage  Institucional-MT/inc
+ * @package     _themename
+ * @subpackage  _themename/inc
  * @author      Leonardo Fabian <ramonlfabian@gmail.com>
  */
 
@@ -15,7 +15,7 @@
  * @since       1.0.0
  * @access      public
  */
-function institucionalmt_customize_register( $wp_customize )
+function _themename_customize_register( $wp_customize )
 {
 
     /*******************************************
@@ -200,13 +200,13 @@ function institucionalmt_customize_register( $wp_customize )
 
     // Add copyright text in the footer
     $wp_customize->add_setting("footer_copyright", array(
-        "default" => __( '&copy 2020 ' .  get_bloginfo('name')  . ' | Todos los Derechos Reservados.', 'institucionalmt' ),
+        "default" => __( '&copy 2020 ' .  get_bloginfo('name')  . ' | Todos los Derechos Reservados.', '_themename' ),
         "transport" => "postMessage",
     ));
     $wp_customize->add_control( 
         $wp_customize,
         'footer_copyright', array( // setting id
-            'label'    => __('Copyright', 'institucionalmt'),
+            'label'    => __('Copyright', '_themename'),
             'section'  => 'footer-options', // section id
             'type'     => 'text',
             'priority' => 2,
@@ -218,7 +218,7 @@ function institucionalmt_customize_register( $wp_customize )
         "transport" => "postMessage",
     ));
     $wp_customize->add_control('footer_nortic', array( // setting id
-        'label'    => __('Sello NORTIC', 'institucionalmt'),
+        'label'    => __('Sello NORTIC', '_themename'),
         'section'  => 'footer-options', // section id
         'type'     => 'textarea',
         'priority' => 3,
@@ -230,19 +230,19 @@ function institucionalmt_customize_register( $wp_customize )
         "transport" => "postMessage",
     ));
     $wp_customize->add_control('footer_nortic_mobile', array( // setting id
-        'label'    => __('Sello NORTIC (Móvil)', 'institucionalmt'),
+        'label'    => __('Sello NORTIC (Móvil)', '_themename'),
         'section'  => 'footer-options', // section id
         'type'     => 'textarea',
         'priority' => 4,
     ));
 }
 
-add_action('customize_register', 'institucionalmt_customize_register');
+add_action('customize_register', '_themename_customize_register');
 
 
 
 // CUSTOMIZE LOGO
-function InstitucionalMT_customizer_logo($wp_customize)
+function _themename_customizer_logo($wp_customize)
 {
     /*
     $imageLocation = '';
@@ -260,7 +260,7 @@ function InstitucionalMT_customizer_logo($wp_customize)
         'sanitize_callback' => 'esc_url_raw'
     ));
 
-    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, 'InstitucionalMT', array(
+    $wp_customize->add_control(new WP_Customize_Image_Control($wp_customize, '_themename', array(
         'label' => 'Subir una imagen',
         'priority' => 20,
         'section' => 'logo-options',
@@ -274,37 +274,37 @@ function InstitucionalMT_customizer_logo($wp_customize)
     */
 }
 
-add_action('customize_register', 'InstitucionalMT_customizer_logo');
+add_action('customize_register', '_themename_customizer_logo');
 
-add_action('login_enqueue_scripts', 'institucionalmt_admin_login_styles');
-function institucionalmt_admin_login_styles()
+add_action('login_enqueue_scripts', '_themename_admin_login_styles');
+function _themename_admin_login_styles()
 {
-    wp_enqueue_style('institucionalmt-admin-login-custom-style', get_stylesheet_directory_uri() . '/admin/css/institucionalmt-admin-login-style.css', array('login'));
+    wp_enqueue_style('_themename-admin-login-custom-style', get_stylesheet_directory_uri() . '/admin/css/admin-login-style.css', array('login'));
 }
 
-add_action('admin_enqueue_scripts', 'institucionalmt_admin_styles');
-function institucionalmt_admin_styles($page)
+add_action('admin_enqueue_scripts', '_themename_admin_styles');
+function _themename_admin_styles($page)
 {
     //var_dump($page);
 
     if ($page == 'toplevel_page_institucionalmt-servicios' || $page == 'servicios_page_submenu-servicios-empleador') {
-        wp_enqueue_style('institucionalmt-admin-custom-style', get_stylesheet_directory_uri() . '/admin/css/institucionalmt-admin-style.css', array(), '1.0', 'all');
-        wp_enqueue_script('institucionalmt-admin-custom-script', get_template_directory_uri() . '/admin/js/institucionalmt-admin-code.js', array('jquery'), '1.0', true );
+        wp_enqueue_style('_themename-admin-custom-style', get_stylesheet_directory_uri() . '/admin/css/admin-style.css', array(), '1.0', 'all');
+        wp_enqueue_script('_themename-admin-custom-script', get_template_directory_uri() . '/admin/js/admin-code.js', array('jquery'), '1.0', true );
     }
 
     wp_dequeue_script('jquery');
 }
 
-add_action('wp_enqueue_scripts', 'institucionalmt_public_styles');
-function institucionalmt_public_styles()
+add_action('wp_enqueue_scripts', '_themename_public_styles');
+function _themename_public_styles()
 {
-    wp_enqueue_style('institucionalmt-public-custom-style', get_stylesheet_directory_uri() . '/public/css/institucionalmt-public-style.css', array(), '1.0', 'all');
-    wp_enqueue_script('institucionalmt-public-custom-script', get_template_directory_uri() . '/public/js/institucionalmt-public-code.js', array('jquery'), '1.0', true );
+    wp_enqueue_style('_themename-public-custom-style', get_stylesheet_directory_uri() . '/public/css/public-style.css', array(), '1.0', 'all');
+    wp_enqueue_script('_themename-public-custom-script', get_template_directory_uri() . '/public/js/public-code.js', array('jquery'), '1.0', true );
 }
 
 // Registrar nueva version de jQuery
-add_action('wp_enqueue_scripts', 'institucionalmt_remove_and_register_jquery');
-function institucionalmt_remove_and_register_jquery(){
+add_action('wp_enqueue_scripts', '_themename_remove_and_register_jquery');
+function _themename_remove_and_register_jquery(){
     // Remove WordPress old jQuery version
     wp_deregister_script('jquery');
 
@@ -317,7 +317,7 @@ function institucionalmt_remove_and_register_jquery(){
 
 // Template [SHORTCODES]
 
-function institucionalmt_shortcode_iframe( $attr_new, $content){
+function _themename_shortcode_iframe( $attr_new, $content){
     // set default attrs
     $attr_default = [
         'src' => 'https://www.google.com/maps/embed?pb=',
@@ -342,10 +342,10 @@ function institucionalmt_shortcode_iframe( $attr_new, $content){
     return "<iframe src='{$inst_src}' width='{$inst_width}' height='{$inst_height}' frameborder='{$inst_frameborder}' style='{$inst_style}' allowfullscreen='{$inst_allowfullscreen}' aria-hidden='{$inst_aria_hidden}' tabindex='{$inst_tabindex}'></iframe>";
 
 }
-add_shortcode('inst_googlemap', 'institucionalmt_shortcode_iframe');
+add_shortcode('inst_googlemap', '_themename_shortcode_iframe');
 
 
-function institucionalmt_shortcode_filter( $out, $pairs, $atts, $shortcode){
+function _themename_shortcode_filter( $out, $pairs, $atts, $shortcode){
     echo '<pre>';
         var_dump($out);
         var_dump($pairs);
@@ -356,7 +356,7 @@ function institucionalmt_shortcode_filter( $out, $pairs, $atts, $shortcode){
     return $out;
 }
 
-add_filter('shortcode_atts_inst_googlemap', 'institucionalmt_shortcode_filter', 10, 4);
+add_filter('shortcode_atts_inst_googlemap', '_themename_shortcode_filter', 10, 4);
 
 
 //remove_shortcode('imt_iframe');

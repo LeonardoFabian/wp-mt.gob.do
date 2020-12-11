@@ -3,19 +3,19 @@
 // PROCESS CONTACT FORM
 
 //formulario privado
-//add_action('admin_post_nopriv_institucionalmt_contactform', 'institucionalmt_send_contact_form');
+//add_action('admin_post_nopriv__themename_contactform', '_themename_send_contact_form');
 
 // formulario publico
-add_action('admin_post_institucionalmt_contactform', 'institucionalmt_send_contact_form');
+add_action('admin_post__themename_contactform', '_themename_send_contact_form');
 
-function institucionalmt_send_contact_form()
+function _themename_send_contact_form()
 {
     // Verificar que los campos no esten vacios
     if (
-        empty($_POST['institucionalmt-txtname']) ||
-        empty($_POST['institucionalmt-txtemail']) ||
-        empty($_POST['institucionalmt-txtsubject']) ||
-        empty($_POST['institucionalmt-txtmessage'])
+        empty($_POST['_themename-txtname']) ||
+        empty($_POST['_themename-txtemail']) ||
+        empty($_POST['_themename-txtsubject']) ||
+        empty($_POST['_themename-txtmessage'])
     ) :
 
         // enviar al usuario a la misma pagina con una variable GET de error
@@ -25,10 +25,10 @@ function institucionalmt_send_contact_form()
     else :
 
         // sanitizar los valores
-        $nombre = sanitize_text_field($_POST['institucionalmt-txtname']);
-        $userEmail = sanitize_email($_POST['institucionalmt-txtemail']);
-        $asunto = sanitize_text_field($_POST['institucionalmt-txtsubject']);
-        $mensaje = sanitize_text_field($_POST['institucionalmt-txtmessage']);
+        $nombre = sanitize_text_field($_POST['_themename-txtname']);
+        $userEmail = sanitize_email($_POST['_themename-txtemail']);
+        $asunto = sanitize_text_field($_POST['_themename-txtsubject']);
+        $mensaje = sanitize_text_field($_POST['_themename-txtmessage']);
 
         // validaciones 
         if (is_email($userEmail)) {

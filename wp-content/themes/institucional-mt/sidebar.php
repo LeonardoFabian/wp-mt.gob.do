@@ -31,7 +31,7 @@
     }
 
     if( is_page() ){
-        // plugin institucionalmt-cpt/public/class-instmt-public.php
+        // plugin _themename-cpt/public/class-instmt-public.php
         do_action('instmt_sidebar_menu');
     }
 
@@ -59,7 +59,7 @@
 
             dynamic_sidebar('post-right-widget-area');
 
-            // plugin institucionalmt-cpt/public/class-instmt-public.php
+            // plugin _themename-cpt/public/class-instmt-public.php
             do_action('instmt_latest_post_per_category_collection');
         }
     }

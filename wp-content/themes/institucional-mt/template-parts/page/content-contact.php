@@ -1,4 +1,4 @@
-<?php institucionalmt_page_header(); ?>
+<?php _themename_page_header(); ?>
 
 <div id="post-<?php the_ID(); ?>">
     <div class="container">
@@ -54,7 +54,7 @@
 
                         <!-- Material outline input -->
                         <div class="md-form md-outline mt-3">
-                            <label for="institucionalmt-txtname">
+                            <label for="_themename-txtname">
                                 <?php
                                 if (get_theme_mod('first_form_control_label_setting') != '') {
                                     echo get_theme_mod('first_form_control_label_setting');
@@ -65,12 +65,12 @@
                                 }
                                 ?>
                             </label>
-                            <input type="text" id="institucionalmt-txtname" name="institucionalmt-txtname" class="form-control">
+                            <input type="text" id="_themename-txtname" class="form-control">
                         </div>
 
                         <!-- Material outline input -->
                         <div class="md-form md-outline mt-3">
-                            <label for="institucionalmt-txtemail">
+                            <label for="_themename-txtemail">
                                 <?php
                                 if (get_theme_mod('second_form_control_label_setting') != '') {
                                     echo get_theme_mod('second_form_control_label_setting');
@@ -81,12 +81,12 @@
                                 }
                                 ?>
                             </label>
-                            <input type="email" id="institucionalmt-txtemail" name="institucionalmt-txtemail" class="form-control">
+                            <input type="email" id="_themename-txtemail" name="_themename-txtemail" class="form-control">
                         </div>
 
                         <!-- Material outline input -->
                         <div class="md-form md-outline">
-                            <label for="institucionalmt-txtsubject">
+                            <label for="_themename-txtsubject">
                                 <?php
                                 if (get_theme_mod('third_form_control_label_setting') != '') {
                                     echo get_theme_mod('third_form_control_label_setting');
@@ -97,12 +97,12 @@
                                 }
                                 ?>
                             </label>
-                            <input type="text" id="institucionalmt-txtsubject" name="institucionalmt-txtsubject" class="form-control">
+                            <input type="text" id="_themename-txtsubject" name="_themename-txtsubject" class="form-control">
                         </div>
 
                         <!--Material textarea-->
                         <div class="md-form md-outline mb-3">
-                            <label for="institucionalmt-txtmessage">
+                            <label for="_themename-txtmessage">
                                 <?php
                                 if (get_theme_mod('fourth_form_control_label_setting') != '') {
                                     echo get_theme_mod('fourth_form_control_label_setting');
@@ -113,10 +113,10 @@
                                 }
                                 ?>
                             </label>
-                            <textarea id="institucionalmt-txtmessage" name="institucionalmt-txtmessage" class="md-textarea form-control" rows="5"></textarea>
+                            <textarea id="_themename-txtmessage" name="_themename-txtmessage" class="md-textarea form-control" rows="5"></textarea>
                         </div>
 
-                        <input type="hidden" name="action" value="institucionalmt_contactform">
+                        <input type="hidden" name="action" value="_themename_contactform">
 
                         <button type="submit" class="btn btn-lg btn-primary btn-sm ml-0">
                             <?php

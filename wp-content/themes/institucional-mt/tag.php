@@ -4,18 +4,9 @@
  */ 
 ?>
 
-<?php
-get_header();
-?>
+<?php get_header(); ?>
 
-<div id="archive-header" class="archive-header title-bar mb-5 d-none d-sm-block">
-    <div class="container d-flex text-left overlay text-light h-100">
-        <div class="align-self-center">
-            <h2 class="archive-header-title"><?php the_tags(); ?></h2>
-            <small class="breadcrumbs tex-muted">Rastro de navegacion pagina tag.php</small>
-        </div>
-    </div>
-</div><!-- archive-header -->
+<?php _themename_tag_page_header(); ?>
 
 <div class="container my-5">
 

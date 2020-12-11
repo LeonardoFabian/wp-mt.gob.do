@@ -12,9 +12,9 @@ Template part para mostrar paginas en la portada
 </div>
 
 <!-- Front Page Portfolio -->
-<section id="institucionalmt-front-page-portfolio-section" class="section scrollspy service-scene" style="max-height: 760px;">
+<section id="_themename-front-page-portfolio-section" class="section scrollspy service-scene" style="max-height: 760px;">
     <?php if (is_active_sidebar('front-page-portfolio')) : ?>
-        <div class="institucionalmt-front-page-portfolio-section-content py-5">
+        <div class="_themename-front-page-portfolio-section-content py-5">
             <div class="container">
                 <div class="row card-deck">
                     <?php dynamic_sidebar('front-page-portfolio'); ?>
@@ -237,7 +237,7 @@ Template part para mostrar paginas en la portada
 <div class="clear-fix"></div>
 
 <!-- Content Top 1 -->
-<section id="institucionalmt-content-top-1-section" class="section scrollspy">
+<section id="_themename-content-top-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-1-left') || is_active_sidebar('content-top-1-right')) : ?>
         <div class="container py-5">
             <div class="row">
@@ -266,7 +266,7 @@ Template part para mostrar paginas en la portada
 <div class="clear-fix"></div>
 
 <!-- Content Top 2 -->
-<section id="institucionalmt-content-top-2-section" class="section scrollspy">
+<section id="_themename-content-top-2-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-2-left') || is_active_sidebar('content-top-2-right')) : ?>
         <div class="container py-5">
             <div class="row">
@@ -295,7 +295,7 @@ Template part para mostrar paginas en la portada
 <div class="clear-fix"></div>
 
 <!-- Content Top 3 -->
-<section id="institucionalmt-content-top-3-section" class="section scrollspy">
+<section id="_themename-content-top-3-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-3-left') || is_active_sidebar('content-top-3-right')) : ?>
         <div class="container py-5">
             <div class="row">
@@ -323,9 +323,9 @@ Template part para mostrar paginas en la portada
 <div class="clear-fix"></div>
 
 <!-- Content Mid 1 -->
-<section id="institucionalmt-content-mid-1-section" class="section scrollspy">
+<section id="_themename-content-mid-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-mid-1')) : ?>
-        <div class="institucionalmt-content-mid-2-section-background py-5" style="background:#dbdbdb;">
+        <div class="_themename-content-mid-2-section-background py-5" style="background:#dbdbdb;">
             <div class="container">
                 <div class="row py-3">
                     <div class="col-sm-12 col-md-6 col-lg-6" style="display:flex;">
@@ -340,9 +340,9 @@ Template part para mostrar paginas en la portada
 <div class="clear-fix"></div>
 
 <!-- Content Mid 2 -->
-<section id="institucionalmt-content-mid-2-section" class="section scrollspy">
+<section id="_themename-content-mid-2-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-mid-2')) : ?>
-        <div class="institucionalmt-content-mid-2-section-background" style="background:#003876;color:#FFFFFF;">
+        <div class="_themename-content-mid-2-section-background" style="background:#003876;color:#FFFFFF;">
             <div class="container">
                 <div class="row py-5">
                     <div class="col-sm-12 col-md-6 col-lg-6" style="display:flex;">
@@ -355,9 +355,9 @@ Template part para mostrar paginas en la portada
 </section>
 
 <!-- Content Mid 2 -->
-<section id="institucionalmt-content-bottom-1-section" class="section scrollspy">
+<section id="_themename-content-bottom-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-bottom-1')) : ?>
-        <div class="institucionalmt-content-bottom-1-section-background" style="background:#dbdbdb;">
+        <div class="_themename-content-bottom-1-section-background" style="background:#dbdbdb;">
             <div class="container">
                 <div class="row py-5">
                     <div class="col-sm-4 col-md-4 col-lg-4" style="display:flex;">
@@ -371,9 +371,9 @@ Template part para mostrar paginas en la portada
     <?php endif; ?>
 </section>
 
-<section id="institucionalmt-mobile-app-section" class="mobile-scene">
+<section id="_themename-mobile-app-section" class="mobile-scene">
     <?php if( is_active_sidebar('mobile-app-sidebar') ) : ?>
-        <div id="institucionalmt-mobile-app-section-background">   
+        <div id="_themename-mobile-app-section-background">   
             <div class="py-5" style="max-height:700px;overflow:hidden;position:relative;">
                 
                 <div class="mobile-section-item" style="position:absolute;left:0;opacity:.9;">
@@ -401,9 +401,9 @@ Template part para mostrar paginas en la portada
     <?php endif; ?>
 </section>
 
-<section id="institucionalmt-customers-sidebar-section">
+<section id="_themename-customers-sidebar-section">
     <?php if( is_active_sidebar('customers-sidebar') ) : ?>
-        <div class="institucionalmt-customers-sidebar-section-background">
+        <div class="_themename-customers-sidebar-section-background">
             <div class="container">
                 <?php dynamic_sidebar('customers-sidebar'); ?>
             </div>

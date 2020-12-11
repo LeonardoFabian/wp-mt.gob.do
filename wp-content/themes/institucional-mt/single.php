@@ -1,8 +1,8 @@
 <?php 
 /**
- * @subpackage Institucional_MT
- * @since 1.0
- * @version 1.0
+ * @subpackage      _themename
+ * @since           1.0
+ * @version         1.0
  */
 get_header(); ?>
 
@@ -26,13 +26,13 @@ get_header(); ?>
                 <div class="container my-5">
 
                     <hr>
-                    <h2>Noticias relacionadas</h2>
+                    <h2><?php echo apply_filters( '_themename_related_news_section_title', esc_html__('Noticias relacionadas', '_themename') ) ?></h2>
 
                     <div id="cooler-nav" class="navigation">
                         <?php $prevPost = get_previous_post();
                         if ($prevPost) { ?>
                             <div class="nav-box previous">
-                                <p class="text-muted">Noticia anterior</p>
+                                <p class="text-muted"><?php echo apply_filters( '_themename_prev_post_label', esc_html__('Noticia anterior', '_themename') ) ?></p>
                                 <?php $prevthumbnail = get_the_post_thumbnail($prevPost->ID, array(100, 100)); ?>
                                 <?php previous_post_link('%link', "$prevthumbnail  <p>%title</p>", TRUE); ?>
                             </div>
@@ -40,7 +40,7 @@ get_header(); ?>
                         $nextPost = get_next_post();
                         if ($nextPost) { ?>
                             <div class="nav-box next" style="float:right;">
-                            <p class="text-muted">Noticia siguiente</p>
+                            <p class="text-muted"><?php echo apply_filters( '_themename_next_post_label', esc_html__('Noticia siguiente', '_themename') ) ?></p>
                                 <?php $nextthumbnail = get_the_post_thumbnail($nextPost->ID, array(100, 100)); ?>
                                 <?php next_post_link('%link', "$nextthumbnail  <p>%title</p>", TRUE); ?>
                             </div>

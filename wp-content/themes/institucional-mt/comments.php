@@ -4,9 +4,9 @@
  *
  * The area of the page that contains comments and the comment form.
  *
- * @package Institucional_MT
- * @subpackage Institucional_MT
- * @since Institucional MT 1.0.0
+ * @package         _themename
+ * @subpackage      _themename
+ * @since           1.0.0
  */
  
 /*

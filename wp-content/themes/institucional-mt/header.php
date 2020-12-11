@@ -5,10 +5,10 @@
     <meta charset="<?php bloginfo( 'charset' ); ?>" >
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">    
     <?php wp_head(); ?>
-    <!-- InstitucionalMT_register_styles -->
+    <!-- _themename_register_styles -->
 </head>
 <body <?php body_class(); ?>>
-    <section id="institucionalmt-top-section">
+    <section id="_themename-top-section">
         <div class="container">
             <div class="row">
                 <div id="top-left" class="col-md-4 col-lg-4 col-xl-4">

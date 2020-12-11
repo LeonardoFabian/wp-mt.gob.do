@@ -26,7 +26,7 @@ get_header();
                     get_template_part( 'template-parts/page/content', 'front-page');
                 endwhile;
             else :
-                _e( 'No existen publicaciones para mostrar en la págna de inicio', 'institucionalmt');
+                echo apply_filters( '_themename_no_posts', esc_html__( 'No existen publicaciones para mostrar', '_themename') );
             endif;
         ?>
 

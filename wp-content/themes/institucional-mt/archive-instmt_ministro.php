@@ -6,7 +6,7 @@
 get_header();
 ?>
 
-<?php institucionalmt_page_header(); ?>
+<?php _themename_page_header(); ?>
 
 <div class="container py-5">
 

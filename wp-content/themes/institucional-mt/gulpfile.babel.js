@@ -13,6 +13,8 @@ import uglify from 'gulp-uglify';
 import named from 'vinyl-named';
 import browserSync from 'browser-sync';
 import zip from 'gulp-zip';
+import replace from 'gulp-replace';
+import info from './package.json';
 
 const server = browserSync.create();
 const PRODUCTION = yargs.argv.prod;
@@ -127,16 +129,18 @@ export const watch = () => {
 }
 
 /**
-* Task to create the theme zip folder
+* Task to create the final theme.zip folder in /packaged/mytheme.zip
 */
 export const compress = () => {
   return gulp.src(paths.package.src)
-    .pipe(zip('institucional-mt.zip'))
+    .pipe(replace('_themename', info.name))
+    .pipe(zip(`${info.name}.zip`))
     .pipe(gulp.dest(paths.package.dest));
 }
 
 export const dev = gulp.series(clean, gulp.parallel(styles, scripts, images, copy), serve, watch);
 export const build = gulp.series(clean, gulp.parallel(styles, scripts, images, copy));
+export const bundle = gulp.series(build, compress);
 
 export default dev;
 

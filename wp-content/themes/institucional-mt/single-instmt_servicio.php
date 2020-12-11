@@ -1,8 +1,8 @@
 <?php 
 /**
- * @subpackage Institucional_MT
- * @since 1.0
- * @version 1.0
+ * @subpackage      _themename
+ * @since           1.0
+ * @version         1.0
  */
 get_header(); ?>
 

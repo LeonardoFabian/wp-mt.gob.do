@@ -6,12 +6,12 @@
  * @since 1.0
  */
 
-function institucionalmt_register_card_deck_panel_widget()
+function _themename_register_card_deck_panel_widget()
 {
-    register_widget('InstitucionalMT_Card_Deck_Panel_Widget');
+    register_widget('_themename_Card_Deck_Panel_Widget');
 }
 
-add_action('widgets_init', 'institucionalmt_register_card_deck_panel_widget');
+add_action('widgets_init', '_themename_register_card_deck_panel_widget');
 
 // Enqueue additional admin scripts
 /*
@@ -20,24 +20,24 @@ add_action('admin_enqueue_scripts', 'custom_service_card_script');
 function custom_service_card_script()
 {
     wp_enqueue_media();
-    wp_enqueue_script('institucionalmt-custom-service-card', get_template_directory_uri() . '/admin/js/widget.js', false, '1.0', true);
-    wp_enqueue_script('institucionalmt-custom-service-icon', get_template_directory_uri() . '/admin/js/icon-upload.js', false, '1.0', true);
+    wp_enqueue_script('_themename-custom-service-card', get_template_directory_uri() . '/admin/js/widget.js', false, '1.0', true);
+    wp_enqueue_script('_themename-custom-service-icon', get_template_directory_uri() . '/admin/js/icon-upload.js', false, '1.0', true);
 }
 */
 
-class InstitucionalMT_Card_Deck_Panel_Widget extends WP_Widget
+class _themename_Card_Deck_Panel_Widget extends WP_Widget
 {
 
     function __construct()
     {
         parent::__construct(
             // widget ID
-            'institucionalmt_card_deck_panel',
+            '_themename_card_deck_panel',
             // widget name
-            __('InstitucionalMT Card Deck Panel Widget', 'institucionalmt'),
+            __('_themename Card Deck Panel Widget', '_themename'),
             // widget description
             array(
-                'description' => __('Need a set two cards of equal width and height panels that aren’t attached to one another? Use decks. (InstitucionalMT)', 'institucionalmt'),
+                'description' => __('Need a set two cards of equal width and height panels that aren’t attached to one another? Use decks. (_themename)', '_themename'),
             )
         );
     }
@@ -75,7 +75,7 @@ class InstitucionalMT_Card_Deck_Panel_Widget extends WP_Widget
         </div>
 
     <?php
-        //echo __('Buscador', 'institucionalmt');
+        //echo __('Buscador', '_themename');
 
         echo $args['after widget'];
     }
@@ -87,7 +87,7 @@ class InstitucionalMT_Card_Deck_Panel_Widget extends WP_Widget
         if (isset($instance['title']))
             $title = $instance['title'];
         else {
-            $title = __('Default title', 'institucionalmt');
+            $title = __('Default title', '_themename');
         }
     ?>
 
