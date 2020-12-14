@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import babel from 'gulp-babel';
+// import babel from 'gulp-babel';
 import yargs from 'yargs';
 //import less from 'gulp-less';
 import sass from 'gulp-sass';

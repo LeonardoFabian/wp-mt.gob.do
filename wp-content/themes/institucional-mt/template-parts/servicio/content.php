@@ -25,7 +25,7 @@ foreach ($datos as $key => $dato) {
         <div class="container align-self-center" style="z-index:999;">
             <div class="">
                 <h2 class="entry-header-title"><?php the_title(); ?></h2>
-                <small class="breadcrumbs tex-muted"><?php the_breadcrumb(); ?></small>
+                <small class="breadcrumbs tex-muted"><?php _themename_breadcrumb(); ?></small>
                 <div class="text-left my-4">
                     <a href="" class="btn btn-lg bg-secondary-color text-light"><i class="fas fa-link"></i>Acceder al Servicio</a>
                 </div>

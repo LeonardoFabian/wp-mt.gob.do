@@ -15,7 +15,7 @@ Template part para mostrar paginas en la portada
 <section id="_themename-front-page-portfolio-section" class="section scrollspy service-scene" style="max-height: 760px;">
     <?php if (is_active_sidebar('front-page-portfolio')) : ?>
         <div class="_themename-front-page-portfolio-section-content py-5">
-            <div class="container">
+            <div class="o-container">
                 <div class="row card-deck">
                     <?php dynamic_sidebar('front-page-portfolio'); ?>
                 </div>
@@ -30,7 +30,7 @@ Template part para mostrar paginas en la portada
 <!-- Front Page Blog Area -->
 <section id="front-page-blog-area-section" class="section scrollspy">
     <?php if (is_active_sidebar('front-page-blog-area')) : ?>
-        <div class="container py-5">
+        <div class="o-container py-5">
             <div class="row">
                 
                 <?php // TODO: Crear widget para mostrar las entrdas del blog en la pagina principal 
@@ -42,7 +42,7 @@ Template part para mostrar paginas en la portada
                         <h2>Noticias Titulo prueba</h2>
                         <hr class="divisor-center">
                     </div> -->
-                    <div class="container">
+                    <div class="o-container">
                         <!-- loop -->
                         <div class="row">
 
@@ -105,7 +105,7 @@ Template part para mostrar paginas en la portada
                                                             </h6>
                                                         </a>
                                                     </div>
-                                                    <div class="wrap-content-text">
+                                                    <div class="c-post__excerpt">
                                                         <!--Text-->
                                                         <p class="post-card-text card-text">
                                                             <?php the_excerpt(); ?>
@@ -194,7 +194,7 @@ Template part para mostrar paginas en la portada
                                                                 </h6>
                                                             </a>
                                                         </div>
-                                                        <div class="wrap-content-text d-block d-sm-none">
+                                                        <div class="c-post__excerpt d-block d-sm-none">
                                                             <!--Text-->
                                                             <p class="post-card-text card-text">
                                                                 <?php the_excerpt(); ?>
@@ -239,7 +239,7 @@ Template part para mostrar paginas en la portada
 <!-- Content Top 1 -->
 <section id="_themename-content-top-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-1-left') || is_active_sidebar('content-top-1-right')) : ?>
-        <div class="container py-5">
+        <div class="o-container py-5">
             <div class="row">
                 <?php if (is_active_sidebar('content-top-1-left') && (!is_active_sidebar('content-top-1-right'))) : ?>
                     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -268,7 +268,7 @@ Template part para mostrar paginas en la portada
 <!-- Content Top 2 -->
 <section id="_themename-content-top-2-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-2-left') || is_active_sidebar('content-top-2-right')) : ?>
-        <div class="container py-5">
+        <div class="o-container py-5">
             <div class="row">
                 <?php if (is_active_sidebar('content-top-2-left') && (!is_active_sidebar('content-top-2-right'))) : ?>
                     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -297,7 +297,7 @@ Template part para mostrar paginas en la portada
 <!-- Content Top 3 -->
 <section id="_themename-content-top-3-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-top-3-left') || is_active_sidebar('content-top-3-right')) : ?>
-        <div class="container py-5">
+        <div class="o-container py-5">
             <div class="row">
                 <?php if (is_active_sidebar('content-top-3-left') && (!is_active_sidebar('content-top-3-right'))) : ?>
                     <div class="col-sm-12 col-md-12 col-lg-12">
@@ -326,7 +326,7 @@ Template part para mostrar paginas en la portada
 <section id="_themename-content-mid-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-mid-1')) : ?>
         <div class="_themename-content-mid-2-section-background py-5" style="background:#dbdbdb;">
-            <div class="container">
+            <div class="o-container">
                 <div class="row py-3">
                     <div class="col-sm-12 col-md-6 col-lg-6" style="display:flex;">
                         <?php dynamic_sidebar('content-mid-1'); ?>
@@ -343,7 +343,7 @@ Template part para mostrar paginas en la portada
 <section id="_themename-content-mid-2-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-mid-2')) : ?>
         <div class="_themename-content-mid-2-section-background" style="background:#003876;color:#FFFFFF;">
-            <div class="container">
+            <div class="o-container">
                 <div class="row py-5">
                     <div class="col-sm-12 col-md-6 col-lg-6" style="display:flex;">
                         <?php dynamic_sidebar('content-mid-2'); ?>
@@ -358,7 +358,7 @@ Template part para mostrar paginas en la portada
 <section id="_themename-content-bottom-1-section" class="section scrollspy">
     <?php if (is_active_sidebar('content-bottom-1')) : ?>
         <div class="_themename-content-bottom-1-section-background" style="background:#dbdbdb;">
-            <div class="container">
+            <div class="o-container">
                 <div class="row py-5">
                     <div class="col-sm-4 col-md-4 col-lg-4" style="display:flex;">
                         <?php dynamic_sidebar('content-bottom-1'); ?>
@@ -385,7 +385,7 @@ Template part para mostrar paginas en la portada
                 <div class="mobile-section-item" style="position:absolute;right:0;bottom:0;">
                     <img id="mobile-img3" src="<?php echo get_template_directory_uri(); ?>/admin/image/paper-mockup.png" class="img-fluid mx-auto d-block" style="max-width: 300px;margin-top:50px;transform: rotate(-35deg);">
                 </div>
-                <div class="container section-overlay" style="z-index:9999;">            
+                <div class="o-container section-overlay" style="z-index:999999;">            
                 <div class="row align-content-center" >                
                     <div class="col-lg-5">
                         <img id="mobile-img-hero" src="<?php echo get_template_directory_uri(); ?>/admin/image/mobile-app.png" class="img-fluid mx-auto d-block" style="max-width: 350px;">

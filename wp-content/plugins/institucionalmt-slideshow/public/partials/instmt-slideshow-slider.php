@@ -21,18 +21,18 @@ function institucionalmt_multiple_items_slide()
     <div id="multi-item-example" class="carousel slide carousel-multi-item" data-ride="carousel">
 
         <!--Controls-->
-        <div class="controls-top">
+        <!-- <div class="controls-top">
             <a class="btn-floating" href="#multi-item-example" data-slide="prev"><i class="fas fa-chevron-left"></i></a>
             <a class="btn-floating" href="#multi-item-example" data-slide="next"><i class="fas fa-chevron-right"></i></a>
-        </div>
+        </div> -->
         <!--/.Controls-->
 
         <!--Indicators-->
-        <ol class="carousel-indicators">
+        <!-- <ol class="carousel-indicators">
             <li data-target="#multi-item-example" data-slide-to="0" class="active"></li>
             <li data-target="#multi-item-example" data-slide-to="1"></li>
             <li data-target="#multi-item-example" data-slide-to="2"></li>
-        </ol>
+        </ol> -->
         <!--/.Indicators-->
 
         <!--Slides-->
@@ -46,7 +46,6 @@ function institucionalmt_multiple_items_slide()
 
             ?>
 
-<?php foreach($items_array as $post){ setup_postdata(get_post($post['id'])); ?>
 
             <!--First slide-->
             <div class="carousel-item">
@@ -55,9 +54,10 @@ function institucionalmt_multiple_items_slide()
                     <?php // var_dump($post); ?>
 
                              
+<?php foreach($items_array as $post){ setup_postdata(get_post($post['id'])); ?>
                         
 
-                        <div class="col-md-4">
+                        <div class="col-md-3">
 
                         <a href="<?php the_permalink(); ?>" title="<?php the_title_attribute(); ?>" target="_blank">
                             <?php
@@ -69,12 +69,12 @@ function institucionalmt_multiple_items_slide()
 
                         </div>                     
 
+            <?php } ?>
                    
                 </div>
             </div>
             <!--/.First slide-->
 
-            <?php } ?>
 
         </div>
         <!--/.Slides-->

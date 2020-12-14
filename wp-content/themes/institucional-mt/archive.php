@@ -17,7 +17,7 @@
 
     ?>
             <div id="post-navigation-section" class="d-none d-sm-block">
-                <div class="container my-5">
+                <div class="o-container my-5">
 
                     <hr>
                     <h2>Noticias destacadas</h2>

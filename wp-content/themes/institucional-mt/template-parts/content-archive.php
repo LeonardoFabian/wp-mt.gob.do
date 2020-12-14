@@ -1,5 +1,6 @@
 <div class="col-12 col-md-4 mb-4">
     <div class="card-deck">
+        <article <?php post_class() ?> >
         <div class="card mb-4">
             <!-- Card date -->
             <div class="date-container text-center bg-secondary-color overlay">
@@ -36,7 +37,7 @@
                             </h6>
                         </a>
                     </div>
-                    <div class="wrap-content-text">
+                    <div class="c-post__excerpt">
                         <!--Text-->
                         <p class="post-card-text card-text">
                             <?php the_excerpt(); ?>
@@ -50,5 +51,6 @@
                 <a class="activator waves-effect waves-light float-right d-block d-sm-none"><i class="fas fa-share-alt"></i></a>
             </div>
         </div>
+    </article>
     </div>
 </div>

@@ -966,25 +966,33 @@ a.btn-social {
     color: #FFFFFF;
 }
 
-.fa-facebook-f {
-    background: rgb(59, 89, 152);
+.fa-facebook {
+    /* background: rgb(59, 89, 152); */
     color: #FFFFFF;
 }
 
 .fa-instagram {
-    background: rgb(225, 48, 108);
+    /* background: rgb(225, 48, 108); */
     color: #FFFFFF;
 }
 
+.instagram {
+    background-color: rgb(225,48,108);
+}
+
 .fa-twitter {
-    background: rgb(29, 161, 242);
+    /* background: rgb(29, 161, 242); */
     color: #FFFFFF;
+}
+
+.fa-linkedin {
+    color: #FFF;
 }
 
 .fa-youtube {
     padding-right: 0px;
     padding-left: 0px;
-    background: rgb(255, 0, 0);
+    /* background: rgb(255, 0, 0); */
     color: #FFFFFF;
 }
 

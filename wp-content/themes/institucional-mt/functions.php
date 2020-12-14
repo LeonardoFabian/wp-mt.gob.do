@@ -12,6 +12,9 @@ require_once('lib/helpers.php');
 // Theme enqueue styles and scripts
 require_once('lib/enqueue-scripts.php');
 
+// Theme sidebars widget positions
+require_once('lib/sidebars.php');
+
 /**
  * Theme setup
  */
@@ -112,7 +115,7 @@ if( !function_exists( '_themename_add_readmore_to_excerpt' ) ){
     function _themename_add_readmore_to_excerpt($more){       
         if (!is_single()) {
             
-            $more = sprintf('&nbsp;<a class="read-more" href="%1$s">%2$s<span class="u-screen-reader-text d-none">acerca de %3$s </span></a>', esc_url( get_permalink( get_the_ID() ) ), __('Leer más ', '_themename'), get_the_title() );
+            $more = sprintf('&nbsp;<a class="c-post__readmore" href="%1$s">%2$s<span class="u-screen-reader-text d-none">acerca de %3$s </span></a>', esc_url( get_permalink( get_the_ID() ) ), __('Leer más ', '_themename'), get_the_title() );
         }
         return $more;
     }

@@ -24,7 +24,7 @@ get_header();
     </div>
 </div><!-- the_posts-header -->
 
-<div class="container py-5">
+<div class="o-container py-5">
 
     <div class="row">
         <?php

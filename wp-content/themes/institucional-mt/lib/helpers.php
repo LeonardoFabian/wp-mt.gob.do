@@ -24,6 +24,26 @@ if( !function_exists( '_themename_page_header' ) ){
     }
 }
 
+/**
+* Encabezado para mostrar en los single-posts
+* @since          1.0.0
+* @access         public
+*/
+if( !function_exists( '_themename_post_header' ) ){
+    function _themename_post_header(){
+        ?>
+        <div id="_themename-header-id-<?php echo get_the_ID(); ?>" class="title-bar mb-5 d-none d-sm-block">
+            <div class="o-container d-flex text-left overlay text-light h-100">
+                <div class="align-self-center">
+                    <h2 class="_themename-page-title c-post__title"><?php the_title(); ?><span></span></h2>
+                    <small class="_themename-breadcrumbs tex-muted"><?php _themename_breadcrumb(); ?></small>
+                </div>
+            </div>
+        </div><!-- entry-header -->
+        <?php
+    }
+}
+
 if( !function_exists( '_themename_tag_page_header' ) ){
     function _themename_tag_page_header(){
         ?>
@@ -72,7 +92,7 @@ if( !function_exists( '_themename_post_meta' ) ){
 if( !function_exists( '_themename_readmore' ) ){
     function _themename_readmore(){
 
-        echo '<a href="'. esc_url( get_permalink() ) .'" title="' . the_title_attribute( ['echo' => false ] ) . '">';
+        echo '<a class="c-post__readmore" href="'. esc_url( get_permalink() ) .'" title="' . the_title_attribute( ['echo' => false ] ) . '">';
         /* translators: %s: Post title */
         printf(
             wp_kses(

@@ -376,8 +376,5 @@ require get_template_directory() . '/inc/panels/panels.php';
 // Theme Widgets
 require get_template_directory() . '/inc/widgets/widgets.php';
 
-// Theme Widgets positions
-require get_template_directory() . '/inc/widgets/widgets-positions.php';
-
 // Theme Admin Menus
 //require get_template_directory() . '/inc/menus/menus.php';

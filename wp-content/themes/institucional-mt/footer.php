@@ -1,7 +1,9 @@
+</main>
+
 <!-- Footer -->
 <footer id="site-footer">
     <div id="footer-top" class="d-none d-sm-block">
-        <div class="container py-5">
+        <div class="o-container py-5">
             <div class="mb-5">
                 <div id="footer-top-1 text-center" class="col-12">
                     <img src="<?php echo get_template_directory_uri(); ?>/admin/image/escudo-light.svg" class="img-fluid mx-auto d-block" style="max-width: 80px;">
@@ -81,7 +83,7 @@
         </div>
     </div><!-- footer top -->
     <div id="footer-inset" class="text-white py-3">
-        <div class="container">
+        <div class="o-container">
             <div class="row">
                 <!-- Footer left -->
                 <div class="d-inline col-sm-12 col-md-4">
@@ -138,7 +140,7 @@
             </div>
         </div>
         <!-- Footer bottom -->
-        <div class="container">
+        <div class="o-container">
             <!-- Footer Menu -->
             
             <?php if (has_nav_menu('footer-menu')) : ?>

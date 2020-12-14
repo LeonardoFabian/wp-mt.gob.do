@@ -20,7 +20,7 @@ get_header();
                 <?php the_search_query(); ?>
                 <?php echo '"'; ?>
             </h2>
-            <small class="breadcrumbs tex-muted"><?php _themename_breadcrumbs(); ?></small>
+            <small class="breadcrumbs tex-muted"><?php _themename_breadcrumb(); ?></small>
         </div>
     </div>
 </div><!-- archive-header -->
